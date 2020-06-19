@@ -1,0 +1,12 @@
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\Entities\bin\Debug\Entities.dll.config
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\Entities\bin\Debug\Entities.dll
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\Entities\bin\Debug\Entities.pdb
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\Entities\bin\Debug\EntityFramework.dll
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\Entities\bin\Debug\EntityFramework.SqlServer.dll
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\Entities\bin\Debug\EntityFramework.xml
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\Entities\bin\Debug\EntityFramework.SqlServer.xml
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\Entities\obj\Debug\Entities.csproj.CopyComplete
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\Entities\obj\Debug\Entities.dll
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\Entities\obj\Debug\Entities.pdb
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\Entities\obj\Debug\Entities.csprojAssemblyReference.cache

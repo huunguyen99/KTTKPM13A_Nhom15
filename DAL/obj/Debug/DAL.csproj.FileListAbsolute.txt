@@ -1,0 +1,17 @@
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\bin\Debug\DAL.dll.config
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\bin\Debug\DAL.dll
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\bin\Debug\DAL.pdb
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\bin\Debug\Entities.dll
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\bin\Debug\EntityFramework.dll
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\bin\Debug\Entities.pdb
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\bin\Debug\Entities.dll.config
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\bin\Debug\EntityFramework.xml
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\obj\Debug\DAL.dll
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\obj\Debug\DAL.pdb
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\obj\Debug\DAL.Migrations.v1.resources
+E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
