@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanPhongServer", "VanPhongServer\VanPhongServer.csproj", "{CA611115-CCDC-4600-94F8-DCCD2EB3E3A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NhanVienTuVan", "NhanVienTuVan\NhanVienTuVan.csproj", "{EA4A8090-C6F9-423B-95C0-2DA701783ADF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CA611115-CCDC-4600-94F8-DCCD2EB3E3A5} = {CA611115-CCDC-4600-94F8-DCCD2EB3E3A5}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NhanVienKyThuat", "NhanVienKyThuat\NhanVienKyThuat.csproj", "{5D433658-BAFB-4EF6-9C1F-4232DD817220}"
 EndProject

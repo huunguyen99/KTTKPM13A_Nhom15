@@ -31,8 +31,6 @@ namespace Entities
         public decimal PhiBaoVe { get; set; }
         [DataMember]
         public decimal TienPhong { get; set; }
-
-        public decimal TienRac { get; set; }
         [DataMember]
         public virtual eHoaDon EHoaDon { get; set; }
     }
