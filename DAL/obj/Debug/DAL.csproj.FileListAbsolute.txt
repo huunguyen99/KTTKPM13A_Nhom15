@@ -15,3 +15,17 @@ E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\ob
 E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\obj\Debug\DAL.pdb
 E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\obj\Debug\DAL.Migrations.v1.resources
 E:\Kiến Trúc Thiết Kế Phần Mềm\BaiTapLonKTTKPM\ChoThueVanPhong\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\phamm\Documents\GitHub\KTTKPM13A_Nhom15\DAL\bin\Debug\DAL.dll.config
+C:\Users\phamm\Documents\GitHub\KTTKPM13A_Nhom15\DAL\bin\Debug\DAL.dll
+C:\Users\phamm\Documents\GitHub\KTTKPM13A_Nhom15\DAL\bin\Debug\DAL.pdb
+C:\Users\phamm\Documents\GitHub\KTTKPM13A_Nhom15\DAL\bin\Debug\Entities.dll
+C:\Users\phamm\Documents\GitHub\KTTKPM13A_Nhom15\DAL\bin\Debug\EntityFramework.dll
+C:\Users\phamm\Documents\GitHub\KTTKPM13A_Nhom15\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\phamm\Documents\GitHub\KTTKPM13A_Nhom15\DAL\bin\Debug\Entities.pdb
+C:\Users\phamm\Documents\GitHub\KTTKPM13A_Nhom15\DAL\bin\Debug\EntityFramework.xml
+C:\Users\phamm\Documents\GitHub\KTTKPM13A_Nhom15\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\phamm\Documents\GitHub\KTTKPM13A_Nhom15\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\phamm\Documents\GitHub\KTTKPM13A_Nhom15\DAL\obj\Debug\DAL.Migrations.v1.resources
+C:\Users\phamm\Documents\GitHub\KTTKPM13A_Nhom15\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
+C:\Users\phamm\Documents\GitHub\KTTKPM13A_Nhom15\DAL\obj\Debug\DAL.dll
+C:\Users\phamm\Documents\GitHub\KTTKPM13A_Nhom15\DAL\obj\Debug\DAL.pdb
