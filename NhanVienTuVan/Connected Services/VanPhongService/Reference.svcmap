@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fbda2c6d-0a60-4cad-a8ce-e17ead1e536d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:57527/ChoThueVanPhongService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ChoThueVanPhongService.xsd" MetadataType="Schema" ID="ca239f5e-1b2e-4b42-a347-fd98e80a4f9c" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ChoThueVanPhongService.disco" MetadataType="Disco" ID="9cc3815f-8151-4d1b-9ee2-6c78dd380bea" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?disco" />
+    <MetadataFile FileName="ChoThueVanPhongService.wsdl" MetadataType="Wsdl" ID="e1adc232-5b59-4011-8793-9293d95b5b1c" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

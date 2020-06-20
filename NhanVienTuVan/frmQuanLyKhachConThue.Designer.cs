@@ -241,6 +241,7 @@
             this.btnSuaThongTin.Size = new System.Drawing.Size(102, 38);
             this.btnSuaThongTin.TabIndex = 13;
             this.btnSuaThongTin.Values.Text = "SỬA ";
+            this.btnSuaThongTin.Click += new System.EventHandler(this.btnSuaThongTin_Click);
             // 
             // kryptonSplitContainer1
             // 
@@ -308,7 +309,7 @@
             this.kryptonWrapLabel2.AutoSize = false;
             this.kryptonWrapLabel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonWrapLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.kryptonWrapLabel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonWrapLabel2.Name = "kryptonWrapLabel2";
             this.kryptonWrapLabel2.Size = new System.Drawing.Size(233, 35);
@@ -437,7 +438,7 @@
             this.ClientSize = new System.Drawing.Size(1109, 468);
             this.Controls.Add(this.kryptonSplitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQuanLyKhachConThue";
             this.Text = "QUẢN LÝ THÔNG TIN KHÁCH HÀNG CÒN THUÊ";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).EndInit();

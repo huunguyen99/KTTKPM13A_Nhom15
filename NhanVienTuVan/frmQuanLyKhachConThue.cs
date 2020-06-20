@@ -16,5 +16,10 @@ namespace NhanVienTuVan
         {
             InitializeComponent();
         }
+
+        private void btnSuaThongTin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
