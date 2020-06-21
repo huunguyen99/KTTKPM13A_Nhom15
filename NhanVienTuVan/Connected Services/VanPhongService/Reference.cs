@@ -9,17 +9,176 @@
 //------------------------------------------------------------------------------
 
 namespace NhanVienTuVan.VanPhongService {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="eVanPhong", Namespace="http://schemas.datacontract.org/2004/07/Entities")]
+    [System.SerializableAttribute()]
+    public partial class eVanPhong : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double DienTichField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal GiaThueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaPhongField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SoBongDenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SoMayLanhField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TangLauField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TenPhongField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool TinhTrangField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double DienTich {
+            get {
+                return this.DienTichField;
+            }
+            set {
+                if ((this.DienTichField.Equals(value) != true)) {
+                    this.DienTichField = value;
+                    this.RaisePropertyChanged("DienTich");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal GiaThue {
+            get {
+                return this.GiaThueField;
+            }
+            set {
+                if ((this.GiaThueField.Equals(value) != true)) {
+                    this.GiaThueField = value;
+                    this.RaisePropertyChanged("GiaThue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaPhong {
+            get {
+                return this.MaPhongField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaPhongField, value) != true)) {
+                    this.MaPhongField = value;
+                    this.RaisePropertyChanged("MaPhong");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SoBongDen {
+            get {
+                return this.SoBongDenField;
+            }
+            set {
+                if ((this.SoBongDenField.Equals(value) != true)) {
+                    this.SoBongDenField = value;
+                    this.RaisePropertyChanged("SoBongDen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SoMayLanh {
+            get {
+                return this.SoMayLanhField;
+            }
+            set {
+                if ((this.SoMayLanhField.Equals(value) != true)) {
+                    this.SoMayLanhField = value;
+                    this.RaisePropertyChanged("SoMayLanh");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TangLau {
+            get {
+                return this.TangLauField;
+            }
+            set {
+                if ((this.TangLauField.Equals(value) != true)) {
+                    this.TangLauField = value;
+                    this.RaisePropertyChanged("TangLau");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TenPhong {
+            get {
+                return this.TenPhongField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TenPhongField, value) != true)) {
+                    this.TenPhongField = value;
+                    this.RaisePropertyChanged("TenPhong");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool TinhTrang {
+            get {
+                return this.TinhTrangField;
+            }
+            set {
+                if ((this.TinhTrangField.Equals(value) != true)) {
+                    this.TinhTrangField = value;
+                    this.RaisePropertyChanged("TinhTrang");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="VanPhongService.IChoThueVanPhongService")]
     public interface IChoThueVanPhongService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/DoWork", ReplyAction="http://tempuri.org/IChoThueVanPhongService/DoWorkResponse")]
-        void DoWork();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayDanhSachPhong", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayDanhSachPhongResponse")]
+        NhanVienTuVan.VanPhongService.eVanPhong[] LayDanhSachPhong();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/DoWork", ReplyAction="http://tempuri.org/IChoThueVanPhongService/DoWorkResponse")]
-        System.Threading.Tasks.Task DoWorkAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayDanhSachPhong", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayDanhSachPhongResponse")]
+        System.Threading.Tasks.Task<NhanVienTuVan.VanPhongService.eVanPhong[]> LayDanhSachPhongAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +208,12 @@ namespace NhanVienTuVan.VanPhongService {
                 base(binding, remoteAddress) {
         }
         
-        public void DoWork() {
-            base.Channel.DoWork();
+        public NhanVienTuVan.VanPhongService.eVanPhong[] LayDanhSachPhong() {
+            return base.Channel.LayDanhSachPhong();
         }
         
-        public System.Threading.Tasks.Task DoWorkAsync() {
-            return base.Channel.DoWorkAsync();
+        public System.Threading.Tasks.Task<NhanVienTuVan.VanPhongService.eVanPhong[]> LayDanhSachPhongAsync() {
+            return base.Channel.LayDanhSachPhongAsync();
         }
     }
 }

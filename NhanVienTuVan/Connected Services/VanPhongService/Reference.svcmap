@@ -23,6 +23,8 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="ChoThueVanPhongService.xsd" MetadataType="Schema" ID="ca239f5e-1b2e-4b42-a347-fd98e80a4f9c" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ChoThueVanPhongService1.xsd" MetadataType="Schema" ID="7e192199-8b29-4c87-899e-5fb5bc23ba71" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ChoThueVanPhongService11.xsd" MetadataType="Schema" ID="8bb620d4-5ec7-4f41-a1a0-08ee5de2d898" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?xsd=xsd2" />
     <MetadataFile FileName="ChoThueVanPhongService.disco" MetadataType="Disco" ID="9cc3815f-8151-4d1b-9ee2-6c78dd380bea" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?disco" />
     <MetadataFile FileName="ChoThueVanPhongService.wsdl" MetadataType="Wsdl" ID="e1adc232-5b59-4011-8793-9293d95b5b1c" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?wsdl" />
   </Metadata>

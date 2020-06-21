@@ -56,6 +56,7 @@
                     NgayTao = c.DateTime(nullable: true),
                     NgayThue = c.DateTime(nullable: true),
                     NgayTra = c.DateTime(nullable: true),
+                    NgayTraThucTe = c.DateTime(nullable: true),
                 })
                 .PrimaryKey(t => t.MaHopDong)
                 .ForeignKey("dbo.eKhachHangs", t => t.MaKH, cascadeDelete: false)
@@ -145,6 +146,7 @@
                 .PrimaryKey(t => t.TenTK)
                 .ForeignKey("dbo.eNhanViens", t => t.MaNV, cascadeDelete: true)
                 .Index(t => t.MaNV);
+
 
         }
 

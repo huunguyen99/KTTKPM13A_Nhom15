@@ -27,7 +27,7 @@
                 SDT = "0165888777",
                 DiaChi = "79A Trần Bá Giao Gò Vấp",
                 QueQuan = "Xã Quế Xuân 1, huyện Quế Sơn, Quảng Nam",
-                NgaySinh = new DateTime(22, 02, 1999),
+                NgaySinh = new DateTime(1999, 02, 22),
                 SoCMND = "205888956",
                 GioiTinh = true,
                 ChucVu = 1,

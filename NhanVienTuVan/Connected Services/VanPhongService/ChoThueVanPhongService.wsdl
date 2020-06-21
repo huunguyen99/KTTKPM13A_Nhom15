@@ -3,24 +3,26 @@
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:57527/ChoThueVanPhongService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57527/ChoThueVanPhongService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:57527/ChoThueVanPhongService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Entities" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IChoThueVanPhongService_DoWork_InputMessage">
-    <wsdl:part name="parameters" element="tns:DoWork" />
+  <wsdl:message name="IChoThueVanPhongService_LayDanhSachPhong_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachPhong" />
   </wsdl:message>
-  <wsdl:message name="IChoThueVanPhongService_DoWork_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  <wsdl:message name="IChoThueVanPhongService_LayDanhSachPhong_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachPhongResponse" />
   </wsdl:message>
   <wsdl:portType name="IChoThueVanPhongService">
-    <wsdl:operation name="DoWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/IChoThueVanPhongService/DoWork" message="tns:IChoThueVanPhongService_DoWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IChoThueVanPhongService/DoWorkResponse" message="tns:IChoThueVanPhongService_DoWork_OutputMessage" />
+    <wsdl:operation name="LayDanhSachPhong">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChoThueVanPhongService/LayDanhSachPhong" message="tns:IChoThueVanPhongService_LayDanhSachPhong_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChoThueVanPhongService/LayDanhSachPhongResponse" message="tns:IChoThueVanPhongService_LayDanhSachPhong_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IChoThueVanPhongService" type="tns:IChoThueVanPhongService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="DoWork">
-      <soap:operation soapAction="http://tempuri.org/IChoThueVanPhongService/DoWork" style="document" />
+    <wsdl:operation name="LayDanhSachPhong">
+      <soap:operation soapAction="http://tempuri.org/IChoThueVanPhongService/LayDanhSachPhong" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

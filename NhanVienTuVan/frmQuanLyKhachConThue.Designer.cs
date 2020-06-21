@@ -441,6 +441,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQuanLyKhachConThue";
             this.Text = "QUẢN LÝ THÔNG TIN KHÁCH HÀNG CÒN THUÊ";
+            this.Load += new System.EventHandler(this.frmQuanLyKhachConThue_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).EndInit();
             this.kryptonSplitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).EndInit();

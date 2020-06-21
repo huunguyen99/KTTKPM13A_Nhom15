@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using DAL;
 
 namespace VanPhongServer
 {
@@ -12,6 +14,7 @@ namespace VanPhongServer
     public interface IChoThueVanPhongService
     {
         [OperationContract]
-        void DoWork();
+        //public List<eVanPhong> LayDSVanPhongTrong();
+        List<eVanPhong> LayDanhSachPhong();
     }
 }

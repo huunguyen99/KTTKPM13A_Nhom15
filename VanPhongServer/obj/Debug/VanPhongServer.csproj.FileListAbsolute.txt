@@ -11,8 +11,8 @@ E:\KTTKPM13A_Nhom15\VanPhongServer\bin\Entities.pdb
 E:\KTTKPM13A_Nhom15\VanPhongServer\bin\Entities.dll.config
 E:\KTTKPM13A_Nhom15\VanPhongServer\bin\EntityFramework.xml
 E:\KTTKPM13A_Nhom15\VanPhongServer\bin\EntityFramework.SqlServer.xml
-E:\KTTKPM13A_Nhom15\VanPhongServer\obj\Debug\VanPhongServer.csprojAssemblyReference.cache
 E:\KTTKPM13A_Nhom15\VanPhongServer\obj\Debug\VanPhongServer.csproj.CoreCompileInputs.cache
 E:\KTTKPM13A_Nhom15\VanPhongServer\obj\Debug\VanPhongServer.csproj.CopyComplete
 E:\KTTKPM13A_Nhom15\VanPhongServer\obj\Debug\VanPhongServer.dll
 E:\KTTKPM13A_Nhom15\VanPhongServer\obj\Debug\VanPhongServer.pdb
+E:\KTTKPM13A_Nhom15\VanPhongServer\obj\Debug\VanPhongServer.csprojAssemblyReference.cache

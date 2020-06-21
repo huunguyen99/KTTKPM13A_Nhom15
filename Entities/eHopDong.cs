@@ -33,6 +33,8 @@ namespace Entities
         [DataMember]
         public DateTime NgayTra { get; set; }
         [DataMember]
+        public DateTime NgayTraThucTe { get; set; }
+        [DataMember]
         public virtual eNhanVien ENhanVien { get; set; }
         [DataMember]
         public virtual eKhachHang EKhachHang { get; set; }

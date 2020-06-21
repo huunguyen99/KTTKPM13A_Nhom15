@@ -33,7 +33,6 @@ E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Ribbon.pdb
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\EntityFramework.xml
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\EntityFramework.SqlServer.xml
-E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.csprojAssemblyReference.cache
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmDangNhap.resources
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmDoiMatKhau.resources
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmLapHopDong.resources
@@ -46,3 +45,4 @@ E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.csproj.CoreCompileInpu
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.csproj.CopyComplete
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.exe
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.pdb
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.csprojAssemblyReference.cache
