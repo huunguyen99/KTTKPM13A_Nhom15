@@ -68,7 +68,7 @@
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(160, 23);
             this.txtMatKhau.TabIndex = 6;
-            this.txtMatKhau.Text = "admin";
+            this.txtMatKhau.Text = "annguyen";
             // 
             // txtTaiKhoan
             // 
@@ -76,7 +76,7 @@
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(160, 23);
             this.txtTaiKhoan.TabIndex = 5;
-            this.txtTaiKhoan.Text = "admin";
+            this.txtTaiKhoan.Text = "annguyen";
             // 
             // btnHuy
             // 
@@ -93,8 +93,9 @@
             this.btnDangNhap.Location = new System.Drawing.Point(110, 137);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(85, 40);
-            this.btnDangNhap.TabIndex = 10;
+            this.btnDangNhap.TabIndex = 0;
             this.btnDangNhap.Values.Text = "ĐĂNG NHẬP";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // frmDangNhap
             // 
@@ -109,10 +110,11 @@
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnDangNhap);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐĂNG NHẬP";
+            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

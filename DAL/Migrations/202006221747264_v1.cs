@@ -56,7 +56,7 @@
                     NgayTao = c.DateTime(nullable: true),
                     NgayThue = c.DateTime(nullable: true),
                     NgayTra = c.DateTime(nullable: true),
-                    NgayTraThucTe = c.DateTime(nullable: true),
+                    NgayTraThucTe = c.DateTime(nullable: false),
                 })
                 .PrimaryKey(t => t.MaHopDong)
                 .ForeignKey("dbo.eKhachHangs", t => t.MaKH, cascadeDelete: false)
@@ -106,20 +106,18 @@
                 {
                     MaPhieuKTra = c.Int(nullable: false, identity: true),
                     MaPhong = c.String(maxLength: 128),
-                    MaNVTuVan = c.Int(nullable: true),
+                    MaNV = c.Int(nullable: true),
                     MaNVKyThuat = c.Int(nullable: true),
                     NgayTao = c.DateTime(nullable: true),
                     TinhTrangPhong = c.Boolean(nullable: true),
                     TrangThaiPhieu = c.Boolean(nullable: true),
                     GhiChu = c.String(),
-                    ENhanVien_MaNV = c.Int(),
                 })
                 .PrimaryKey(t => t.MaPhieuKTra)
-                .ForeignKey("dbo.eNhanViens", t => t.ENhanVien_MaNV)
+                .ForeignKey("dbo.eNhanViens", t => t.MaNV)
                 .ForeignKey("dbo.eVanPhongs", t => t.MaPhong)
                 .Index(t => t.MaPhong)
-                .Index(t => t.ENhanVien_MaNV);
-
+                .Index(t => t.MaNV);
             CreateTable(
                 "dbo.eVanPhongs",
                 c => new
@@ -146,7 +144,6 @@
                 .PrimaryKey(t => t.TenTK)
                 .ForeignKey("dbo.eNhanViens", t => t.MaNV, cascadeDelete: true)
                 .Index(t => t.MaNV);
-
 
         }
 

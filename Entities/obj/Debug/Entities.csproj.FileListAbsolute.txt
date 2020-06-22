@@ -17,7 +17,6 @@ E:\KTTKPM13A_Nhom15\Entities\bin\Debug\EntityFramework.dll
 E:\KTTKPM13A_Nhom15\Entities\bin\Debug\EntityFramework.SqlServer.dll
 E:\KTTKPM13A_Nhom15\Entities\bin\Debug\EntityFramework.xml
 E:\KTTKPM13A_Nhom15\Entities\bin\Debug\EntityFramework.SqlServer.xml
-E:\KTTKPM13A_Nhom15\Entities\obj\Debug\Entities.csprojAssemblyReference.cache
 E:\KTTKPM13A_Nhom15\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
 E:\KTTKPM13A_Nhom15\Entities\obj\Debug\Entities.csproj.CopyComplete
 E:\KTTKPM13A_Nhom15\Entities\obj\Debug\Entities.dll

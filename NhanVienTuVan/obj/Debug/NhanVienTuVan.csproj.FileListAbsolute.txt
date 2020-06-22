@@ -46,3 +46,6 @@ E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.csproj.CopyComplete
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.exe
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.pdb
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.csprojAssemblyReference.cache
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\Entities.dll
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\Entities.pdb
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\Entities.dll.config

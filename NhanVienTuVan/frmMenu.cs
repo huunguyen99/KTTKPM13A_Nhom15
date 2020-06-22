@@ -7,14 +7,102 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entities;
+using NhanVienTuVan.VanPhongService;
 
 namespace NhanVienTuVan
 {
     public partial class frmMenu : Form
     {
-        public frmMenu()
+        private static int MaNV {get;set;}
+        public frmMenu(eNhanVien nv)
         {
             InitializeComponent();
+        }
+
+        frmQuanLyKhachConThue frmkhachconthue = new frmQuanLyKhachConThue();
+        frmQuanLyKhachKhongConThue frmkhachkhongconthue = new frmQuanLyKhachKhongConThue();
+        frmDoiMatKhau frmdmk = new frmDoiMatKhau();
+        frmLapHopDong frmlaphopdong = new frmLapHopDong();
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void mnuKHConThue_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
+            if (frmkhachconthue.IsAccessible == false)
+            {
+                frmkhachconthue = new frmQuanLyKhachConThue();
+                frmkhachconthue.MdiParent = this;
+                frmkhachconthue.Show();
+            }
+        }
+
+        private void mnuKHKhongConThue_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
+            if (frmkhachkhongconthue.IsAccessible == false)
+            {
+                frmkhachkhongconthue = new frmQuanLyKhachKhongConThue();
+                frmkhachkhongconthue.MdiParent = this;
+                frmkhachkhongconthue.Show();
+            }
+        }
+
+        private void mnuHopDong_Click(object sender, EventArgs e)
+        {
+            //foreach (Form frm in this.MdiChildren)
+            //{
+            //    frm.Close();
+            //}
+            //if (frmkhachkhongconthue.IsAccessible == false)
+            //{
+            //    frmkhachkhongconthue = new frmQuanLyKhachKhongConThue();
+            //    frmkhachkhongconthue.MdiParent = this;
+            //    frmkhachkhongconthue.Show();
+            //}
+        }
+
+        private void mnuLapHopDong_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
+            if (frmlaphopdong.IsAccessible == false)
+            {
+                frmlaphopdong = new frmLapHopDong();
+                frmlaphopdong.MdiParent = this;
+                frmlaphopdong.Show();
+            }
+        }
+
+        private void mnuDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
+            if (frmdmk.IsAccessible == false)
+            {
+                frmdmk = new frmDoiMatKhau();
+                frmdmk.MdiParent = this;
+                frmdmk.Show();
+            }
         }
     }
 }

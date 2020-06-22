@@ -13,4 +13,127 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="LayDSVanPhongTrong">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDSVanPhongTrongResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LayDSVanPhongTrongResult" nillable="true" type="q2:ArrayOfeVanPhong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDSVanPhongDangChoThue">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDSVanPhongDangChoThueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LayDSVanPhongDangChoThueResult" nillable="true" type="q3:ArrayOfeVanPhong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DangNhap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="taiKhoan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="matKhau" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DangNhapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DangNhapResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayNhanVienDangNhap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="taiKhoan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="matKhau" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayNhanVienDangNhapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LayNhanVienDangNhapResult" nillable="true" type="q4:eNhanVien" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDSKhachHangDangThue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="maPhong" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDSKhachHangDangThueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LayDSKhachHangDangThueResult" nillable="true" type="q5:ArrayOfeKhachHang" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TaoPhieuKiemTra">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="p" nillable="true" type="q6:ePhieuYeuCauKiemTraPhong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TaoPhieuKiemTraResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CapNhatPhieuKiemTra">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="p" nillable="true" type="q7:ePhieuYeuCauKiemTraPhong" />
+        <xs:element minOccurs="0" name="tinhTrangPhong" type="xs:boolean" />
+        <xs:element minOccurs="0" name="maNVKyThuat" type="xs:int" />
+        <xs:element minOccurs="0" name="ghiChu" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CapNhatPhieuKiemTraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CapNhatPhieuKiemTraResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDSPhieuDaDuyet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="maPhong" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDSPhieuDaDuyetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LayDSPhieuDaDuyetResult" nillable="true" type="q8:ArrayOfePhieuYeuCauKiemTraPhong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDSPhieuChuaDuyet">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDSPhieuChuaDuyetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LayDSPhieuChuaDuyetResult" nillable="true" type="q9:ArrayOfePhieuYeuCauKiemTraPhong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

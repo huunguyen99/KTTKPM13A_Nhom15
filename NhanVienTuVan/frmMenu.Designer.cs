@@ -177,8 +177,7 @@
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab8,
             this.kryptonRibbonTab2});
-            this.kryptonRibbon1.SelectedContext = null;
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1021, 115);
             this.kryptonRibbon1.TabIndex = 3;
             // 
@@ -244,15 +243,18 @@
             // mnuKHConThue
             // 
             this.mnuKHConThue.TextLine1 = "Khách hàng còn thuê";
+            this.mnuKHConThue.Click += new System.EventHandler(this.mnuKHConThue_Click);
             // 
             // mnuKHKhongConThue
             // 
             this.mnuKHKhongConThue.ImageSmall = ((System.Drawing.Image)(resources.GetObject("mnuKHKhongConThue.ImageSmall")));
             this.mnuKHKhongConThue.TextLine1 = "khách hàng không còn thuê";
+            this.mnuKHKhongConThue.Click += new System.EventHandler(this.mnuKHKhongConThue_Click);
             // 
             // mnuHopDong
             // 
             this.mnuHopDong.TextLine1 = "Hợp đồng";
+            this.mnuHopDong.Click += new System.EventHandler(this.mnuHopDong_Click);
             // 
             // kryptonRibbonTab8
             // 
@@ -275,6 +277,7 @@
             // mnuLapHopDong
             // 
             this.mnuLapHopDong.TextLine1 = "Lập Hợp Đồng";
+            this.mnuLapHopDong.Click += new System.EventHandler(this.mnuLapHopDong_Click);
             // 
             // kryptonRibbonTab2
             // 
@@ -298,6 +301,7 @@
             // mnuDoiMatKhau
             // 
             this.mnuDoiMatKhau.TextLine1 = "Đổi mật khẩu";
+            this.mnuDoiMatKhau.Click += new System.EventHandler(this.mnuDoiMatKhau_Click);
             // 
             // kryptonRibbonGroupTriple10
             // 
@@ -321,6 +325,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CHƯƠNG TRÌNH QUẢN LÝ CHO THUÊ VĂN PHÒNG";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMenu_FormClosed);
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

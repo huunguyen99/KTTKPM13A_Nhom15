@@ -9,176 +9,71 @@
 //------------------------------------------------------------------------------
 
 namespace NhanVienTuVan.VanPhongService {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="eVanPhong", Namespace="http://schemas.datacontract.org/2004/07/Entities")]
-    [System.SerializableAttribute()]
-    public partial class eVanPhong : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private double DienTichField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal GiaThueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MaPhongField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int SoBongDenField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int SoMayLanhField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TangLauField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TenPhongField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool TinhTrangField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double DienTich {
-            get {
-                return this.DienTichField;
-            }
-            set {
-                if ((this.DienTichField.Equals(value) != true)) {
-                    this.DienTichField = value;
-                    this.RaisePropertyChanged("DienTich");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal GiaThue {
-            get {
-                return this.GiaThueField;
-            }
-            set {
-                if ((this.GiaThueField.Equals(value) != true)) {
-                    this.GiaThueField = value;
-                    this.RaisePropertyChanged("GiaThue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string MaPhong {
-            get {
-                return this.MaPhongField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MaPhongField, value) != true)) {
-                    this.MaPhongField = value;
-                    this.RaisePropertyChanged("MaPhong");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int SoBongDen {
-            get {
-                return this.SoBongDenField;
-            }
-            set {
-                if ((this.SoBongDenField.Equals(value) != true)) {
-                    this.SoBongDenField = value;
-                    this.RaisePropertyChanged("SoBongDen");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int SoMayLanh {
-            get {
-                return this.SoMayLanhField;
-            }
-            set {
-                if ((this.SoMayLanhField.Equals(value) != true)) {
-                    this.SoMayLanhField = value;
-                    this.RaisePropertyChanged("SoMayLanh");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TangLau {
-            get {
-                return this.TangLauField;
-            }
-            set {
-                if ((this.TangLauField.Equals(value) != true)) {
-                    this.TangLauField = value;
-                    this.RaisePropertyChanged("TangLau");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TenPhong {
-            get {
-                return this.TenPhongField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TenPhongField, value) != true)) {
-                    this.TenPhongField = value;
-                    this.RaisePropertyChanged("TenPhong");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool TinhTrang {
-            get {
-                return this.TinhTrangField;
-            }
-            set {
-                if ((this.TinhTrangField.Equals(value) != true)) {
-                    this.TinhTrangField = value;
-                    this.RaisePropertyChanged("TinhTrang");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="VanPhongService.IChoThueVanPhongService")]
     public interface IChoThueVanPhongService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayDanhSachPhong", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayDanhSachPhongResponse")]
-        NhanVienTuVan.VanPhongService.eVanPhong[] LayDanhSachPhong();
+        Entities.eVanPhong[] LayDanhSachPhong();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayDanhSachPhong", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayDanhSachPhongResponse")]
-        System.Threading.Tasks.Task<NhanVienTuVan.VanPhongService.eVanPhong[]> LayDanhSachPhongAsync();
+        System.Threading.Tasks.Task<Entities.eVanPhong[]> LayDanhSachPhongAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayDSVanPhongTrong", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayDSVanPhongTrongResponse")]
+        Entities.eVanPhong[] LayDSVanPhongTrong();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayDSVanPhongTrong", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayDSVanPhongTrongResponse")]
+        System.Threading.Tasks.Task<Entities.eVanPhong[]> LayDSVanPhongTrongAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayDSVanPhongDangChoThue", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayDSVanPhongDangChoThueResponse")]
+        Entities.eVanPhong[] LayDSVanPhongDangChoThue();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayDSVanPhongDangChoThue", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayDSVanPhongDangChoThueResponse")]
+        System.Threading.Tasks.Task<Entities.eVanPhong[]> LayDSVanPhongDangChoThueAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/DangNhap", ReplyAction="http://tempuri.org/IChoThueVanPhongService/DangNhapResponse")]
+        bool DangNhap(string taiKhoan, string matKhau);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/DangNhap", ReplyAction="http://tempuri.org/IChoThueVanPhongService/DangNhapResponse")]
+        System.Threading.Tasks.Task<bool> DangNhapAsync(string taiKhoan, string matKhau);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayNhanVienDangNhap", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayNhanVienDangNhapResponse")]
+        Entities.eNhanVien LayNhanVienDangNhap(string taiKhoan, string matKhau);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayNhanVienDangNhap", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayNhanVienDangNhapResponse")]
+        System.Threading.Tasks.Task<Entities.eNhanVien> LayNhanVienDangNhapAsync(string taiKhoan, string matKhau);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayDSKhachHangDangThue", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayDSKhachHangDangThueResponse")]
+        Entities.eKhachHang[] LayDSKhachHangDangThue(string maPhong);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayDSKhachHangDangThue", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayDSKhachHangDangThueResponse")]
+        System.Threading.Tasks.Task<Entities.eKhachHang[]> LayDSKhachHangDangThueAsync(string maPhong);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/TaoPhieuKiemTra", ReplyAction="http://tempuri.org/IChoThueVanPhongService/TaoPhieuKiemTraResponse")]
+        void TaoPhieuKiemTra(Entities.ePhieuYeuCauKiemTraPhong p);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/TaoPhieuKiemTra", ReplyAction="http://tempuri.org/IChoThueVanPhongService/TaoPhieuKiemTraResponse")]
+        System.Threading.Tasks.Task TaoPhieuKiemTraAsync(Entities.ePhieuYeuCauKiemTraPhong p);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/CapNhatPhieuKiemTra", ReplyAction="http://tempuri.org/IChoThueVanPhongService/CapNhatPhieuKiemTraResponse")]
+        bool CapNhatPhieuKiemTra(Entities.ePhieuYeuCauKiemTraPhong p, bool tinhTrangPhong, int maNVKyThuat, string ghiChu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/CapNhatPhieuKiemTra", ReplyAction="http://tempuri.org/IChoThueVanPhongService/CapNhatPhieuKiemTraResponse")]
+        System.Threading.Tasks.Task<bool> CapNhatPhieuKiemTraAsync(Entities.ePhieuYeuCauKiemTraPhong p, bool tinhTrangPhong, int maNVKyThuat, string ghiChu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayDSPhieuDaDuyet", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayDSPhieuDaDuyetResponse")]
+        Entities.ePhieuYeuCauKiemTraPhong[] LayDSPhieuDaDuyet(string maPhong);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayDSPhieuDaDuyet", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayDSPhieuDaDuyetResponse")]
+        System.Threading.Tasks.Task<Entities.ePhieuYeuCauKiemTraPhong[]> LayDSPhieuDaDuyetAsync(string maPhong);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayDSPhieuChuaDuyet", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayDSPhieuChuaDuyetResponse")]
+        Entities.ePhieuYeuCauKiemTraPhong[] LayDSPhieuChuaDuyet();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChoThueVanPhongService/LayDSPhieuChuaDuyet", ReplyAction="http://tempuri.org/IChoThueVanPhongService/LayDSPhieuChuaDuyetResponse")]
+        System.Threading.Tasks.Task<Entities.ePhieuYeuCauKiemTraPhong[]> LayDSPhieuChuaDuyetAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -208,12 +103,84 @@ namespace NhanVienTuVan.VanPhongService {
                 base(binding, remoteAddress) {
         }
         
-        public NhanVienTuVan.VanPhongService.eVanPhong[] LayDanhSachPhong() {
+        public Entities.eVanPhong[] LayDanhSachPhong() {
             return base.Channel.LayDanhSachPhong();
         }
         
-        public System.Threading.Tasks.Task<NhanVienTuVan.VanPhongService.eVanPhong[]> LayDanhSachPhongAsync() {
+        public System.Threading.Tasks.Task<Entities.eVanPhong[]> LayDanhSachPhongAsync() {
             return base.Channel.LayDanhSachPhongAsync();
+        }
+        
+        public Entities.eVanPhong[] LayDSVanPhongTrong() {
+            return base.Channel.LayDSVanPhongTrong();
+        }
+        
+        public System.Threading.Tasks.Task<Entities.eVanPhong[]> LayDSVanPhongTrongAsync() {
+            return base.Channel.LayDSVanPhongTrongAsync();
+        }
+        
+        public Entities.eVanPhong[] LayDSVanPhongDangChoThue() {
+            return base.Channel.LayDSVanPhongDangChoThue();
+        }
+        
+        public System.Threading.Tasks.Task<Entities.eVanPhong[]> LayDSVanPhongDangChoThueAsync() {
+            return base.Channel.LayDSVanPhongDangChoThueAsync();
+        }
+        
+        public bool DangNhap(string taiKhoan, string matKhau) {
+            return base.Channel.DangNhap(taiKhoan, matKhau);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DangNhapAsync(string taiKhoan, string matKhau) {
+            return base.Channel.DangNhapAsync(taiKhoan, matKhau);
+        }
+        
+        public Entities.eNhanVien LayNhanVienDangNhap(string taiKhoan, string matKhau) {
+            return base.Channel.LayNhanVienDangNhap(taiKhoan, matKhau);
+        }
+        
+        public System.Threading.Tasks.Task<Entities.eNhanVien> LayNhanVienDangNhapAsync(string taiKhoan, string matKhau) {
+            return base.Channel.LayNhanVienDangNhapAsync(taiKhoan, matKhau);
+        }
+        
+        public Entities.eKhachHang[] LayDSKhachHangDangThue(string maPhong) {
+            return base.Channel.LayDSKhachHangDangThue(maPhong);
+        }
+        
+        public System.Threading.Tasks.Task<Entities.eKhachHang[]> LayDSKhachHangDangThueAsync(string maPhong) {
+            return base.Channel.LayDSKhachHangDangThueAsync(maPhong);
+        }
+        
+        public void TaoPhieuKiemTra(Entities.ePhieuYeuCauKiemTraPhong p) {
+            base.Channel.TaoPhieuKiemTra(p);
+        }
+        
+        public System.Threading.Tasks.Task TaoPhieuKiemTraAsync(Entities.ePhieuYeuCauKiemTraPhong p) {
+            return base.Channel.TaoPhieuKiemTraAsync(p);
+        }
+        
+        public bool CapNhatPhieuKiemTra(Entities.ePhieuYeuCauKiemTraPhong p, bool tinhTrangPhong, int maNVKyThuat, string ghiChu) {
+            return base.Channel.CapNhatPhieuKiemTra(p, tinhTrangPhong, maNVKyThuat, ghiChu);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CapNhatPhieuKiemTraAsync(Entities.ePhieuYeuCauKiemTraPhong p, bool tinhTrangPhong, int maNVKyThuat, string ghiChu) {
+            return base.Channel.CapNhatPhieuKiemTraAsync(p, tinhTrangPhong, maNVKyThuat, ghiChu);
+        }
+        
+        public Entities.ePhieuYeuCauKiemTraPhong[] LayDSPhieuDaDuyet(string maPhong) {
+            return base.Channel.LayDSPhieuDaDuyet(maPhong);
+        }
+        
+        public System.Threading.Tasks.Task<Entities.ePhieuYeuCauKiemTraPhong[]> LayDSPhieuDaDuyetAsync(string maPhong) {
+            return base.Channel.LayDSPhieuDaDuyetAsync(maPhong);
+        }
+        
+        public Entities.ePhieuYeuCauKiemTraPhong[] LayDSPhieuChuaDuyet() {
+            return base.Channel.LayDSPhieuChuaDuyet();
+        }
+        
+        public System.Threading.Tasks.Task<Entities.ePhieuYeuCauKiemTraPhong[]> LayDSPhieuChuaDuyetAsync() {
+            return base.Channel.LayDSPhieuChuaDuyetAsync();
         }
     }
 }

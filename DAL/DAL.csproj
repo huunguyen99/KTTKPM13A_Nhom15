@@ -34,7 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Entities">
+    <Reference Include="Entities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Entities\bin\Debug\Entities.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -54,9 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202006211522243_v1.cs" />
-    <Compile Include="Migrations\202006211522243_v1.designer.cs">
-      <DependentUpon>202006211522243_v1.cs</DependentUpon>
+    <Compile Include="Migrations\202006221747264_v1.cs" />
+    <Compile Include="Migrations\202006221747264_v1.designer.cs">
+      <DependentUpon>202006221747264_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="VanPhongDbContext.cs" />
@@ -67,8 +68,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006211522243_v1.resx">
-      <DependentUpon>202006211522243_v1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006221747264_v1.resx">
+      <DependentUpon>202006221747264_v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

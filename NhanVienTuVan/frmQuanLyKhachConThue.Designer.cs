@@ -303,6 +303,7 @@
             this.treDSPhong.Name = "treDSPhong";
             this.treDSPhong.Size = new System.Drawing.Size(233, 400);
             this.treDSPhong.TabIndex = 10;
+            this.treDSPhong.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treDSPhong_AfterSelect);
             // 
             // kryptonWrapLabel2
             // 
@@ -436,11 +437,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 468);
+            this.ControlBox = false;
             this.Controls.Add(this.kryptonSplitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQuanLyKhachConThue";
             this.Text = "QUẢN LÝ THÔNG TIN KHÁCH HÀNG CÒN THUÊ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmQuanLyKhachConThue_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).EndInit();
             this.kryptonSplitContainer1.Panel1.ResumeLayout(false);

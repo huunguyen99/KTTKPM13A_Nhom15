@@ -39,7 +39,6 @@ E:\KTTKPM13A_Nhom15\DAL\bin\Debug\Entities.pdb
 E:\KTTKPM13A_Nhom15\DAL\bin\Debug\Entities.dll.config
 E:\KTTKPM13A_Nhom15\DAL\bin\Debug\EntityFramework.xml
 E:\KTTKPM13A_Nhom15\DAL\bin\Debug\EntityFramework.SqlServer.xml
-E:\KTTKPM13A_Nhom15\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 E:\KTTKPM13A_Nhom15\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 E:\KTTKPM13A_Nhom15\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\KTTKPM13A_Nhom15\DAL\obj\Debug\DAL.dll

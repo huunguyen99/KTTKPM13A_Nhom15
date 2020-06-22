@@ -142,13 +142,14 @@
     <None Include="Connected Services\VanPhongService\ChoThueVanPhongService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\VanPhongService\ChoThueVanPhongService11.xsd">
+    <None Include="Connected Services\VanPhongService\ChoThueVanPhongService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\VanPhongService\NhanVienTuVan.VanPhongService.eVanPhong.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Entities.eKhachHang.datasource" />
+    <None Include="Properties\DataSources\Entities.eNhanVien.datasource" />
+    <None Include="Properties\DataSources\Entities.ePhieuYeuCauKiemTraPhong.datasource" />
+    <None Include="Properties\DataSources\Entities.eVanPhong.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -164,6 +165,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{FA818603-A42E-47A2-B132-9325CF76580E}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\VanPhongService\" />
