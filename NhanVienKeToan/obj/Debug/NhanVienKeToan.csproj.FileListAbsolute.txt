@@ -1,0 +1,14 @@
+E:\KTTKPM13A_Nhom15\NhanVienKeToan\bin\Debug\NhanVienKeToan.exe.config
+E:\KTTKPM13A_Nhom15\NhanVienKeToan\bin\Debug\NhanVienKeToan.exe
+E:\KTTKPM13A_Nhom15\NhanVienKeToan\bin\Debug\NhanVienKeToan.pdb
+E:\KTTKPM13A_Nhom15\NhanVienKeToan\bin\Debug\EntityFramework.dll
+E:\KTTKPM13A_Nhom15\NhanVienKeToan\bin\Debug\EntityFramework.SqlServer.dll
+E:\KTTKPM13A_Nhom15\NhanVienKeToan\bin\Debug\EntityFramework.xml
+E:\KTTKPM13A_Nhom15\NhanVienKeToan\bin\Debug\EntityFramework.SqlServer.xml
+E:\KTTKPM13A_Nhom15\NhanVienKeToan\obj\Debug\NhanVienKeToan.csprojAssemblyReference.cache
+E:\KTTKPM13A_Nhom15\NhanVienKeToan\obj\Debug\NhanVienKeToan.Properties.Resources.resources
+E:\KTTKPM13A_Nhom15\NhanVienKeToan\obj\Debug\NhanVienKeToan.csproj.GenerateResource.cache
+E:\KTTKPM13A_Nhom15\NhanVienKeToan\obj\Debug\NhanVienKeToan.csproj.CoreCompileInputs.cache
+E:\KTTKPM13A_Nhom15\NhanVienKeToan\obj\Debug\NhanVienKeToan.csproj.CopyComplete
+E:\KTTKPM13A_Nhom15\NhanVienKeToan\obj\Debug\NhanVienKeToan.exe
+E:\KTTKPM13A_Nhom15\NhanVienKeToan\obj\Debug\NhanVienKeToan.pdb

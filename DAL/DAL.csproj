@@ -55,6 +55,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DALChiTietHoaDon.cs" />
+    <Compile Include="DALHoaDon.cs" />
+    <Compile Include="DALHopDong.cs" />
+    <Compile Include="DALKhachHang.cs" />
+    <Compile Include="DALNhanVien.cs" />
+    <Compile Include="DALNhanVienVaTaiKhoan.cs" />
+    <Compile Include="DALPhieuYeuCauKiemTraPhong.cs" />
+    <Compile Include="DALVanPhong.cs" />
     <Compile Include="Migrations\202006221747264_v1.cs" />
     <Compile Include="Migrations\202006221747264_v1.designer.cs">
       <DependentUpon>202006221747264_v1.cs</DependentUpon>

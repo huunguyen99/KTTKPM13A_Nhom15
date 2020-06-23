@@ -30,6 +30,17 @@
         {
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.kryptonSplitContainer1 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
+            this.kryptonSplitContainer3 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
+            this.kryptonWrapLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lvwDSKhachHang = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.kryptonSplitContainer2 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.kryptonWrapLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
@@ -58,23 +69,18 @@
             this.btnThoat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnXoa = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnSuaThongTin = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonSplitContainer3 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
-            this.lvwDSKhachHang = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.kryptonWrapLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
             this.kryptonSplitContainer1.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).BeginInit();
             this.kryptonSplitContainer1.Panel2.SuspendLayout();
             this.kryptonSplitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer3.Panel1)).BeginInit();
+            this.kryptonSplitContainer3.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer3.Panel2)).BeginInit();
+            this.kryptonSplitContainer3.Panel2.SuspendLayout();
+            this.kryptonSplitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer2.Panel1)).BeginInit();
             this.kryptonSplitContainer2.Panel1.SuspendLayout();
@@ -85,12 +91,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
             this.kryptonGroupBox2.Panel.SuspendLayout();
             this.kryptonGroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer3.Panel1)).BeginInit();
-            this.kryptonSplitContainer3.Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer3.Panel2)).BeginInit();
-            this.kryptonSplitContainer3.Panel2.SuspendLayout();
-            this.kryptonSplitContainer3.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonSplitContainer1
@@ -108,9 +108,106 @@
             // kryptonSplitContainer1.Panel2
             // 
             this.kryptonSplitContainer1.Panel2.Controls.Add(this.kryptonSplitContainer2);
-            this.kryptonSplitContainer1.Size = new System.Drawing.Size(1105, 446);
-            this.kryptonSplitContainer1.SplitterDistance = 236;
+            this.kryptonSplitContainer1.Size = new System.Drawing.Size(1105, 457);
+            this.kryptonSplitContainer1.SplitterDistance = 217;
             this.kryptonSplitContainer1.TabIndex = 0;
+            // 
+            // kryptonSplitContainer3
+            // 
+            this.kryptonSplitContainer3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.kryptonSplitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonSplitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.kryptonSplitContainer3.Name = "kryptonSplitContainer3";
+            this.kryptonSplitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // kryptonSplitContainer3.Panel1
+            // 
+            this.kryptonSplitContainer3.Panel1.Controls.Add(this.kryptonWrapLabel2);
+            // 
+            // kryptonSplitContainer3.Panel2
+            // 
+            this.kryptonSplitContainer3.Panel2.Controls.Add(this.lvwDSKhachHang);
+            this.kryptonSplitContainer3.Size = new System.Drawing.Size(1105, 217);
+            this.kryptonSplitContainer3.SplitterDistance = 35;
+            this.kryptonSplitContainer3.TabIndex = 0;
+            // 
+            // kryptonWrapLabel2
+            // 
+            this.kryptonWrapLabel2.AutoSize = false;
+            this.kryptonWrapLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonWrapLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.kryptonWrapLabel2.Location = new System.Drawing.Point(0, 0);
+            this.kryptonWrapLabel2.Name = "kryptonWrapLabel2";
+            this.kryptonWrapLabel2.Size = new System.Drawing.Size(1105, 35);
+            this.kryptonWrapLabel2.StateCommon.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonWrapLabel2.Text = "DANH SÁCH KHÁCH HÀNG KHÔNG CÒN THUÊ";
+            this.kryptonWrapLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lvwDSKhachHang
+            // 
+            this.lvwDSKhachHang.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.lvwDSKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvwDSKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvwDSKhachHang.FullRowSelect = true;
+            this.lvwDSKhachHang.GridLines = true;
+            this.lvwDSKhachHang.HideSelection = false;
+            this.lvwDSKhachHang.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.lvwDSKhachHang.Location = new System.Drawing.Point(0, 0);
+            this.lvwDSKhachHang.Name = "lvwDSKhachHang";
+            this.lvwDSKhachHang.Size = new System.Drawing.Size(1105, 177);
+            this.lvwDSKhachHang.TabIndex = 10;
+            this.lvwDSKhachHang.UseCompatibleStateImageBehavior = false;
+            this.lvwDSKhachHang.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Mã KH";
+            this.columnHeader1.Width = 66;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Họ Tên";
+            this.columnHeader2.Width = 193;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Số CMND";
+            this.columnHeader7.Width = 111;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Ngày Sinh";
+            this.columnHeader8.Width = 114;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Số ĐT";
+            this.columnHeader3.Width = 105;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Email";
+            this.columnHeader4.Width = 164;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Địa Chỉ";
+            this.columnHeader5.Width = 260;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Giới Tính";
+            this.columnHeader6.Width = 95;
             // 
             // kryptonSplitContainer2
             // 
@@ -144,7 +241,7 @@
             this.kryptonSplitContainer2.Panel2.Controls.Add(this.btnThoat);
             this.kryptonSplitContainer2.Panel2.Controls.Add(this.btnXoa);
             this.kryptonSplitContainer2.Panel2.Controls.Add(this.btnSuaThongTin);
-            this.kryptonSplitContainer2.Size = new System.Drawing.Size(1105, 205);
+            this.kryptonSplitContainer2.Size = new System.Drawing.Size(1105, 235);
             this.kryptonSplitContainer2.SplitterDistance = 317;
             this.kryptonSplitContainer2.TabIndex = 0;
             // 
@@ -163,7 +260,7 @@
             this.kryptonGroupBox2.Panel.Controls.Add(this.lblTimKiemSV);
             this.kryptonGroupBox2.Panel.Controls.Add(this.txtGiaTriTim);
             this.kryptonGroupBox2.Panel.Controls.Add(this.btnTimKiem);
-            this.kryptonGroupBox2.Size = new System.Drawing.Size(317, 205);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(317, 235);
             this.kryptonGroupBox2.TabIndex = 2;
             this.kryptonGroupBox2.Values.Heading = "Thông tin tìm kiếm";
             // 
@@ -227,10 +324,10 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(92, 163);
+            this.btnTimKiem.Location = new System.Drawing.Point(92, 145);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(138, 35);
+            this.btnTimKiem.Size = new System.Drawing.Size(138, 38);
             this.btnTimKiem.TabIndex = 55;
             this.btnTimKiem.Values.Text = "TÌM KIẾM";
             // 
@@ -378,6 +475,7 @@
             this.btnThoat.Size = new System.Drawing.Size(102, 38);
             this.btnThoat.TabIndex = 44;
             this.btnThoat.Values.Text = "THOÁT";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnXoa
             // 
@@ -399,108 +497,11 @@
             this.btnSuaThongTin.TabIndex = 43;
             this.btnSuaThongTin.Values.Text = "SỬA ";
             // 
-            // kryptonSplitContainer3
-            // 
-            this.kryptonSplitContainer3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.kryptonSplitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonSplitContainer3.Location = new System.Drawing.Point(0, 0);
-            this.kryptonSplitContainer3.Name = "kryptonSplitContainer3";
-            this.kryptonSplitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // kryptonSplitContainer3.Panel1
-            // 
-            this.kryptonSplitContainer3.Panel1.Controls.Add(this.kryptonWrapLabel2);
-            // 
-            // kryptonSplitContainer3.Panel2
-            // 
-            this.kryptonSplitContainer3.Panel2.Controls.Add(this.lvwDSKhachHang);
-            this.kryptonSplitContainer3.Size = new System.Drawing.Size(1105, 236);
-            this.kryptonSplitContainer3.SplitterDistance = 39;
-            this.kryptonSplitContainer3.TabIndex = 0;
-            // 
-            // lvwDSKhachHang
-            // 
-            this.lvwDSKhachHang.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
-            this.lvwDSKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvwDSKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvwDSKhachHang.FullRowSelect = true;
-            this.lvwDSKhachHang.GridLines = true;
-            this.lvwDSKhachHang.HideSelection = false;
-            this.lvwDSKhachHang.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.lvwDSKhachHang.Location = new System.Drawing.Point(0, 0);
-            this.lvwDSKhachHang.Name = "lvwDSKhachHang";
-            this.lvwDSKhachHang.Size = new System.Drawing.Size(1105, 192);
-            this.lvwDSKhachHang.TabIndex = 10;
-            this.lvwDSKhachHang.UseCompatibleStateImageBehavior = false;
-            this.lvwDSKhachHang.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Mã KH";
-            this.columnHeader1.Width = 66;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Họ Tên";
-            this.columnHeader2.Width = 193;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Số CMND";
-            this.columnHeader7.Width = 111;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Ngày Sinh";
-            this.columnHeader8.Width = 114;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Số ĐT";
-            this.columnHeader3.Width = 79;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Email";
-            this.columnHeader4.Width = 164;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Địa Chỉ";
-            this.columnHeader5.Width = 260;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Giới Tính";
-            this.columnHeader6.Width = 95;
-            // 
-            // kryptonWrapLabel2
-            // 
-            this.kryptonWrapLabel2.AutoSize = false;
-            this.kryptonWrapLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonWrapLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.kryptonWrapLabel2.Location = new System.Drawing.Point(0, 0);
-            this.kryptonWrapLabel2.Name = "kryptonWrapLabel2";
-            this.kryptonWrapLabel2.Size = new System.Drawing.Size(1105, 39);
-            this.kryptonWrapLabel2.StateCommon.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel2.Text = "DANH SÁCH KHÁCH HÀNG KHÔNG CÒN THUÊ";
-            this.kryptonWrapLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frmQuanLyKhachKhongConThue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 446);
+            this.ClientSize = new System.Drawing.Size(1105, 457);
             this.ControlBox = false;
             this.Controls.Add(this.kryptonSplitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -515,6 +516,12 @@
             this.kryptonSplitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).EndInit();
             this.kryptonSplitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer3.Panel1)).EndInit();
+            this.kryptonSplitContainer3.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer3.Panel2)).EndInit();
+            this.kryptonSplitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer3)).EndInit();
+            this.kryptonSplitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer2.Panel1)).EndInit();
             this.kryptonSplitContainer2.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer2.Panel2)).EndInit();
@@ -527,12 +534,6 @@
             this.kryptonGroupBox2.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
             this.kryptonGroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer3.Panel1)).EndInit();
-            this.kryptonSplitContainer3.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer3.Panel2)).EndInit();
-            this.kryptonSplitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer3)).EndInit();
-            this.kryptonSplitContainer3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

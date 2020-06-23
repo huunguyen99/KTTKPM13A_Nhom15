@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a60d3191-b10e-4204-a61d-13ce9e1c559d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="798fac90-e057-4ee3-88ab-a381672e83f3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:57527/ChoThueVanPhongService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ChoThueVanPhongService.xsd" MetadataType="Schema" ID="199a0f47-8b82-461c-8346-5526196c8f8d" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?xsd=xsd0" />
-    <MetadataFile FileName="ChoThueVanPhongService1.xsd" MetadataType="Schema" ID="97a4a2f3-1d8a-43fd-8f89-614144b9cd41" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?xsd=xsd1" />
-    <MetadataFile FileName="ChoThueVanPhongService2.xsd" MetadataType="Schema" ID="be223fa8-f5be-4489-8bbd-90901510f48c" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?xsd=xsd2" />
-    <MetadataFile FileName="ChoThueVanPhongService.disco" MetadataType="Disco" ID="e0363b6d-a783-47a8-9e2e-5534e44e3390" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?disco" />
-    <MetadataFile FileName="ChoThueVanPhongService.wsdl" MetadataType="Wsdl" ID="07614aec-1e2c-4fb1-b6ef-f44aceb8bc2e" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?wsdl" />
+    <MetadataFile FileName="ChoThueVanPhongService.xsd" MetadataType="Schema" ID="0ddf6c1d-0b35-4704-88d5-f4a4ba981234" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ChoThueVanPhongService1.xsd" MetadataType="Schema" ID="a10147eb-e0ab-42c0-b6f5-a7c99040259b" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ChoThueVanPhongService2.xsd" MetadataType="Schema" ID="11eb2310-ee69-4b95-9c02-e5c89f6a26e0" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ChoThueVanPhongService.disco" MetadataType="Disco" ID="c3bfdc36-3a20-4db6-b41e-834f60ecab68" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?disco" />
+    <MetadataFile FileName="ChoThueVanPhongService.wsdl" MetadataType="Wsdl" ID="1ccd4be0-358c-4462-94d2-16a738def61f" SourceId="1" SourceUrl="http://localhost:57527/ChoThueVanPhongService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

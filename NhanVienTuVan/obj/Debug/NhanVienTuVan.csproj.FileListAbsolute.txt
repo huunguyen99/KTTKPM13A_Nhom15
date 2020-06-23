@@ -49,3 +49,8 @@ E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.csprojAssemblyReferenc
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\Entities.dll
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\Entities.pdb
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\Entities.dll.config
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\DAL.dll
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\DAL.pdb
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\DAL.dll.config
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmDanhSachTatCaKhachHang.resources
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmDienThongTinHopDong.resources

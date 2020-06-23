@@ -18,12 +18,13 @@ namespace NhanVienTuVan
         public frmMenu(eNhanVien nv)
         {
             InitializeComponent();
+            MaNV = nv.MaNV;
         }
 
         frmQuanLyKhachConThue frmkhachconthue = new frmQuanLyKhachConThue();
         frmQuanLyKhachKhongConThue frmkhachkhongconthue = new frmQuanLyKhachKhongConThue();
         frmDoiMatKhau frmdmk = new frmDoiMatKhau();
-        frmLapHopDong frmlaphopdong = new frmLapHopDong();
+        frmLapHopDong frmlaphopdong = new frmLapHopDong(MaNV);
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
@@ -85,7 +86,7 @@ namespace NhanVienTuVan
             }
             if (frmlaphopdong.IsAccessible == false)
             {
-                frmlaphopdong = new frmLapHopDong();
+                frmlaphopdong = new frmLapHopDong(MaNV);
                 frmlaphopdong.MdiParent = this;
                 frmlaphopdong.Show();
             }
@@ -103,6 +104,12 @@ namespace NhanVienTuVan
                 frmdmk.MdiParent = this;
                 frmdmk.Show();
             }
+        }
+
+        private void mnuDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Hide();
         }
     }
 }

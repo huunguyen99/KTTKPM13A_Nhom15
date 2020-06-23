@@ -45,6 +45,7 @@
             this.btnHuy.Size = new System.Drawing.Size(96, 35);
             this.btnHuy.TabIndex = 12;
             this.btnHuy.Values.Text = "HỦY";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnXacNhan
             // 
@@ -53,6 +54,7 @@
             this.btnXacNhan.Size = new System.Drawing.Size(96, 35);
             this.btnXacNhan.TabIndex = 11;
             this.btnXacNhan.Values.Text = "XÁC NHẬN";
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // txtXacNhanMatKhauMoi
             // 

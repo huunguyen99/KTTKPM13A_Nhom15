@@ -15,3 +15,4 @@ E:\KTTKPM13A_Nhom15\VanPhongServer\obj\Debug\VanPhongServer.csproj.CoreCompileIn
 E:\KTTKPM13A_Nhom15\VanPhongServer\obj\Debug\VanPhongServer.csproj.CopyComplete
 E:\KTTKPM13A_Nhom15\VanPhongServer\obj\Debug\VanPhongServer.dll
 E:\KTTKPM13A_Nhom15\VanPhongServer\obj\Debug\VanPhongServer.pdb
+E:\KTTKPM13A_Nhom15\VanPhongServer\obj\Debug\VanPhongServer.csprojAssemblyReference.cache

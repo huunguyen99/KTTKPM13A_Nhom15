@@ -130,7 +130,7 @@ namespace VanPhongServer
 
         public List<ePhieuYeuCauKiemTraPhong> LayDSPhieuDaDuyet(string maPhong)
         {
-            var dsphieu = dt.tblPhieuYeuCauKiemTraPhong.Where(x => x.TrangThaiPhieu == true && x.MaPhong == maPhong).ToList();
+            var dsphieu = dt.tblPhieuYeuCauKiemTraPhong.Where(p => p.MaPhong == maPhong && p.TrangThaiPhieu == true).ToList();
             return dsphieu;
         }
 

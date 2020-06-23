@@ -42,6 +42,9 @@
     <Reference Include="ComponentFactory.Krypton.Toolkit">
       <HintPath>..\..\..\..\Thư Viện Lập Trình C Sharp\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="DAL">
+      <HintPath>..\DAL\bin\Debug\DAL.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -75,6 +78,18 @@
     </Compile>
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDanhSachTatCaKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDanhSachTatCaKhachHang.Designer.cs">
+      <DependentUpon>frmDanhSachTatCaKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDienThongTinHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDienThongTinHopDong.Designer.cs">
+      <DependentUpon>frmDienThongTinHopDong.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDoiMatKhau.cs">
       <SubType>Form</SubType>
@@ -110,6 +125,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDanhSachTatCaKhachHang.resx">
+      <DependentUpon>frmDanhSachTatCaKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDienThongTinHopDong.resx">
+      <DependentUpon>frmDienThongTinHopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>

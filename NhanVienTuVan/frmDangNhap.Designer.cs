@@ -86,6 +86,7 @@
             this.btnHuy.Size = new System.Drawing.Size(85, 40);
             this.btnHuy.TabIndex = 11;
             this.btnHuy.Values.Text = "HỦY";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnDangNhap
             // 

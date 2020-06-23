@@ -177,6 +177,7 @@
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab8,
             this.kryptonRibbonTab2});
+            this.kryptonRibbon1.SelectedContext = null;
             this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1021, 115);
             this.kryptonRibbon1.TabIndex = 3;
@@ -311,6 +312,7 @@
             // mnuDangXuat
             // 
             this.mnuDangXuat.TextLine1 = "Đăng Xuất";
+            this.mnuDangXuat.Click += new System.EventHandler(this.mnuDangXuat_Click);
             // 
             // frmMenu
             // 

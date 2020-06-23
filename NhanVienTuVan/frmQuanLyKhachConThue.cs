@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NhanVienTuVan.VanPhongService;
 using Entities;
+using DAL;
 
 namespace NhanVienTuVan
 {
@@ -19,13 +20,15 @@ namespace NhanVienTuVan
             InitializeComponent();
         }
 
-        ChoThueVanPhongServiceClient dt;
+        DALVanPhong dalvp;
+        DALKhachHang dalkh;
         List<eVanPhong> dsphong;
         string maPhongChon;
         private void frmQuanLyKhachConThue_Load(object sender, EventArgs e)
         {
-            dt = new ChoThueVanPhongServiceClient();
-            dsphong = dt.LayDSVanPhongDangChoThue().ToList();
+            dalvp = new DALVanPhong();
+            dalkh = new DALKhachHang();
+            dsphong = dalvp.LayDSVanPhongDangChoThue().ToList();
             LoadPhongLenTreeView(treDSPhong, dsphong);
         }
 
@@ -77,9 +80,16 @@ namespace NhanVienTuVan
             if(treDSPhong.SelectedNode != null)
             {
                 maPhongChon = treDSPhong.SelectedNode.Tag.ToString();
-                List<eKhachHang> dskh = dt.LayDSKhachHangDangThue(maPhongChon).ToList();
+                List<eKhachHang> dskh = dalkh.LayDSKhachHangDangThue(maPhongChon);
                 LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
             }    
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult hoiThoat = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+            if (hoiThoat == DialogResult.Yes)
+                this.Close();
         }
     }
 }
