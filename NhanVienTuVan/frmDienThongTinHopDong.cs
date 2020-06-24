@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 using Entities;
+using BUS;
 
 namespace NhanVienTuVan
 {
@@ -42,6 +43,7 @@ namespace NhanVienTuVan
             hd.NgayTra = dtpNgayTra.Value;
             hd.NgayTraThucTe = dtpNgayTra.Value;
             hd.TienCoc = GiaThue * 2;
+            hd.TinhTrangHD = true;
             return hd;
 
         }

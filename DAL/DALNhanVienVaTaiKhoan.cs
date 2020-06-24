@@ -15,6 +15,14 @@ namespace DAL
             dt = new VanPhongDbContext();
         }
 
+        public List<eTaiKhoan> LayDSTaiKhoanVaNhanVien()
+        {
+            var ds = (from n in dt.tblTaiKhoan
+                      where n.ENhanVien.ChucVu != 4
+                      select n).ToList();
+            return ds;
+        }
+
         public eTaiKhoan KiemTraTaiKhoan(string taiKhoan, string matKhau)
         {
             var tk = (from n in dt.tblTaiKhoan
@@ -36,5 +44,24 @@ namespace DAL
                 return null;
             return tk.ENhanVien;
         }
+
+        public bool DoiMatKhau(int maNV, string matKhau, string matKhauMoi)
+        {
+            var tk = (from n in dt.tblTaiKhoan
+                      where n.ENhanVien.MaNV.Equals(maNV)
+                      select n).FirstOrDefault();
+            if (!tk.MatKhau.Equals(matKhau))
+                return false;
+            try
+            {
+                tk.MatKhau = matKhauMoi;
+                dt.SaveChanges();
+                return true;
+            }
+            catch(Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }    
     }
 }

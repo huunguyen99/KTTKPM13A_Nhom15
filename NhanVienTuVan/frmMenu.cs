@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities;
-using NhanVienTuVan.VanPhongService;
 
 namespace NhanVienTuVan
 {
@@ -23,8 +22,10 @@ namespace NhanVienTuVan
 
         frmQuanLyKhachConThue frmkhachconthue = new frmQuanLyKhachConThue();
         frmQuanLyKhachKhongConThue frmkhachkhongconthue = new frmQuanLyKhachKhongConThue();
-        frmDoiMatKhau frmdmk = new frmDoiMatKhau();
+        frmDoiMatKhau frmdmk = new frmDoiMatKhau(MaNV);
         frmLapHopDong frmlaphopdong = new frmLapHopDong(MaNV);
+        frmTraPhong frmtp = new frmTraPhong();
+        frmQuanLyHopDong frmqlhd = new frmQuanLyHopDong();
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
@@ -33,7 +34,7 @@ namespace NhanVienTuVan
 
         private void frmMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            this.Owner.Show();
         }
 
         private void mnuKHConThue_Click(object sender, EventArgs e)
@@ -66,16 +67,16 @@ namespace NhanVienTuVan
 
         private void mnuHopDong_Click(object sender, EventArgs e)
         {
-            //foreach (Form frm in this.MdiChildren)
-            //{
-            //    frm.Close();
-            //}
-            //if (frmkhachkhongconthue.IsAccessible == false)
-            //{
-            //    frmkhachkhongconthue = new frmQuanLyKhachKhongConThue();
-            //    frmkhachkhongconthue.MdiParent = this;
-            //    frmkhachkhongconthue.Show();
-            //}
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
+            if (frmqlhd.IsAccessible == false)
+            {
+                frmqlhd = new frmQuanLyHopDong();
+                frmqlhd.MdiParent = this;
+                frmqlhd.Show();
+            }
         }
 
         private void mnuLapHopDong_Click(object sender, EventArgs e)
@@ -100,7 +101,7 @@ namespace NhanVienTuVan
             }
             if (frmdmk.IsAccessible == false)
             {
-                frmdmk = new frmDoiMatKhau();
+                frmdmk = new frmDoiMatKhau(MaNV);
                 frmdmk.MdiParent = this;
                 frmdmk.Show();
             }
@@ -109,7 +110,21 @@ namespace NhanVienTuVan
         private void mnuDangXuat_Click(object sender, EventArgs e)
         {
             this.Owner.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void mnuTraPhong_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
+            if (frmtp.IsAccessible == false)
+            {
+                frmtp = new frmTraPhong();
+                frmtp.MdiParent = this;
+                frmtp.Show();
+            }
         }
     }
 }

@@ -54,3 +54,9 @@ E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\DAL.pdb
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\DAL.dll.config
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmDanhSachTatCaKhachHang.resources
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmDienThongTinHopDong.resources
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\BUS.dll
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\BUS.pdb
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\BUS.dll.config
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmDienThongTinKhachHang.resources
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmTraPhong.resources
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmQuanLyHopDong.resources

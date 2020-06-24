@@ -37,7 +37,6 @@
             this.lvwDSPhieuKiemTra = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -59,9 +58,9 @@
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.btnThoat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnLapHopDong = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnYeuCauKiemTraPhong = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnThoat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
             this.kryptonSplitContainer1.Panel1.SuspendLayout();
@@ -106,7 +105,7 @@
             this.kryptonWrapLabel1.AutoSize = false;
             this.kryptonWrapLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonWrapLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.kryptonWrapLabel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonWrapLabel1.Name = "kryptonWrapLabel1";
             this.kryptonWrapLabel1.Size = new System.Drawing.Size(1046, 35);
@@ -148,7 +147,7 @@
             this.kryptonWrapLabel2.AutoSize = false;
             this.kryptonWrapLabel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonWrapLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.kryptonWrapLabel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonWrapLabel2.Name = "kryptonWrapLabel2";
             this.kryptonWrapLabel2.Size = new System.Drawing.Size(236, 35);
@@ -200,7 +199,6 @@
             this.lvwDSPhieuKiemTra.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
@@ -224,28 +222,23 @@
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Mã NV Tư Vấn";
-            this.columnHeader2.Width = 120;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Mã NV Kỹ Thuật";
-            this.columnHeader3.Width = 120;
+            this.columnHeader2.Text = "Nhân Viên Tạo Phiếu";
+            this.columnHeader2.Width = 182;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Ngày Tạo";
-            this.columnHeader4.Width = 100;
+            this.columnHeader4.Width = 147;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Tình Trạng Phòng";
-            this.columnHeader5.Width = 120;
+            this.columnHeader5.Width = 183;
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Trạng Thái";
-            this.columnHeader6.Width = 120;
+            this.columnHeader6.Text = "Trạng Thái Phiếu";
+            this.columnHeader6.Width = 136;
             // 
             // kryptonLabel9
             // 
@@ -383,6 +376,15 @@
             this.kryptonLabel1.TabIndex = 1;
             this.kryptonLabel1.Values.Text = "Mã Phòng";
             // 
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(496, 277);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(192, 39);
+            this.btnThoat.TabIndex = 0;
+            this.btnThoat.Values.Text = "THOÁT";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
             // btnLapHopDong
             // 
             this.btnLapHopDong.Location = new System.Drawing.Point(276, 277);
@@ -400,15 +402,6 @@
             this.btnYeuCauKiemTraPhong.TabIndex = 0;
             this.btnYeuCauKiemTraPhong.Values.Text = "GỬI YÊU CẦU KIỂM TRA PHÒNG";
             this.btnYeuCauKiemTraPhong.Click += new System.EventHandler(this.btnYeuCauKiemTraPhong_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Location = new System.Drawing.Point(496, 277);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(192, 39);
-            this.btnThoat.TabIndex = 0;
-            this.btnThoat.Values.Text = "THOÁT";
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmLapHopDong
             // 
@@ -457,7 +450,6 @@
         private System.Windows.Forms.ListView lvwDSPhieuKiemTra;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;

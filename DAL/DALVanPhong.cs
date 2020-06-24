@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,13 +17,11 @@ namespace DAL
         }
         public bool KiemTraPhongDaThueChua(string maPhong)
         {
-            var pkt = dt.tblPhieuYeuCauKiemTraPhong.Where(x => x.MaPhong == maPhong).FirstOrDefault();
-            if (pkt == null)
-                return false;
-            var hd = dt.tblHopDong.Where(x => x.MaPhieuKTra == pkt.MaPhieuKTra).FirstOrDefault();
+            var hd = (from p in dt.tblPhieuYeuCauKiemTraPhong
+                      join h in dt.tblHopDong on p.MaPhieuKTra equals h.MaPhieuKTra
+                      where p.MaPhong.Equals(maPhong) && h.TinhTrangHD == true
+                      select h).FirstOrDefault();
             if (hd == null)
-                return false;
-            if (hd.NgayTraThucTe < DateTime.Now)
                 return false;
             return true;
         }
@@ -54,6 +53,27 @@ namespace DAL
                     dsphong.Add(item);
             }
             return dsphong;
+        }
+
+        public bool TraPhong(string maPhong)
+        {
+            var hd = (from p in dt.tblPhieuYeuCauKiemTraPhong
+                      join h in dt.tblHopDong on p.MaPhieuKTra equals h.MaPhieuKTra
+                      where p.MaPhong.Equals(maPhong) && h.TinhTrangHD == true
+                      select h).FirstOrDefault();
+            if (hd == null)
+                return false;
+            try
+            {
+                hd.TinhTrangHD = false;
+                hd.NgayTraThucTe = DateTime.Now;
+                dt.SaveChanges();
+                return true;
+            }
+            catch(Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
     }
 }

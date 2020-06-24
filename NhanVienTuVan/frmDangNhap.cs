@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities;
-using NhanVienTuVan.VanPhongService;
+using DAL;
+using BUS;
 
 
 namespace NhanVienTuVan
@@ -20,18 +21,18 @@ namespace NhanVienTuVan
             InitializeComponent();
         }
 
-        ChoThueVanPhongServiceClient dt;
+        BUSNhanVienVaTaiKhoan busnv;
         eNhanVien nv;
         
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-            dt = new ChoThueVanPhongServiceClient();
+            busnv = new BUSNhanVienVaTaiKhoan();
         }
         int demDN;
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             
-            nv = dt.LayNhanVienDangNhap(txtTaiKhoan.Text, txtMatKhau.Text);
+            nv = busnv.LayNhanVienDangNhap(txtTaiKhoan.Text, txtMatKhau.Text);
             if (txtTaiKhoan.Text.Trim().Length == 0 || txtMatKhau.Text.Trim().Length == 0)
             {
                 demDN++;
@@ -40,7 +41,7 @@ namespace NhanVienTuVan
             else if (nv != null)
             {
                 frmMenu frmMN;
-                if (nv.ChucVu == 1)
+                if (nv.ChucVu == 1 || nv.ChucVu == 4)
                 {
                     frmMN = new frmMenu(nv);
                     frmMN.Owner = this;

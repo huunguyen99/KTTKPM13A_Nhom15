@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities;
-using NhanVienTuVan.VanPhongService;
 using DAL;
+using BUS;
 
 namespace NhanVienTuVan
 {
@@ -21,17 +21,17 @@ namespace NhanVienTuVan
             InitializeComponent();
             MaNV = manv;
         }
-        DALVanPhong dalvp;
-        DALPhieuYeuCauKiemTraPhong dalphieu;
+        BUSVanPhong busvp;
+        BUSPhieuYeuCauKiemTraPhong busphieu;
         List<eVanPhong> dsphongtrong;
         string maPhongChon;
         eVanPhong phongChon;
 
         private void frmLapHopDong_Load(object sender, EventArgs e)
         {
-            dalvp = new DALVanPhong();
-            dalphieu = new DALPhieuYeuCauKiemTraPhong();
-            dsphongtrong = dalvp.LayDSVanPhongTrong().ToList();
+            busvp = new BUSVanPhong();
+            busphieu = new BUSPhieuYeuCauKiemTraPhong();
+            dsphongtrong = busvp.LayDSVanPhongTrong().ToList();
             LoadPhongLenTreeView(treDSPhong, dsphongtrong);
         }
         void LoadPhongLenTreeView(TreeView tre, List<eVanPhong> dsp)
@@ -50,8 +50,7 @@ namespace NhanVienTuVan
         void ThemItem(ePhieuYeuCauKiemTraPhong p, ListView lvw)
         {
             ListViewItem lvwitem = new ListViewItem(p.MaPhieuKTra.ToString());
-            lvwitem.SubItems.Add(p.MaNV.ToString());
-            lvwitem.SubItems.Add(p.MaNVKyThuat.ToString());
+            lvwitem.SubItems.Add(p.ENhanVien.TenNV.ToString());
             lvwitem.SubItems.Add(p.NgayTao.ToString("dd/MM/yyyy"));
             if(p.TrangThaiPhieu == false)
             {
@@ -84,7 +83,7 @@ namespace NhanVienTuVan
             {
                 maPhongChon = treDSPhong.SelectedNode.Tag.ToString();
                 phongChon = dsphongtrong.Where(x => x.MaPhong == maPhongChon).FirstOrDefault();
-                List<ePhieuYeuCauKiemTraPhong> dsphieu = dalphieu.LayDSPhieuDaDuyet(maPhongChon).ToList();
+                List<ePhieuYeuCauKiemTraPhong> dsphieu = busphieu.LayDSPhieuDaDuyet(maPhongChon).ToList();
                 LoadPhieuKiemTraLenListView(dsphieu, lvwDSPhieuKiemTra);
             }    
         }
@@ -104,7 +103,7 @@ namespace NhanVienTuVan
         {
             if (treDSPhong.SelectedNode != null)
             {
-                if (dalphieu.KiemTraPhongDaGuiPhieuKiemTraChua(maPhongChon) == true)
+                if (busphieu.KiemTraPhongDaGuiPhieuKiemTraChua(maPhongChon) == true)
                     MessageBox.Show("Bạn đã gửi yêu cầu kiểm tra thông tin cho phòng này rồi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 else
                 {
@@ -112,9 +111,9 @@ namespace NhanVienTuVan
                     if (hoi == DialogResult.Yes)
                     {
                         ePhieuYeuCauKiemTraPhong ph = TaoPhieKiemTra();
-                        dalphieu.TaoPhieuKiemTra(ph);
+                        busphieu.TaoPhieuKiemTra(ph);
                         MessageBox.Show("Gửi yêu cầu kiểm tra phòng thành công", "Thông báo");
-                        List<ePhieuYeuCauKiemTraPhong> dsphieu = dalphieu.LayDSPhieuDaDuyet(maPhongChon).ToList();
+                        List<ePhieuYeuCauKiemTraPhong> dsphieu = busphieu.LayDSPhieuDaDuyet(maPhongChon).ToList();
                         LoadPhieuKiemTraLenListView(dsphieu, lvwDSPhieuKiemTra);
                     }
                 }
@@ -139,8 +138,8 @@ namespace NhanVienTuVan
             {
                 MessageBox.Show("Phòng này đang hỏng. Không thể cho thuê", "Thông báo");
                 rtxtGhiChu.Clear();
-                dalphieu.XoaPhieuKiemTra(phChon.MaPhieuKTra);
-                List<ePhieuYeuCauKiemTraPhong> dsphieu = dalphieu.LayDSPhieuDaDuyet(maPhongChon).ToList();
+                busphieu.XoaPhieuKiemTra(phChon.MaPhieuKTra);
+                List<ePhieuYeuCauKiemTraPhong> dsphieu = busphieu.LayDSPhieuDaDuyet(maPhongChon).ToList();
                 LoadPhieuKiemTraLenListView(dsphieu, lvwDSPhieuKiemTra);
             }    
         }
@@ -161,10 +160,19 @@ namespace NhanVienTuVan
                         frmDanhSachTatCaKhachHang frmdskh = new frmDanhSachTatCaKhachHang(MaNV, phChon.MaPhieuKTra, phongChon.GiaThue);
                         if (frmdskh.ShowDialog() == DialogResult.OK)
                         {
-                            dsphongtrong = dalvp.LayDSVanPhongTrong().ToList();
+                            dsphongtrong = busvp.LayDSVanPhongTrong().ToList();
                             LoadPhongLenTreeView(treDSPhong, dsphongtrong);
                         }
                     }
+                    else if(hoi == DialogResult.No)
+                    {
+                        frmDienThongTinKhachHang frmkh = new frmDienThongTinKhachHang(MaNV, phChon.MaPhieuKTra, phongChon.GiaThue);
+                        if(frmkh.ShowDialog() == DialogResult.OK)
+                        {
+                            dsphongtrong = busvp.LayDSVanPhongTrong().ToList();
+                            LoadPhongLenTreeView(treDSPhong, dsphongtrong);
+                        }    
+                    }    
                 }
             }
             else

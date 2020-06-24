@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    [DataContract]
     public class eVanPhong
     {
         public eVanPhong()
@@ -16,21 +15,13 @@ namespace Entities
             dsPhieu = new HashSet<ePhieuYeuCauKiemTraPhong>();
         }
         [Key]
-        [DataMember]
         public string MaPhong { get; set; }
-        [DataMember]
         public string TenPhong { get; set; }
-        [DataMember]
         public decimal GiaThue { get; set; }
-        [DataMember]
         public int TangLau { get; set; }
-        [DataMember]
         public double DienTich { get; set; }
-        [DataMember]
         public int SoBongDen { get; set; }
-        [DataMember]
         public int SoMayLanh { get; set; }
-        [DataMember]
         public Boolean TinhTrang { get; set; }
         public ICollection<ePhieuYeuCauKiemTraPhong> dsPhieu { get; set; }
     }

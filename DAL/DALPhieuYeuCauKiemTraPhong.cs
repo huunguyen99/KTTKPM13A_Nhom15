@@ -71,7 +71,16 @@ namespace DAL
         public List<ePhieuYeuCauKiemTraPhong> LayDSPhieuDaDuyet(string maPhong)
         {
             var dsphieu = dt.tblPhieuYeuCauKiemTraPhong.Where(p => p.MaPhong == maPhong && p.TrangThaiPhieu == true).ToList();
-            return dsphieu;
+            var dshphieucanlay = new List<ePhieuYeuCauKiemTraPhong>();
+            foreach(var item in dsphieu)
+            {
+                var hd = (from n in dt.tblHopDong
+                          where n.MaPhieuKTra == item.MaPhieuKTra
+                          select n).FirstOrDefault();
+                if (hd == null)
+                    dshphieucanlay.Add(item);
+            }    
+            return dshphieucanlay;
         }
 
         public List<ePhieuYeuCauKiemTraPhong> LayDSPhieuChuaDuyet()

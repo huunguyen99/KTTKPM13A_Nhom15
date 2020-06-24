@@ -59,13 +59,12 @@
     <Compile Include="DALHoaDon.cs" />
     <Compile Include="DALHopDong.cs" />
     <Compile Include="DALKhachHang.cs" />
-    <Compile Include="DALNhanVien.cs" />
     <Compile Include="DALNhanVienVaTaiKhoan.cs" />
     <Compile Include="DALPhieuYeuCauKiemTraPhong.cs" />
     <Compile Include="DALVanPhong.cs" />
-    <Compile Include="Migrations\202006221747264_v1.cs" />
-    <Compile Include="Migrations\202006221747264_v1.designer.cs">
-      <DependentUpon>202006221747264_v1.cs</DependentUpon>
+    <Compile Include="Migrations\202006241052385_v1.cs" />
+    <Compile Include="Migrations\202006241052385_v1.designer.cs">
+      <DependentUpon>202006241052385_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="VanPhongDbContext.cs" />
@@ -76,8 +75,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006221747264_v1.resx">
-      <DependentUpon>202006221747264_v1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006241052385_v1.resx">
+      <DependentUpon>202006241052385_v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

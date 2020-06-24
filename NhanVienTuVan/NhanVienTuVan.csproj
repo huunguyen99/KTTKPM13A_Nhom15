@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BUS">
+      <HintPath>..\BUS\bin\Debug\BUS.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
       <HintPath>..\..\..\..\Thư Viện Lập Trình C Sharp\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
@@ -68,11 +71,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\VanPhongService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +107,18 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDienThongTinKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDienThongTinKhachHang.Designer.cs">
+      <DependentUpon>frmDienThongTinKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyHopDong.Designer.cs">
+      <DependentUpon>frmQuanLyHopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuanLyKhachConThue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +130,12 @@
     </Compile>
     <Compile Include="frmQuanLyKhachKhongConThue.Designer.cs">
       <DependentUpon>frmQuanLyKhachKhongConThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTraPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTraPhong.Designer.cs">
+      <DependentUpon>frmTraPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -141,11 +157,20 @@
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDienThongTinKhachHang.resx">
+      <DependentUpon>frmDienThongTinKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyHopDong.resx">
+      <DependentUpon>frmQuanLyHopDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyKhachConThue.resx">
       <DependentUpon>frmQuanLyKhachConThue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyKhachKhongConThue.resx">
       <DependentUpon>frmQuanLyKhachKhongConThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTraPhong.resx">
+      <DependentUpon>frmTraPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -156,16 +181,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\VanPhongService\ChoThueVanPhongService.wsdl" />
-    <None Include="Connected Services\VanPhongService\ChoThueVanPhongService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\VanPhongService\ChoThueVanPhongService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\VanPhongService\ChoThueVanPhongService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Entities.eKhachHang.datasource" />
     <None Include="Properties\DataSources\Entities.eNhanVien.datasource" />
@@ -192,24 +207,6 @@
       <Project>{FA818603-A42E-47A2-B132-9325CF76580E}</Project>
       <Name>Entities</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\VanPhongService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\VanPhongService\ChoThueVanPhongService.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\VanPhongService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\VanPhongService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\VanPhongService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
