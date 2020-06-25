@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Entities;
 using DAL;
 using BUS;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace Admin
 {
@@ -26,6 +27,21 @@ namespace Admin
             busnvtk = new BUSNhanVienVaTaiKhoan();
             dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVien();
             LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
+            ItemsCboChucVu(cboChucVu);
+            XuLyAutoComplete();
+        }
+        void ItemsCboChucVu(KryptonComboBox cbo)
+        {
+            List<clsChucVu> list = new List<clsChucVu>()
+            {
+                new clsChucVu {Ten = "Nhân Viên Tư Vấn", Value = 1},
+                new clsChucVu {Ten = "Nhân Viên Kỹ Thuật", Value = 2},
+                new clsChucVu {Ten = "Nhân Viên Kế Toán", Value = 3}
+            };
+            cbo.DataSource = list;
+            cbo.DisplayMember = "Ten";
+            cbo.ValueMember = "Value";
+            cbo.SelectedItem = list.FirstOrDefault();
         }
 
         void ThemItem(eTaiKhoan tk, ListView lvw)
@@ -85,11 +101,11 @@ namespace Admin
             else
                 txtGioiTinh.Text = "Nữ";
             if (tk.ENhanVien.ChucVu == 1)
-                txtChucVu.Text = "Nhân Viên Tư Vấn";
-            else if(tk.ENhanVien.ChucVu == 2)
-                txtChucVu.Text = "Nhân Viên Kỹ Thuật";
+                cboChucVu.SelectedValue = 1;
+            else if (tk.ENhanVien.ChucVu == 2)
+                cboChucVu.SelectedValue = 2;
             else
-                txtChucVu.Text = "Nhân Viên Kế Toán";
+                cboChucVu.SelectedValue = 3;
             if (tk.ENhanVien.Active == true)
                 txtTinhTrang.Text = "Vẫn còn làm việc";
             else
@@ -105,6 +121,161 @@ namespace Admin
                 tkChon = (eTaiKhoan)lvwDSNhanVien.SelectedItems[0].Tag;
                 TaiHienThongTinNhanVien(tkChon);
             }    
+        }
+
+        private void btnThemNhanVien_Click(object sender, EventArgs e)
+        {
+            frmThemNhanVien frmtnv = new frmThemNhanVien();
+            if(frmtnv.ShowDialog() == DialogResult.OK)
+            {
+                dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVien();
+                LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
+            }    
+        }
+
+        private void btnXoaNV_Click(object sender, EventArgs e)
+        {
+            if (lvwDSNhanVien.SelectedItems.Count > 0)
+            {
+                DialogResult hoiXoa = MessageBox.Show("Bạn có chắc chắn muốn xa thải nhân viên này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                if(hoiXoa == DialogResult.Yes)
+                {
+                    busnvtk.XoaNV(tkChon);
+                    MessageBox.Show("Xa thải nhân viên thành công", "Thông báo");
+                    dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVien();
+                    LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
+                }    
+            }
+            else
+                MessageBox.Show("Vui lòng chọn nhân viên cần xa thải", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        eNhanVien TaoNVSua()
+        {
+            eNhanVien nv = new eNhanVien();
+            nv.ChucVu = Convert.ToInt32(cboChucVu.SelectedValue);
+            nv.DiaChi = rtxtDiaChi.Text;
+            nv.QueQuan = rtxtQueQuan.Text;
+            nv.Email = txtEmail.Text;
+            nv.SDT = txtSoDT.Text;
+            nv.SoCMND = txtSoCMND.Text;
+            nv.TenNV = txtTenNV.Text;
+            nv.NgaySinh = dtpNgaySinh.Value;
+            return nv;
+        }
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (lvwDSNhanVien.SelectedItems.Count > 0)
+            {
+                DialogResult hoiSua = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin nhân viên này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                if (hoiSua == DialogResult.Yes)
+                {
+                    eNhanVien nv = TaoNVSua();
+                    busnvtk.SuaTTNhanVien(tkChon.MaNV, nv);
+                    MessageBox.Show("Sửa thông tin nhân viên thành công", "Thông báo");
+                    dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVien();
+                    LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
+                }
+            }
+            else
+                MessageBox.Show("Vui lòng chọn nhân viên cần chỉnh sửa thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        void XuLyAutoComplete()
+        {
+            if (rdoTimTheoCMND.Checked == true)
+            {
+                txtGiaTriTim.AutoCompleteCustomSource.Clear();
+                foreach (var item in dsnvtk)
+                {
+                    txtGiaTriTim.AutoCompleteCustomSource.Add(item.ENhanVien.SoCMND);
+                }
+            }
+            else if (rdoTimTheoSDT.Checked == true)
+            {
+                txtGiaTriTim.AutoCompleteCustomSource.Clear();
+                foreach (var item in dsnvtk)
+                {
+                    txtGiaTriTim.AutoCompleteCustomSource.Add(item.ENhanVien.SDT);
+                }
+            }
+            else if (rdoTimTheoTen.Checked == true)
+            {
+                txtGiaTriTim.AutoCompleteCustomSource.Clear();
+                foreach (var item in dsnvtk)
+                {
+                    txtGiaTriTim.AutoCompleteCustomSource.Add(item.ENhanVien.TenNV);
+                }
+            }
+        }
+
+
+
+        int TimKiem(string giaTriTim)
+        {
+            eTaiKhoan tk;
+            if (rdoTimTheoCMND.Checked == true)
+            {
+                for (int i = 0; i < lvwDSNhanVien.Items.Count; i++)
+                {
+                    tk = (eTaiKhoan)lvwDSNhanVien.Items[i].Tag;
+                    if (tk.ENhanVien.SoCMND.Contains(giaTriTim))
+                        return i;
+                }
+            }
+            else if (rdoTimTheoSDT.Checked == true)
+            {
+                for (int i = 0; i < lvwDSNhanVien.Items.Count; i++)
+                {
+                    tk = (eTaiKhoan)lvwDSNhanVien.Items[i].Tag;
+                    if (tk.ENhanVien.SDT.Contains(giaTriTim))
+                        return i;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < lvwDSNhanVien.Items.Count; i++)
+                {
+                    tk = (eTaiKhoan)lvwDSNhanVien.Items[i].Tag;
+                    if (tk.ENhanVien.TenNV.Contains(giaTriTim))
+                        return i;
+                }
+            }
+            return -1;
+        }
+
+        private void btnTimKiemNV_Click(object sender, EventArgs e)
+        {
+            int kq = TimKiem(txtGiaTriTim.Text);
+            if (kq == -1)
+                MessageBox.Show("Không tìm thấy khách hàng có thông tin điền vào", "Thông báo");
+            else
+            {
+                if (lvwDSNhanVien.SelectedItems.Count > 0)
+                {
+                    int vitritruoc = lvwDSNhanVien.SelectedIndices[0];
+                    lvwDSNhanVien.Items[vitritruoc].Selected = false;
+                }
+                lvwDSNhanVien.Items[kq].Selected = true;
+                lvwDSNhanVien.Focus();
+                tkChon = (eTaiKhoan)lvwDSNhanVien.Items[kq].Tag;
+                TaiHienThongTinNhanVien(tkChon);
+            }
+        }
+
+        private void rdoTimTheoCMND_CheckedChanged(object sender, EventArgs e)
+        {
+            XuLyAutoComplete();
+        }
+
+        private void rdoTimTheoSDT_CheckedChanged(object sender, EventArgs e)
+        {
+            XuLyAutoComplete();
+        }
+
+        private void rdoTimTheoTen_CheckedChanged(object sender, EventArgs e)
+        {
+            XuLyAutoComplete();
         }
     }
 }

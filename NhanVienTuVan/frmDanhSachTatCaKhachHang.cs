@@ -33,6 +33,7 @@ namespace NhanVienTuVan
             buskh = new BUSKhachHang();
             dskh = buskh.LayDSTatCaKhachHang();
             LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
+            XuLyAutoComplete();
         }
         void ThemItem(eKhachHang k, ListView lvw)
         {
@@ -136,20 +137,7 @@ namespace NhanVienTuVan
             }    
         }
 
-        private void rdoTimTheoCMND_CheckedChanged(object sender, EventArgs e)
-        {
-            XuLyAutoComplete();
-        }
-
-        private void rdoTimTheoSDT_CheckedChanged(object sender, EventArgs e)
-        {
-            XuLyAutoComplete();
-        }
-
-        private void rdoTimTheoTen_CheckedChanged(object sender, EventArgs e)
-        {
-            XuLyAutoComplete();
-        }
+        
 
         int TimKiem(string giaTriTim)
         {
@@ -184,6 +172,21 @@ namespace NhanVienTuVan
             return -1;
         }
 
+        private void rdoTimTheoCMND_CheckedChanged(object sender, EventArgs e)
+        {
+            XuLyAutoComplete();
+        }
+
+        private void rdoTimTheoSDT_CheckedChanged(object sender, EventArgs e)
+        {
+            XuLyAutoComplete();
+        }
+
+        private void rdoTimTheoTen_CheckedChanged(object sender, EventArgs e)
+        {
+            XuLyAutoComplete();
+        }
+
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             int kq = TimKiem(txtGiaTriTim.Text);
@@ -198,7 +201,7 @@ namespace NhanVienTuVan
                 }
                 lvwDSKhachHang.Items[kq].Selected = true;
                 lvwDSKhachHang.Focus();
-                khChon = (eKhachHang)lvwDSKhachHang.SelectedItems[kq].Tag;
+                khChon = (eKhachHang)lvwDSKhachHang.Items[kq].Tag;
                 TaiHienKHTuListView(khChon);
             }
         }

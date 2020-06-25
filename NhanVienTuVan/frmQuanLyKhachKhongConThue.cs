@@ -224,7 +224,7 @@ namespace NhanVienTuVan
                 }
                 lvwDSKhachHang.Items[kq].Selected = true;
                 lvwDSKhachHang.Focus();
-                khChon = (eKhachHang)lvwDSKhachHang.SelectedItems[kq].Tag;
+                khChon = (eKhachHang)lvwDSKhachHang.Items[kq].Tag;
                 TaiHienKHTuListView(khChon);
             }
         }

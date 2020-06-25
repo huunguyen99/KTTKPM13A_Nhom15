@@ -35,5 +35,27 @@ namespace BUS
         {
             return dt.LayDSTaiKhoanVaNhanVien();
         }
+
+        public void ThemNhanVien(eNhanVien nv)
+        {
+            dt.ThemNhanVien(nv);
+        }
+        public eTaiKhoan KiemTraTKTonTai(string tenTK)
+        {
+            return dt.KiemTraTKTonTai(tenTK);
+        }
+        public void ThemTK(eTaiKhoan tk)
+        {
+            dt.ThemTK(tk);
+        }
+
+        public void XoaNV(eTaiKhoan nv)
+        {
+            dt.XoaNV(nv);
+        }
+        public void SuaTTNhanVien(int maNV, eNhanVien nvSua)
+        {
+            dt.SuaTTNhanVien(maNV, nvSua);
+        }
     }
 }

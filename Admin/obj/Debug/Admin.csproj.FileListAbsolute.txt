@@ -33,3 +33,4 @@ E:\KTTKPM13A_Nhom15\Admin\obj\Debug\Admin.csproj.CopyComplete
 E:\KTTKPM13A_Nhom15\Admin\obj\Debug\Admin.exe
 E:\KTTKPM13A_Nhom15\Admin\obj\Debug\Admin.pdb
 E:\KTTKPM13A_Nhom15\Admin\obj\Debug\Admin.csprojAssemblyReference.cache
+E:\KTTKPM13A_Nhom15\Admin\obj\Debug\Admin.frmThemNhanVien.resources
