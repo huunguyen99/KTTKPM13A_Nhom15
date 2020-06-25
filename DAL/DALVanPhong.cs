@@ -57,9 +57,8 @@ namespace DAL
 
         public bool TraPhong(string maPhong)
         {
-            var hd = (from p in dt.tblPhieuYeuCauKiemTraPhong
-                      join h in dt.tblHopDong on p.MaPhieuKTra equals h.MaPhieuKTra
-                      where p.MaPhong.Equals(maPhong) && h.TinhTrangHD == true
+            var hd = (from h in dt.tblHopDong
+                      where h.EPhieu.MaPhong.Equals(maPhong) && h.TinhTrangHD == true
                       select h).FirstOrDefault();
             if (hd == null)
                 return false;

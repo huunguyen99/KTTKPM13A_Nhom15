@@ -31,8 +31,7 @@ namespace DAL
         public List<eHopDong> LayDSHopDongConHan(string maPhong)
         {
             var ds = (from n in dt.tblHopDong
-                      join p in dt.tblPhieuYeuCauKiemTraPhong on n.MaPhieuKTra equals p.MaPhieuKTra
-                      where n.TinhTrangHD == true && p.MaPhong == maPhong
+                      where n.TinhTrangHD == true && n.EPhieu.MaPhong == maPhong
                       select n).ToList();
             return ds;
         }

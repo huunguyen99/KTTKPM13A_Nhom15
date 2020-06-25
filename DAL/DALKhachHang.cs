@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,21 +18,17 @@ namespace DAL
         }
         public List<eKhachHang> LayDSKhachHangDangThue(string maPhong)
         {
-            var dskh = (from k in dt.tblKhachHang
-                        join h in dt.tblHopDong on k.MaKH equals h.MaKH
-                        join p in dt.tblPhieuYeuCauKiemTraPhong on h.MaPhieuKTra equals p.MaPhieuKTra
-                        where h.TinhTrangHD == true && p.MaPhong == maPhong && k.Active == true
-                        select k).ToList();
+            var dskh = (from h in dt.tblHopDong
+                        where h.TinhTrangHD == true && h.EPhieu.MaPhong.Equals(maPhong) && h.EKhachHang.Active == true
+                        select h.EKhachHang).ToList();
             return dskh;
         }
 
         public List<eKhachHang> LayDSKhachHangKhongConThue()
         {
-            var dskh = (from k in dt.tblKhachHang
-                        join h in dt.tblHopDong on k.MaKH equals h.MaKH
-                        join p in dt.tblPhieuYeuCauKiemTraPhong on h.MaPhieuKTra equals p.MaPhieuKTra
-                        where h.TinhTrangHD == false && k.Active == true
-                        select k).ToList();
+            var dskh = (from h in dt.tblHopDong
+                        where h.TinhTrangHD == false && h.EKhachHang.Active == true
+                        select h.EKhachHang).ToList();
             return dskh;
         }
         public List<eKhachHang> LayDSTatCaKhachHang()
@@ -87,8 +84,8 @@ namespace DAL
         public bool SuaKH(eKhachHang khCanSua, eKhachHang khSua)
         {
             var kh = (from n in dt.tblKhachHang
-                         where n.MaKH.Equals(khCanSua.MaKH)
-                         select n).FirstOrDefault();
+                      where n.MaKH.Equals(khCanSua.MaKH)
+                      select n).FirstOrDefault();
             if (kh == null)
                 return false;
             try
