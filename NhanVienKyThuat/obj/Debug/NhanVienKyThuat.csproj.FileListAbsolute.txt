@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\bin\Debug\NhanVienKyThuat.exe.config
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\bin\Debug\NhanVienKyThuat.exe
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\bin\Debug\NhanVienKyThuat.pdb
@@ -18,3 +19,19 @@ E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.fr
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.frmMenu.resources
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.frmQuanLyPhong.resources
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.frmDoiMatKhau.resources
+=======
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\NhanVienKyThuat.exe.config
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\NhanVienKyThuat.exe
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\NhanVienKyThuat.pdb
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\EntityFramework.dll
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\EntityFramework.SqlServer.dll
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\EntityFramework.xml
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\EntityFramework.SqlServer.xml
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.csprojAssemblyReference.cache
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.Properties.Resources.resources
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.csproj.GenerateResource.cache
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.csproj.CoreCompileInputs.cache
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.csproj.CopyComplete
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.exe
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.pdb
+>>>>>>> 3c6c56bd877e47a4c61c041a4e7835117f5f4bdd

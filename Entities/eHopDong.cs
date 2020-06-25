@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    [DataContract]
     public class eHopDong
     {
         public eHopDong()
@@ -16,30 +15,19 @@ namespace Entities
             dsHoaDon = new HashSet<eHoaDon>();
         }
         [Key]
-        [DataMember]
         public int MaHopDong { get; set; }
-        [DataMember]
         public int MaNV { get; set; }
-        [DataMember]
         public int MaKH { get; set; }
-        [DataMember]
         public int MaPhieuKTra { get; set; }
-        [DataMember]
         public decimal TienCoc { get; set; }
-        [DataMember]
         public DateTime NgayTao { get; set; }
-        [DataMember]
         public DateTime NgayThue { get; set; }
-        [DataMember]
         public DateTime NgayTra { get; set; }
-        [DataMember]
         public DateTime NgayTraThucTe { get; set; }
-        [DataMember]
+        public Boolean TinhTrangHD { get; set; }
         public virtual eNhanVien ENhanVien { get; set; }
-        [DataMember]
         public virtual eKhachHang EKhachHang { get; set; }
 
-        [DataMember]
         public virtual ePhieuYeuCauKiemTraPhong EPhieu { get; set; }
         public ICollection<eHoaDon> dsHoaDon { get; set; }
 

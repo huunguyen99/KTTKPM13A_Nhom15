@@ -66,6 +66,7 @@
             this.kryptonRibbonGroup11 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple9 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.mnuLapHopDong = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.mnuTraPhong = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonTab2 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup2 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
@@ -173,6 +174,7 @@
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab8,
             this.kryptonRibbonTab2});
+            this.kryptonRibbon1.SelectedContext = null;
             this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1021, 143);
             this.kryptonRibbon1.TabIndex = 3;
@@ -268,12 +270,18 @@
             // kryptonRibbonGroupTriple9
             // 
             this.kryptonRibbonGroupTriple9.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.mnuLapHopDong});
+            this.mnuLapHopDong,
+            this.mnuTraPhong});
             // 
             // mnuLapHopDong
             // 
             this.mnuLapHopDong.TextLine1 = "Lập Hợp Đồng";
             this.mnuLapHopDong.Click += new System.EventHandler(this.mnuLapHopDong_Click);
+            // 
+            // mnuTraPhong
+            // 
+            this.mnuTraPhong.TextLine1 = "Trả Phòng";
+            this.mnuTraPhong.Click += new System.EventHandler(this.mnuTraPhong_Click);
             // 
             // kryptonRibbonTab2
             // 
@@ -374,6 +382,7 @@
         public ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton mnuDoiMatKhau;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple10;
         public ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton mnuDangXuat;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton mnuTraPhong;
     }
 }
 

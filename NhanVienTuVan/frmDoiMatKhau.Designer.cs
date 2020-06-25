@@ -45,6 +45,7 @@
             this.btnHuy.Size = new System.Drawing.Size(96, 35);
             this.btnHuy.TabIndex = 12;
             this.btnHuy.Values.Text = "HỦY";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnXacNhan
             // 
@@ -53,6 +54,7 @@
             this.btnXacNhan.Size = new System.Drawing.Size(96, 35);
             this.btnXacNhan.TabIndex = 11;
             this.btnXacNhan.Values.Text = "XÁC NHẬN";
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // txtXacNhanMatKhauMoi
             // 
@@ -121,6 +123,7 @@
             this.Name = "frmDoiMatKhau";
             this.Text = "ĐỔI MẬT KHẨU";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmDoiMatKhau_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

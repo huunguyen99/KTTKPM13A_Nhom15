@@ -28,15 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            this.txtGioiTinh = new System.Windows.Forms.TextBox();
-            this.txtQueQuan = new System.Windows.Forms.TextBox();
-            this.txtNgaySinh = new System.Windows.Forms.TextBox();
-            this.txtSoCMND = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtSoDT = new System.Windows.Forms.TextBox();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.txtMaKH = new System.Windows.Forms.TextBox();
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -63,6 +55,14 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtSoDT = new System.Windows.Forms.TextBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.txtMaKH = new System.Windows.Forms.TextBox();
+            this.txtSoCMND = new System.Windows.Forms.TextBox();
+            this.txtGioiTinh = new System.Windows.Forms.TextBox();
+            this.dtpNgaySinh = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.rtxtDiaChi = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
             this.kryptonSplitContainer1.Panel1.SuspendLayout();
@@ -87,81 +87,9 @@
             this.kryptonGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtGioiTinh
-            // 
-            this.txtGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGioiTinh.Location = new System.Drawing.Point(576, 90);
-            this.txtGioiTinh.Name = "txtGioiTinh";
-            this.txtGioiTinh.ReadOnly = true;
-            this.txtGioiTinh.Size = new System.Drawing.Size(238, 22);
-            this.txtGioiTinh.TabIndex = 8;
-            // 
-            // txtQueQuan
-            // 
-            this.txtQueQuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQueQuan.Location = new System.Drawing.Point(576, 59);
-            this.txtQueQuan.Name = "txtQueQuan";
-            this.txtQueQuan.ReadOnly = true;
-            this.txtQueQuan.Size = new System.Drawing.Size(238, 22);
-            this.txtQueQuan.TabIndex = 7;
-            // 
-            // txtNgaySinh
-            // 
-            this.txtNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgaySinh.Location = new System.Drawing.Point(576, 28);
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.ReadOnly = true;
-            this.txtNgaySinh.Size = new System.Drawing.Size(238, 22);
-            this.txtNgaySinh.TabIndex = 6;
-            // 
-            // txtSoCMND
-            // 
-            this.txtSoCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoCMND.Location = new System.Drawing.Point(576, 121);
-            this.txtSoCMND.Name = "txtSoCMND";
-            this.txtSoCMND.ReadOnly = true;
-            this.txtSoCMND.Size = new System.Drawing.Size(238, 22);
-            this.txtSoCMND.TabIndex = 4;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(178, 120);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(238, 22);
-            this.txtEmail.TabIndex = 3;
-            // 
-            // txtSoDT
-            // 
-            this.txtSoDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoDT.Location = new System.Drawing.Point(178, 90);
-            this.txtSoDT.Name = "txtSoDT";
-            this.txtSoDT.ReadOnly = true;
-            this.txtSoDT.Size = new System.Drawing.Size(238, 22);
-            this.txtSoDT.TabIndex = 2;
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.Location = new System.Drawing.Point(178, 60);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.ReadOnly = true;
-            this.txtHoTen.Size = new System.Drawing.Size(238, 22);
-            this.txtHoTen.TabIndex = 1;
-            // 
-            // txtMaKH
-            // 
-            this.txtMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKH.Location = new System.Drawing.Point(178, 30);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.ReadOnly = true;
-            this.txtMaKH.Size = new System.Drawing.Size(238, 22);
-            this.txtMaKH.TabIndex = 0;
-            // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(497, 90);
+            this.kryptonLabel6.Location = new System.Drawing.Point(497, 59);
             this.kryptonLabel6.Name = "kryptonLabel6";
             this.kryptonLabel6.Size = new System.Drawing.Size(59, 20);
             this.kryptonLabel6.TabIndex = 29;
@@ -177,7 +105,7 @@
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(497, 60);
+            this.kryptonLabel5.Location = new System.Drawing.Point(497, 117);
             this.kryptonLabel5.Name = "kryptonLabel5";
             this.kryptonLabel5.Size = new System.Drawing.Size(49, 20);
             this.kryptonLabel5.TabIndex = 27;
@@ -185,7 +113,7 @@
             // 
             // kryptonLabel9
             // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(497, 120);
+            this.kryptonLabel9.Location = new System.Drawing.Point(497, 88);
             this.kryptonLabel9.Name = "kryptonLabel9";
             this.kryptonLabel9.Size = new System.Drawing.Size(64, 20);
             this.kryptonLabel9.TabIndex = 26;
@@ -226,17 +154,17 @@
             // btnThoat
             // 
             this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThoat.Location = new System.Drawing.Point(576, 170);
+            this.btnThoat.Location = new System.Drawing.Point(576, 194);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(102, 38);
             this.btnThoat.TabIndex = 14;
             this.btnThoat.Values.Text = "THOÁT";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnSuaThongTin
             // 
             this.btnSuaThongTin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSuaThongTin.Enabled = false;
-            this.btnSuaThongTin.Location = new System.Drawing.Point(314, 170);
+            this.btnSuaThongTin.Location = new System.Drawing.Point(314, 194);
             this.btnSuaThongTin.Name = "btnSuaThongTin";
             this.btnSuaThongTin.Size = new System.Drawing.Size(102, 38);
             this.btnSuaThongTin.TabIndex = 13;
@@ -258,8 +186,8 @@
             // kryptonSplitContainer1.Panel2
             // 
             this.kryptonSplitContainer1.Panel2.Controls.Add(this.kryptonSplitContainer2);
-            this.kryptonSplitContainer1.Size = new System.Drawing.Size(1109, 468);
-            this.kryptonSplitContainer1.SplitterDistance = 28;
+            this.kryptonSplitContainer1.Size = new System.Drawing.Size(1109, 528);
+            this.kryptonSplitContainer1.SplitterDistance = 31;
             this.kryptonSplitContainer1.TabIndex = 1;
             // 
             // kryptonWrapLabel1
@@ -270,7 +198,7 @@
             this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.kryptonWrapLabel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonWrapLabel1.Name = "kryptonWrapLabel1";
-            this.kryptonWrapLabel1.Size = new System.Drawing.Size(1109, 28);
+            this.kryptonWrapLabel1.Size = new System.Drawing.Size(1109, 31);
             this.kryptonWrapLabel1.StateCommon.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonWrapLabel1.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.kryptonWrapLabel1.Text = "DANH SÁCH KHÁCH HÀNG";
@@ -291,7 +219,7 @@
             // kryptonSplitContainer2.Panel2
             // 
             this.kryptonSplitContainer2.Panel2.Controls.Add(this.kryptonSplitContainer3);
-            this.kryptonSplitContainer2.Size = new System.Drawing.Size(1109, 435);
+            this.kryptonSplitContainer2.Size = new System.Drawing.Size(1109, 492);
             this.kryptonSplitContainer2.SplitterDistance = 233;
             this.kryptonSplitContainer2.TabIndex = 0;
             // 
@@ -301,7 +229,7 @@
             this.treDSPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treDSPhong.Location = new System.Drawing.Point(0, 35);
             this.treDSPhong.Name = "treDSPhong";
-            this.treDSPhong.Size = new System.Drawing.Size(233, 400);
+            this.treDSPhong.Size = new System.Drawing.Size(233, 457);
             this.treDSPhong.TabIndex = 10;
             this.treDSPhong.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treDSPhong_AfterSelect);
             // 
@@ -310,7 +238,7 @@
             this.kryptonWrapLabel2.AutoSize = false;
             this.kryptonWrapLabel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonWrapLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
             this.kryptonWrapLabel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonWrapLabel2.Name = "kryptonWrapLabel2";
             this.kryptonWrapLabel2.Size = new System.Drawing.Size(233, 35);
@@ -333,8 +261,8 @@
             // kryptonSplitContainer3.Panel2
             // 
             this.kryptonSplitContainer3.Panel2.Controls.Add(this.kryptonGroupBox1);
-            this.kryptonSplitContainer3.Size = new System.Drawing.Size(871, 435);
-            this.kryptonSplitContainer3.SplitterDistance = 173;
+            this.kryptonSplitContainer3.Size = new System.Drawing.Size(871, 492);
+            this.kryptonSplitContainer3.SplitterDistance = 176;
             this.kryptonSplitContainer3.TabIndex = 0;
             // 
             // lvwDSKhachHang
@@ -354,13 +282,14 @@
             this.lvwDSKhachHang.GridLines = true;
             this.lvwDSKhachHang.HideSelection = false;
             this.lvwDSKhachHang.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.lvwDSKhachHang.Location = new System.Drawing.Point(0, 0);
             this.lvwDSKhachHang.Name = "lvwDSKhachHang";
-            this.lvwDSKhachHang.Size = new System.Drawing.Size(871, 173);
+            this.lvwDSKhachHang.Size = new System.Drawing.Size(871, 176);
             this.lvwDSKhachHang.TabIndex = 8;
             this.lvwDSKhachHang.UseCompatibleStateImageBehavior = false;
             this.lvwDSKhachHang.View = System.Windows.Forms.View.Details;
+            this.lvwDSKhachHang.SelectedIndexChanged += new System.EventHandler(this.lvwDSKhachHang_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -410,9 +339,9 @@
             // 
             // kryptonGroupBox1.Panel
             // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.rtxtDiaChi);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.dtpNgaySinh);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtGioiTinh);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.txtQueQuan);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.txtNgaySinh);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtSoCMND);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtEmail);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtSoDT);
@@ -428,15 +357,79 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
             this.kryptonGroupBox1.Panel.Controls.Add(this.btnThoat);
             this.kryptonGroupBox1.Panel.Controls.Add(this.btnSuaThongTin);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(871, 257);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(871, 311);
             this.kryptonGroupBox1.TabIndex = 5;
             this.kryptonGroupBox1.Values.Heading = "THÔNG TIN CHI TIẾT";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(178, 120);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(238, 22);
+            this.txtEmail.TabIndex = 3;
+            // 
+            // txtSoDT
+            // 
+            this.txtSoDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoDT.Location = new System.Drawing.Point(178, 90);
+            this.txtSoDT.Name = "txtSoDT";
+            this.txtSoDT.Size = new System.Drawing.Size(238, 22);
+            this.txtSoDT.TabIndex = 2;
+            // 
+            // txtHoTen
+            // 
+            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.Location = new System.Drawing.Point(178, 60);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(238, 22);
+            this.txtHoTen.TabIndex = 1;
+            // 
+            // txtMaKH
+            // 
+            this.txtMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaKH.Location = new System.Drawing.Point(178, 30);
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(238, 22);
+            this.txtMaKH.TabIndex = 0;
+            // 
+            // txtSoCMND
+            // 
+            this.txtSoCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoCMND.Location = new System.Drawing.Point(576, 88);
+            this.txtSoCMND.Name = "txtSoCMND";
+            this.txtSoCMND.Size = new System.Drawing.Size(238, 22);
+            this.txtSoCMND.TabIndex = 4;
+            // 
+            // txtGioiTinh
+            // 
+            this.txtGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGioiTinh.Location = new System.Drawing.Point(576, 58);
+            this.txtGioiTinh.Name = "txtGioiTinh";
+            this.txtGioiTinh.Size = new System.Drawing.Size(238, 22);
+            this.txtGioiTinh.TabIndex = 8;
+            // 
+            // dtpNgaySinh
+            // 
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(576, 29);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(238, 21);
+            this.dtpNgaySinh.TabIndex = 35;
+            // 
+            // rtxtDiaChi
+            // 
+            this.rtxtDiaChi.Location = new System.Drawing.Point(576, 122);
+            this.rtxtDiaChi.Name = "rtxtDiaChi";
+            this.rtxtDiaChi.Size = new System.Drawing.Size(238, 56);
+            this.rtxtDiaChi.TabIndex = 36;
+            this.rtxtDiaChi.Text = "";
             // 
             // frmQuanLyKhachConThue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1109, 468);
+            this.ClientSize = new System.Drawing.Size(1109, 528);
             this.ControlBox = false;
             this.Controls.Add(this.kryptonSplitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -473,14 +466,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtGioiTinh;
-        private System.Windows.Forms.TextBox txtQueQuan;
-        private System.Windows.Forms.TextBox txtNgaySinh;
-        private System.Windows.Forms.TextBox txtSoCMND;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtSoDT;
-        private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.TextBox txtMaKH;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel6;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel10;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
@@ -507,5 +492,13 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtpNgaySinh;
+        private System.Windows.Forms.TextBox txtGioiTinh;
+        private System.Windows.Forms.TextBox txtSoCMND;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtSoDT;
+        private System.Windows.Forms.TextBox txtHoTen;
+        private System.Windows.Forms.TextBox txtMaKH;
+        private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox rtxtDiaChi;
     }
 }
