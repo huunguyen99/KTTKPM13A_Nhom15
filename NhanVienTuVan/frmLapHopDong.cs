@@ -95,6 +95,7 @@ namespace NhanVienTuVan
             ph.TinhTrangPhong = false;
             ph.MaPhong = maPhongChon;
             ph.MaNV = MaNV;
+            ph.MaNVKyThuat = 0;
             ph.GhiChu = null;
             ph.NgayTao = DateTime.Now;
             return ph;
@@ -136,7 +137,7 @@ namespace NhanVienTuVan
         {
             if(phChon.TinhTrangPhong == false && phChon.TrangThaiPhieu == true)
             {
-                MessageBox.Show("Phòng này đang hỏng. Không thể cho thuê", "Thông báo");
+                MessageBox.Show("Phòng này đang hỏng. Không thể cho thuê", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 rtxtGhiChu.Clear();
                 busphieu.XoaPhieuKiemTra(phChon.MaPhieuKTra);
                 List<ePhieuYeuCauKiemTraPhong> dsphieu = busphieu.LayDSPhieuDaDuyet(maPhongChon).ToList();
@@ -150,7 +151,7 @@ namespace NhanVienTuVan
             {
                 if (phChon.TinhTrangPhong == false)
                 {
-                    MessageBox.Show("Phòng này đang hỏng. Không thể cho thuê", "Thông báo");
+                    MessageBox.Show("Phòng này đang hỏng. Không thể cho thuê", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {

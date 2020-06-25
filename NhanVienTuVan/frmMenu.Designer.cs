@@ -177,7 +177,8 @@ namespace NhanVienTuVan
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab8,
             this.kryptonRibbonTab2});
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab8;
+            this.kryptonRibbon1.SelectedContext = null;
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1021, 115);
             this.kryptonRibbon1.TabIndex = 3;
             // 
@@ -330,7 +331,7 @@ namespace NhanVienTuVan
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CHƯƠNG TRÌNH QUẢN LÝ CHO THUÊ VĂN PHÒNG";
+            this.Text = "NHÂN VIÊN TƯ VẤN-CHƯƠNG TRÌNH QUẢN LÝ CHO THUÊ VĂN PHÒNG";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMenu_FormClosed);
             this.Load += new System.EventHandler(this.frmMenu_Load);

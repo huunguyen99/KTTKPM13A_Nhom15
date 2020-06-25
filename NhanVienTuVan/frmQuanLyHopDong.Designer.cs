@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
             this.txtTienCoc = new System.Windows.Forms.TextBox();
             this.txtKhachHang = new System.Windows.Forms.TextBox();
             this.txtMaHopDong = new System.Windows.Forms.TextBox();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.btnSua = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dtpNgayTra = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.dtpNgayThue = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.dtpNgayTao = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
@@ -59,7 +60,6 @@
             this.treDSPhong = new System.Windows.Forms.TreeView();
             this.kryptonWrapLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.kryptonSplitContainer3 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
-            this.btnSua = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
             this.kryptonGroupBox1.Panel.SuspendLayout();
@@ -136,8 +136,18 @@
             this.kryptonGroupBox1.TabIndex = 5;
             this.kryptonGroupBox1.Values.Heading = "THÔNG TIN CHI TIẾT";
             // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(309, 164);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(102, 38);
+            this.btnSua.TabIndex = 36;
+            this.btnSua.Values.Text = "SỬA";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
             // dtpNgayTra
             // 
+            this.dtpNgayTra.CalendarTodayDate = new System.DateTime(2020, 6, 25, 0, 0, 0, 0);
             this.dtpNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayTra.Location = new System.Drawing.Point(590, 88);
             this.dtpNgayTra.Name = "dtpNgayTra";
@@ -146,6 +156,7 @@
             // 
             // dtpNgayThue
             // 
+            this.dtpNgayThue.CalendarTodayDate = new System.DateTime(2020, 6, 25, 0, 0, 0, 0);
             this.dtpNgayThue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayThue.Location = new System.Drawing.Point(590, 59);
             this.dtpNgayThue.Name = "dtpNgayThue";
@@ -154,6 +165,7 @@
             // 
             // dtpNgayTao
             // 
+            this.dtpNgayTao.CalendarTodayDate = new System.DateTime(2020, 6, 25, 0, 0, 0, 0);
             this.dtpNgayTao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayTao.Location = new System.Drawing.Point(590, 30);
             this.dtpNgayTao.Name = "dtpNgayTao";
@@ -250,7 +262,7 @@
             this.lvwDSHopDong.GridLines = true;
             this.lvwDSHopDong.HideSelection = false;
             this.lvwDSHopDong.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem4});
             this.lvwDSHopDong.Location = new System.Drawing.Point(0, 0);
             this.lvwDSHopDong.Name = "lvwDSHopDong";
             this.lvwDSHopDong.Size = new System.Drawing.Size(897, 229);
@@ -321,6 +333,7 @@
             this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.kryptonWrapLabel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonWrapLabel1.Name = "kryptonWrapLabel1";
+            this.kryptonWrapLabel1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.kryptonWrapLabel1.Size = new System.Drawing.Size(1141, 38);
             this.kryptonWrapLabel1.StateCommon.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonWrapLabel1.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -361,9 +374,10 @@
             this.kryptonWrapLabel2.AutoSize = false;
             this.kryptonWrapLabel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonWrapLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.kryptonWrapLabel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonWrapLabel2.Name = "kryptonWrapLabel2";
+            this.kryptonWrapLabel2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.kryptonWrapLabel2.Size = new System.Drawing.Size(239, 35);
             this.kryptonWrapLabel2.StateCommon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonWrapLabel2.Text = "DANH SÁCH PHÒNG";
@@ -387,15 +401,6 @@
             this.kryptonSplitContainer3.Size = new System.Drawing.Size(897, 494);
             this.kryptonSplitContainer3.SplitterDistance = 229;
             this.kryptonSplitContainer3.TabIndex = 0;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(309, 164);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(102, 38);
-            this.btnSua.TabIndex = 36;
-            this.btnSua.Values.Text = "SỬA";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // frmQuanLyHopDong
             // 

@@ -15,9 +15,9 @@ namespace NhanVienTuVan
 {
     public partial class frmDienThongTinKhachHang : Form
     {
-        private static int MaNV;
-        private static decimal GiaThue;
-        private static int MaPhieu;
+        private static int MaNV { get; set; }
+        private static decimal GiaThue { get; set; }
+        private static int MaPhieu { get; set; }
         public frmDienThongTinKhachHang(int manv, int maphieu, decimal giathue)
         {
             InitializeComponent();

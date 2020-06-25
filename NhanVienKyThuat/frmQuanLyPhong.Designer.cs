@@ -29,16 +29,14 @@
         private void InitializeComponent()
         {
             this.kryptonSplitContainer1 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
-            this.lvwDSPhong = new System.Windows.Forms.ListView();
             this.kryptonSplitContainer2 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.kryptonRadioButton1 = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.rdoTimTheoTenPhong = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.rdoTimTheoMaPhong = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.lblTimKiem = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.btnTaiLai = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnTimKiemNV = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.txtGiaTriTim = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonRadioButton1 = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.kryptonSplitContainer3 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.txtTangLau = new System.Windows.Forms.TextBox();
@@ -58,11 +56,12 @@
             this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonGroupBox3 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.btnThem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnXoa = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnSua = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnLuu = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnThoat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnSua = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnXoa = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnThem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonSplitContainer4 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
+            this.lvwDSPhong = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -71,6 +70,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.kryptonWrapLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
             this.kryptonSplitContainer1.Panel1.SuspendLayout();
@@ -101,6 +101,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).BeginInit();
             this.kryptonGroupBox3.Panel.SuspendLayout();
             this.kryptonGroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer4.Panel1)).BeginInit();
+            this.kryptonSplitContainer4.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer4.Panel2)).BeginInit();
+            this.kryptonSplitContainer4.Panel2.SuspendLayout();
+            this.kryptonSplitContainer4.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonSplitContainer1
@@ -114,7 +120,7 @@
             // 
             // kryptonSplitContainer1.Panel1
             // 
-            this.kryptonSplitContainer1.Panel1.Controls.Add(this.lvwDSPhong);
+            this.kryptonSplitContainer1.Panel1.Controls.Add(this.kryptonSplitContainer4);
             // 
             // kryptonSplitContainer1.Panel2
             // 
@@ -122,29 +128,6 @@
             this.kryptonSplitContainer1.Size = new System.Drawing.Size(1065, 550);
             this.kryptonSplitContainer1.SplitterDistance = 244;
             this.kryptonSplitContainer1.TabIndex = 0;
-            // 
-            // lvwDSPhong
-            // 
-            this.lvwDSPhong.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8});
-            this.lvwDSPhong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvwDSPhong.FullRowSelect = true;
-            this.lvwDSPhong.GridLines = true;
-            this.lvwDSPhong.HideSelection = false;
-            this.lvwDSPhong.Location = new System.Drawing.Point(0, 0);
-            this.lvwDSPhong.Margin = new System.Windows.Forms.Padding(4);
-            this.lvwDSPhong.Name = "lvwDSPhong";
-            this.lvwDSPhong.Size = new System.Drawing.Size(1065, 244);
-            this.lvwDSPhong.TabIndex = 1;
-            this.lvwDSPhong.UseCompatibleStateImageBehavior = false;
-            this.lvwDSPhong.View = System.Windows.Forms.View.Details;
             // 
             // kryptonSplitContainer2
             // 
@@ -167,7 +150,10 @@
             // 
             // kryptonGroupBox2
             // 
+            this.kryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
+            this.kryptonGroupBox2.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox2.Location = new System.Drawing.Point(0, 0);
             this.kryptonGroupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
@@ -177,7 +163,6 @@
             this.kryptonGroupBox2.Panel.Controls.Add(this.rdoTimTheoTenPhong);
             this.kryptonGroupBox2.Panel.Controls.Add(this.rdoTimTheoMaPhong);
             this.kryptonGroupBox2.Panel.Controls.Add(this.lblTimKiem);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.btnTaiLai);
             this.kryptonGroupBox2.Panel.Controls.Add(this.btnTimKiemNV);
             this.kryptonGroupBox2.Panel.Controls.Add(this.txtGiaTriTim);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonRadioButton1);
@@ -185,17 +170,9 @@
             this.kryptonGroupBox2.TabIndex = 0;
             this.kryptonGroupBox2.Values.Heading = "Tìm kiếm";
             // 
-            // kryptonRadioButton1
-            // 
-            this.kryptonRadioButton1.Location = new System.Drawing.Point(74, 99);
-            this.kryptonRadioButton1.Name = "kryptonRadioButton1";
-            this.kryptonRadioButton1.Size = new System.Drawing.Size(18, 12);
-            this.kryptonRadioButton1.TabIndex = 0;
-            this.kryptonRadioButton1.Values.Text = "";
-            // 
             // rdoTimTheoTenPhong
             // 
-            this.rdoTimTheoTenPhong.Location = new System.Drawing.Point(66, 137);
+            this.rdoTimTheoTenPhong.Location = new System.Drawing.Point(139, 125);
             this.rdoTimTheoTenPhong.Name = "rdoTimTheoTenPhong";
             this.rdoTimTheoTenPhong.Size = new System.Drawing.Size(149, 20);
             this.rdoTimTheoTenPhong.TabIndex = 68;
@@ -204,7 +181,7 @@
             // rdoTimTheoMaPhong
             // 
             this.rdoTimTheoMaPhong.Checked = true;
-            this.rdoTimTheoMaPhong.Location = new System.Drawing.Point(66, 99);
+            this.rdoTimTheoMaPhong.Location = new System.Drawing.Point(25, 91);
             this.rdoTimTheoMaPhong.Name = "rdoTimTheoMaPhong";
             this.rdoTimTheoMaPhong.Size = new System.Drawing.Size(146, 20);
             this.rdoTimTheoMaPhong.TabIndex = 69;
@@ -219,21 +196,12 @@
             this.lblTimKiem.TabIndex = 67;
             this.lblTimKiem.Values.Text = "GIÁ TRỊ TÌM:";
             // 
-            // btnTaiLai
-            // 
-            this.btnTaiLai.Location = new System.Drawing.Point(228, 190);
-            this.btnTaiLai.Margin = new System.Windows.Forms.Padding(5);
-            this.btnTaiLai.Name = "btnTaiLai";
-            this.btnTaiLai.Size = new System.Drawing.Size(80, 35);
-            this.btnTaiLai.TabIndex = 63;
-            this.btnTaiLai.Values.Text = "TẢI LẠI";
-            // 
             // btnTimKiemNV
             // 
-            this.btnTimKiemNV.Location = new System.Drawing.Point(44, 190);
+            this.btnTimKiemNV.Location = new System.Drawing.Point(74, 190);
             this.btnTimKiemNV.Margin = new System.Windows.Forms.Padding(5);
             this.btnTimKiemNV.Name = "btnTimKiemNV";
-            this.btnTimKiemNV.Size = new System.Drawing.Size(80, 35);
+            this.btnTimKiemNV.Size = new System.Drawing.Size(171, 35);
             this.btnTimKiemNV.TabIndex = 65;
             this.btnTimKiemNV.Values.Text = "TÌM KIẾM";
             // 
@@ -246,6 +214,14 @@
             this.txtGiaTriTim.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.txtGiaTriTim.Size = new System.Drawing.Size(203, 23);
             this.txtGiaTriTim.TabIndex = 66;
+            // 
+            // kryptonRadioButton1
+            // 
+            this.kryptonRadioButton1.Location = new System.Drawing.Point(74, 99);
+            this.kryptonRadioButton1.Name = "kryptonRadioButton1";
+            this.kryptonRadioButton1.Size = new System.Drawing.Size(18, 12);
+            this.kryptonRadioButton1.TabIndex = 0;
+            this.kryptonRadioButton1.Values.Text = "";
             // 
             // kryptonSplitContainer3
             // 
@@ -268,7 +244,10 @@
             // 
             // kryptonGroupBox1
             // 
+            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
+            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.kryptonGroupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
@@ -433,20 +412,46 @@
             // 
             // kryptonGroupBox3
             // 
+            this.kryptonGroupBox3.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
+            this.kryptonGroupBox3.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox3.Location = new System.Drawing.Point(0, 0);
             this.kryptonGroupBox3.Name = "kryptonGroupBox3";
             // 
             // kryptonGroupBox3.Panel
             // 
             this.kryptonGroupBox3.Panel.Controls.Add(this.btnThoat);
-            this.kryptonGroupBox3.Panel.Controls.Add(this.btnLuu);
             this.kryptonGroupBox3.Panel.Controls.Add(this.btnSua);
             this.kryptonGroupBox3.Panel.Controls.Add(this.btnXoa);
             this.kryptonGroupBox3.Panel.Controls.Add(this.btnThem);
             this.kryptonGroupBox3.Size = new System.Drawing.Size(708, 73);
             this.kryptonGroupBox3.TabIndex = 0;
             this.kryptonGroupBox3.Values.Heading = "Chức năng";
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(591, 4);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(83, 35);
+            this.btnThoat.TabIndex = 0;
+            this.btnThoat.Values.Text = "Thoát";
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(406, 4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(83, 35);
+            this.btnSua.TabIndex = 0;
+            this.btnSua.Values.Text = "Sửa";
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(221, 6);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(83, 35);
+            this.btnXoa.TabIndex = 0;
+            this.btnXoa.Values.Text = "Xóa";
             // 
             // btnThem
             // 
@@ -456,37 +461,47 @@
             this.btnThem.TabIndex = 0;
             this.btnThem.Values.Text = "Thêm";
             // 
-            // btnXoa
+            // kryptonSplitContainer4
             // 
-            this.btnXoa.Location = new System.Drawing.Point(175, 6);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(83, 35);
-            this.btnXoa.TabIndex = 0;
-            this.btnXoa.Values.Text = "Xóa";
+            this.kryptonSplitContainer4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.kryptonSplitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonSplitContainer4.Location = new System.Drawing.Point(0, 0);
+            this.kryptonSplitContainer4.Name = "kryptonSplitContainer4";
+            this.kryptonSplitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // btnSua
+            // kryptonSplitContainer4.Panel1
             // 
-            this.btnSua.Location = new System.Drawing.Point(314, 4);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(83, 35);
-            this.btnSua.TabIndex = 0;
-            this.btnSua.Values.Text = "Sửa";
+            this.kryptonSplitContainer4.Panel1.Controls.Add(this.kryptonWrapLabel1);
             // 
-            // btnLuu
+            // kryptonSplitContainer4.Panel2
             // 
-            this.btnLuu.Location = new System.Drawing.Point(453, 6);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(83, 35);
-            this.btnLuu.TabIndex = 0;
-            this.btnLuu.Values.Text = "Lưu";
+            this.kryptonSplitContainer4.Panel2.Controls.Add(this.lvwDSPhong);
+            this.kryptonSplitContainer4.Size = new System.Drawing.Size(1065, 244);
+            this.kryptonSplitContainer4.SplitterDistance = 38;
+            this.kryptonSplitContainer4.TabIndex = 0;
             // 
-            // btnThoat
+            // lvwDSPhong
             // 
-            this.btnThoat.Location = new System.Drawing.Point(592, 4);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(83, 35);
-            this.btnThoat.TabIndex = 0;
-            this.btnThoat.Values.Text = "Thoát";
+            this.lvwDSPhong.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.lvwDSPhong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvwDSPhong.FullRowSelect = true;
+            this.lvwDSPhong.GridLines = true;
+            this.lvwDSPhong.HideSelection = false;
+            this.lvwDSPhong.Location = new System.Drawing.Point(0, 0);
+            this.lvwDSPhong.Margin = new System.Windows.Forms.Padding(4);
+            this.lvwDSPhong.Name = "lvwDSPhong";
+            this.lvwDSPhong.Size = new System.Drawing.Size(1065, 201);
+            this.lvwDSPhong.TabIndex = 2;
+            this.lvwDSPhong.UseCompatibleStateImageBehavior = false;
+            this.lvwDSPhong.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -496,7 +511,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Tên phòng";
-            this.columnHeader2.Width = 150;
+            this.columnHeader2.Width = 167;
             // 
             // columnHeader3
             // 
@@ -506,7 +521,7 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Giá thuê";
-            this.columnHeader4.Width = 117;
+            this.columnHeader4.Width = 139;
             // 
             // columnHeader5
             // 
@@ -526,7 +541,20 @@
             // columnHeader8
             // 
             this.columnHeader8.Text = "Tình trạng";
-            this.columnHeader8.Width = 95;
+            this.columnHeader8.Width = 118;
+            // 
+            // kryptonWrapLabel1
+            // 
+            this.kryptonWrapLabel1.AutoSize = false;
+            this.kryptonWrapLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonWrapLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.kryptonWrapLabel1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonWrapLabel1.Name = "kryptonWrapLabel1";
+            this.kryptonWrapLabel1.Size = new System.Drawing.Size(1065, 38);
+            this.kryptonWrapLabel1.StateCommon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonWrapLabel1.Text = "DANH SÁCH VĂN PHÒNG HIỆN CÓ";
+            this.kryptonWrapLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmQuanLyPhong
             // 
@@ -572,6 +600,12 @@
             this.kryptonGroupBox3.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).EndInit();
             this.kryptonGroupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer4.Panel1)).EndInit();
+            this.kryptonSplitContainer4.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer4.Panel2)).EndInit();
+            this.kryptonSplitContainer4.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer4)).EndInit();
+            this.kryptonSplitContainer4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -579,14 +613,12 @@
         #endregion
 
         private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer1;
-        private System.Windows.Forms.ListView lvwDSPhong;
         private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer2;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton kryptonRadioButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdoTimTheoTenPhong;
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdoTimTheoMaPhong;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblTimKiem;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnTaiLai;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnTimKiemNV;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtGiaTriTim;
         private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer3;
@@ -609,10 +641,12 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnThoat;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnLuu;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSua;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnXoa;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnThem;
+        private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer4;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel1;
+        private System.Windows.Forms.ListView lvwDSPhong;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

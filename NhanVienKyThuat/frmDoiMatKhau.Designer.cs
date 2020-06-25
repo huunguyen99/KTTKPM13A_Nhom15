@@ -40,73 +40,75 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(225, 162);
+            this.btnHuy.Location = new System.Drawing.Point(233, 162);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(96, 35);
-            this.btnHuy.TabIndex = 12;
+            this.btnHuy.TabIndex = 28;
             this.btnHuy.Values.Text = "HỦY";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnXacNhan
             // 
-            this.btnXacNhan.Location = new System.Drawing.Point(82, 162);
+            this.btnXacNhan.Location = new System.Drawing.Point(90, 162);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(96, 35);
-            this.btnXacNhan.TabIndex = 11;
+            this.btnXacNhan.TabIndex = 27;
             this.btnXacNhan.Values.Text = "XÁC NHẬN";
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // txtXacNhanMatKhauMoi
             // 
-            this.txtXacNhanMatKhauMoi.Location = new System.Drawing.Point(200, 118);
+            this.txtXacNhanMatKhauMoi.Location = new System.Drawing.Point(208, 118);
             this.txtXacNhanMatKhauMoi.Name = "txtXacNhanMatKhauMoi";
             this.txtXacNhanMatKhauMoi.PasswordChar = '*';
             this.txtXacNhanMatKhauMoi.Size = new System.Drawing.Size(139, 23);
-            this.txtXacNhanMatKhauMoi.TabIndex = 10;
+            this.txtXacNhanMatKhauMoi.TabIndex = 26;
             // 
             // txtMatKhauMoi
             // 
-            this.txtMatKhauMoi.Location = new System.Drawing.Point(200, 74);
+            this.txtMatKhauMoi.Location = new System.Drawing.Point(208, 74);
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.PasswordChar = '*';
             this.txtMatKhauMoi.Size = new System.Drawing.Size(139, 23);
-            this.txtMatKhauMoi.TabIndex = 7;
+            this.txtMatKhauMoi.TabIndex = 23;
             // 
             // txtMatKhauHienTai
             // 
-            this.txtMatKhauHienTai.Location = new System.Drawing.Point(200, 30);
+            this.txtMatKhauHienTai.Location = new System.Drawing.Point(208, 30);
             this.txtMatKhauHienTai.Name = "txtMatKhauHienTai";
             this.txtMatKhauHienTai.PasswordChar = '*';
             this.txtMatKhauHienTai.Size = new System.Drawing.Size(139, 23);
-            this.txtMatKhauHienTai.TabIndex = 5;
+            this.txtMatKhauHienTai.TabIndex = 21;
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(67, 121);
+            this.kryptonLabel3.Location = new System.Drawing.Point(75, 121);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(118, 20);
-            this.kryptonLabel3.TabIndex = 8;
+            this.kryptonLabel3.TabIndex = 24;
             this.kryptonLabel3.Values.Text = "Xác Nhận Mật Khẩu";
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(67, 77);
+            this.kryptonLabel2.Location = new System.Drawing.Point(75, 77);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(88, 20);
-            this.kryptonLabel2.TabIndex = 9;
+            this.kryptonLabel2.TabIndex = 25;
             this.kryptonLabel2.Values.Text = "Mật Khẩu Mới";
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(67, 33);
+            this.kryptonLabel1.Location = new System.Drawing.Point(75, 33);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(111, 20);
-            this.kryptonLabel1.TabIndex = 6;
+            this.kryptonLabel1.TabIndex = 22;
             this.kryptonLabel1.Values.Text = "Mật Khẩu Hiện Tại";
             // 
             // frmDoiMatKhau
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 235);
+            this.ClientSize = new System.Drawing.Size(440, 227);
             this.ControlBox = false;
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnXacNhan);
@@ -116,8 +118,12 @@
             this.Controls.Add(this.kryptonLabel3);
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.kryptonLabel1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDoiMatKhau";
             this.Text = "ĐỔI MẬT KHẨU";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmDoiMatKhau_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

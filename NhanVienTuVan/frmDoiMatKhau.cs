@@ -15,7 +15,7 @@ namespace NhanVienTuVan
 {
     public partial class frmDoiMatKhau : Form
     {
-        private static int MaNV;
+        private static int MaNV { get; set; }
         public frmDoiMatKhau(int manv)
         {
             InitializeComponent();

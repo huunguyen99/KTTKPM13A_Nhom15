@@ -7,12 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Entities;
 using DAL;
+using Entities;
 using BUS;
 
-
-namespace NhanVienTuVan
+namespace Admin
 {
     public partial class frmDangNhap : Form
     {
@@ -20,18 +19,17 @@ namespace NhanVienTuVan
         {
             InitializeComponent();
         }
-
         BUSNhanVienVaTaiKhoan busnv;
         eNhanVien nv;
-        
+
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
             busnv = new BUSNhanVienVaTaiKhoan();
         }
+
         int demDN;
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            
             nv = busnv.LayNhanVienDangNhap(txtTaiKhoan.Text, txtMatKhau.Text);
             if (txtTaiKhoan.Text.Trim().Length == 0 || txtMatKhau.Text.Trim().Length == 0)
             {
@@ -67,6 +65,8 @@ namespace NhanVienTuVan
                 Application.Exit();
             }
         }
+
+
 
         private void btnHuy_Click(object sender, EventArgs e)
         {

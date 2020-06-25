@@ -11,11 +11,11 @@ using DAL;
 using Entities;
 using BUS;
 
-namespace NhanVienTuVan
+namespace Admin
 {
     public partial class frmDoiMatKhau : Form
     {
-        private static int MaNV;
+        private static int MaNV { get; set; }
         public frmDoiMatKhau(int manv)
         {
             InitializeComponent();
@@ -49,8 +49,8 @@ namespace NhanVienTuVan
                             this.Close();
                         }
                     }
-                }    
-            }    
+                }
+            }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -59,8 +59,5 @@ namespace NhanVienTuVan
             if (hoiThoat == DialogResult.Yes)
                 this.Close();
         }
-
-        
-        
     }
 }

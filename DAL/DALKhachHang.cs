@@ -26,9 +26,21 @@ namespace DAL
 
         public List<eKhachHang> LayDSKhachHangKhongConThue()
         {
-            var dskh = (from h in dt.tblHopDong
-                        where h.TinhTrangHD == false && h.EKhachHang.Active == true
-                        select h.EKhachHang).ToList();
+            List<eKhachHang> dskh = (from h in dt.tblHopDong
+                                     where h.TinhTrangHD == false && h.EKhachHang.Active == true
+                                     select h.EKhachHang).ToList();
+            for (int i = 0; i < dskh.Count; i++)
+            {
+                eKhachHang k = dskh[i];
+                var hd = (from n in dt.tblHopDong
+                          where n.EKhachHang.MaKH == k.MaKH && n.TinhTrangHD == true
+                          select n).FirstOrDefault();
+                if (hd != null)
+                {
+                    dskh.RemoveAt(i);
+                    i--;
+                }
+            }    
             return dskh;
         }
         public List<eKhachHang> LayDSTatCaKhachHang()

@@ -37,23 +37,6 @@ namespace DAL
             }
         }
 
-        public bool CapNhatPhieuKiemTra(ePhieuYeuCauKiemTraPhong p, bool tinhTrangPhong, int maNVKyThuat, string ghiChu)
-        {
-            ePhieuYeuCauKiemTraPhong ph = dt.tblPhieuYeuCauKiemTraPhong.Where(x => x.MaPhieuKTra == p.MaPhieuKTra).FirstOrDefault();
-            try
-            {
-                ph.TinhTrangPhong = tinhTrangPhong;
-                ph.TrangThaiPhieu = true;
-                ph.MaNVKyThuat = maNVKyThuat;
-                ph.GhiChu = ghiChu;
-                dt.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-        }
 
         public void XoaPhieuKiemTra(int maPhieu)
         {
@@ -87,6 +70,25 @@ namespace DAL
         {
             var dsphieu = dt.tblPhieuYeuCauKiemTraPhong.Where(x => x.TrangThaiPhieu == false).ToList();
             return dsphieu;
+        }
+
+        public void DuyetPhieu(ePhieuYeuCauKiemTraPhong ph, int maNVDuyet, bool tinhTrangPhong, string ghiChu)
+        {
+            var phieu = (from n in dt.tblPhieuYeuCauKiemTraPhong
+                         where n.MaPhieuKTra == ph.MaPhieuKTra
+                         select n).FirstOrDefault();
+            try
+            {
+                phieu.GhiChu = ghiChu;
+                phieu.MaNVKyThuat = maNVDuyet;
+                phieu.TinhTrangPhong = tinhTrangPhong;
+                phieu.TrangThaiPhieu = true;
+                dt.SaveChanges();
+            }
+            catch(Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
     }
 }

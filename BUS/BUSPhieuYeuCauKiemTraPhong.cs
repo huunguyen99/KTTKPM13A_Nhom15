@@ -24,11 +24,6 @@ namespace BUS
             dt.TaoPhieuKiemTra(p);
         }
 
-        public bool CapNhatPhieuKiemTra(ePhieuYeuCauKiemTraPhong p, bool tinhTrangPhong, int maNVKyThuat, string ghiChu)
-        {
-            return dt.CapNhatPhieuKiemTra(p, tinhTrangPhong,maNVKyThuat, ghiChu);
-        }
-
         public void XoaPhieuKiemTra(int maPhieu)
         {
             dt.XoaPhieuKiemTra(maPhieu);
@@ -41,6 +36,10 @@ namespace BUS
         public List<ePhieuYeuCauKiemTraPhong> LayDSPhieuChuaDuyet()
         {
             return dt.LayDSPhieuChuaDuyet();
+        }
+        public void DuyetPhieu(ePhieuYeuCauKiemTraPhong ph, int maNVDuyet, bool tinhTrangPhong, string ghiChu)
+        {
+            dt.DuyetPhieu(ph, maNVDuyet, tinhTrangPhong, ghiChu);
         }
     }
 }

@@ -22,9 +22,6 @@ E:\KTTKPM13A_Nhom15\Admin\bin\Debug\Entities.pdb
 E:\KTTKPM13A_Nhom15\Admin\bin\Debug\Entities.dll.config
 E:\KTTKPM13A_Nhom15\Admin\bin\Debug\EntityFramework.xml
 E:\KTTKPM13A_Nhom15\Admin\bin\Debug\EntityFramework.SqlServer.xml
-E:\KTTKPM13A_Nhom15\Admin\obj\Debug\NhanVienTuVan.frmDangNhap.resources
-E:\KTTKPM13A_Nhom15\Admin\obj\Debug\NhanVienTuVan.frmDoiMatKhau.resources
-E:\KTTKPM13A_Nhom15\Admin\obj\Debug\NhanVienTuVan.frmMenu.resources
 E:\KTTKPM13A_Nhom15\Admin\obj\Debug\Admin.frmQuanLyNhanVien.resources
 E:\KTTKPM13A_Nhom15\Admin\obj\Debug\Admin.Properties.Resources.resources
 E:\KTTKPM13A_Nhom15\Admin\obj\Debug\Admin.csproj.GenerateResource.cache
@@ -34,3 +31,6 @@ E:\KTTKPM13A_Nhom15\Admin\obj\Debug\Admin.exe
 E:\KTTKPM13A_Nhom15\Admin\obj\Debug\Admin.pdb
 E:\KTTKPM13A_Nhom15\Admin\obj\Debug\Admin.csprojAssemblyReference.cache
 E:\KTTKPM13A_Nhom15\Admin\obj\Debug\Admin.frmThemNhanVien.resources
+E:\KTTKPM13A_Nhom15\Admin\obj\Debug\Admin.frmDangNhap.resources
+E:\KTTKPM13A_Nhom15\Admin\obj\Debug\Admin.frmDoiMatKhau.resources
+E:\KTTKPM13A_Nhom15\Admin\obj\Debug\Admin.frmMenu.resources
