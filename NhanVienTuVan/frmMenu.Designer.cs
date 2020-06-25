@@ -1,4 +1,6 @@
-﻿namespace NhanVienTuVan
+﻿using System;
+
+namespace NhanVienTuVan
 {
     partial class frmMenu
     {
@@ -47,9 +49,6 @@
             this.kryptonContextMenuItem15 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.kryptonRibbon1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbon();
-            this.kryptonContextMenuItem16 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
-            this.kryptonContextMenuItem17 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
-            this.kryptonContextMenuItem18 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.kryptonRibbonRecentDoc1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonRecentDoc();
             this.kryptonRibbonRecentDoc2 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonRecentDoc();
             this.kryptonRibbonRecentDoc3 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonRecentDoc();
@@ -73,6 +72,9 @@
             this.mnuDoiMatKhau = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupTriple10 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.mnuDangXuat = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonContextMenuItem16 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonContextMenuItem17 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonContextMenuItem18 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,10 +163,6 @@
             this.kryptonRibbon1.Name = "kryptonRibbon1";
             this.kryptonRibbon1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.kryptonRibbon1.QATLocation = ComponentFactory.Krypton.Ribbon.QATLocation.Hidden;
-            this.kryptonRibbon1.RibbonAppButton.AppButtonMenuItems.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
-            this.kryptonContextMenuItem16,
-            this.kryptonContextMenuItem17,
-            this.kryptonContextMenuItem18});
             this.kryptonRibbon1.RibbonAppButton.AppButtonMinRecentSize = new System.Drawing.Size(150, 150);
             this.kryptonRibbon1.RibbonAppButton.AppButtonRecentDocs.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonRecentDoc[] {
             this.kryptonRibbonRecentDoc1,
@@ -179,24 +177,9 @@
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab8,
             this.kryptonRibbonTab2});
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab8;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1021, 115);
             this.kryptonRibbon1.TabIndex = 3;
-            // 
-            // kryptonContextMenuItem16
-            // 
-            this.kryptonContextMenuItem16.Image = ((System.Drawing.Image)(resources.GetObject("kryptonContextMenuItem16.Image")));
-            this.kryptonContextMenuItem16.Text = "&Open";
-            // 
-            // kryptonContextMenuItem17
-            // 
-            this.kryptonContextMenuItem17.Image = ((System.Drawing.Image)(resources.GetObject("kryptonContextMenuItem17.Image")));
-            this.kryptonContextMenuItem17.Text = "&Save";
-            // 
-            // kryptonContextMenuItem18
-            // 
-            this.kryptonContextMenuItem18.Image = ((System.Drawing.Image)(resources.GetObject("kryptonContextMenuItem18.Image")));
-            this.kryptonContextMenuItem18.Text = "E&xit";
             // 
             // kryptonRibbonRecentDoc1
             // 
@@ -321,6 +304,21 @@
             this.mnuDangXuat.TextLine1 = "Đăng Xuất";
             this.mnuDangXuat.Click += new System.EventHandler(this.mnuDangXuat_Click);
             // 
+            // kryptonContextMenuItem16
+            // 
+            this.kryptonContextMenuItem16.Image = ((System.Drawing.Image)(resources.GetObject("kryptonContextMenuItem16.Image")));
+            this.kryptonContextMenuItem16.Text = "&Open";
+            // 
+            // kryptonContextMenuItem17
+            // 
+            this.kryptonContextMenuItem17.Image = ((System.Drawing.Image)(resources.GetObject("kryptonContextMenuItem17.Image")));
+            this.kryptonContextMenuItem17.Text = "&Save";
+            // 
+            // kryptonContextMenuItem18
+            // 
+            this.kryptonContextMenuItem18.Image = ((System.Drawing.Image)(resources.GetObject("kryptonContextMenuItem18.Image")));
+            this.kryptonContextMenuItem18.Text = "E&xit";
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -341,6 +339,7 @@
             this.PerformLayout();
 
         }
+
 
         #endregion
 

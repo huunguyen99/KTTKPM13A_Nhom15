@@ -17,7 +17,7 @@ namespace NhanVienTuVan
         public frmMenu(eNhanVien nv)
         {
             InitializeComponent();
-            MaNV = nv.MaNV;
+            
         }
 
         frmQuanLyKhachConThue frmkhachconthue = new frmQuanLyKhachConThue();
@@ -34,7 +34,7 @@ namespace NhanVienTuVan
 
         private void frmMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Owner.Show();
+            Application.Exit();
         }
 
         private void mnuKHConThue_Click(object sender, EventArgs e)
@@ -109,8 +109,7 @@ namespace NhanVienTuVan
 
         private void mnuDangXuat_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
-            this.Close();
+
         }
 
         private void mnuTraPhong_Click(object sender, EventArgs e)

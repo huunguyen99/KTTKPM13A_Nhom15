@@ -60,5 +60,10 @@ namespace NhanVienTuVan
             this.Owner.Show();
             this.Close();
         }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
