@@ -104,5 +104,10 @@ namespace NhanVienTuVan
                 frmdmk.Show();
             }
         }
+
+        private void mnuDangXuat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,137 @@
+﻿namespace NhanVienKyThuat
+{
+    partial class frmDoiMatKhau
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btnHuy = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnXacNhan = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.txtXacNhanMatKhauMoi = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtMatKhauMoi = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtMatKhauHienTai = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.SuspendLayout();
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(225, 162);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(96, 35);
+            this.btnHuy.TabIndex = 12;
+            this.btnHuy.Values.Text = "HỦY";
+            // 
+            // btnXacNhan
+            // 
+            this.btnXacNhan.Location = new System.Drawing.Point(82, 162);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(96, 35);
+            this.btnXacNhan.TabIndex = 11;
+            this.btnXacNhan.Values.Text = "XÁC NHẬN";
+            // 
+            // txtXacNhanMatKhauMoi
+            // 
+            this.txtXacNhanMatKhauMoi.Location = new System.Drawing.Point(200, 118);
+            this.txtXacNhanMatKhauMoi.Name = "txtXacNhanMatKhauMoi";
+            this.txtXacNhanMatKhauMoi.PasswordChar = '*';
+            this.txtXacNhanMatKhauMoi.Size = new System.Drawing.Size(139, 23);
+            this.txtXacNhanMatKhauMoi.TabIndex = 10;
+            // 
+            // txtMatKhauMoi
+            // 
+            this.txtMatKhauMoi.Location = new System.Drawing.Point(200, 74);
+            this.txtMatKhauMoi.Name = "txtMatKhauMoi";
+            this.txtMatKhauMoi.PasswordChar = '*';
+            this.txtMatKhauMoi.Size = new System.Drawing.Size(139, 23);
+            this.txtMatKhauMoi.TabIndex = 7;
+            // 
+            // txtMatKhauHienTai
+            // 
+            this.txtMatKhauHienTai.Location = new System.Drawing.Point(200, 30);
+            this.txtMatKhauHienTai.Name = "txtMatKhauHienTai";
+            this.txtMatKhauHienTai.PasswordChar = '*';
+            this.txtMatKhauHienTai.Size = new System.Drawing.Size(139, 23);
+            this.txtMatKhauHienTai.TabIndex = 5;
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(67, 121);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(118, 20);
+            this.kryptonLabel3.TabIndex = 8;
+            this.kryptonLabel3.Values.Text = "Xác Nhận Mật Khẩu";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(67, 77);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(88, 20);
+            this.kryptonLabel2.TabIndex = 9;
+            this.kryptonLabel2.Values.Text = "Mật Khẩu Mới";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(67, 33);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(111, 20);
+            this.kryptonLabel1.TabIndex = 6;
+            this.kryptonLabel1.Values.Text = "Mật Khẩu Hiện Tại";
+            // 
+            // frmDoiMatKhau
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(404, 235);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnXacNhan);
+            this.Controls.Add(this.txtXacNhanMatKhauMoi);
+            this.Controls.Add(this.txtMatKhauMoi);
+            this.Controls.Add(this.txtMatKhauHienTai);
+            this.Controls.Add(this.kryptonLabel3);
+            this.Controls.Add(this.kryptonLabel2);
+            this.Controls.Add(this.kryptonLabel1);
+            this.Name = "frmDoiMatKhau";
+            this.Text = "ĐỔI MẬT KHẨU";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnHuy;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnXacNhan;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtXacNhanMatKhauMoi;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtMatKhauMoi;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtMatKhauHienTai;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+    }
+}

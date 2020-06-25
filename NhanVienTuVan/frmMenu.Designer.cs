@@ -159,10 +159,6 @@
             this.kryptonRibbon1.InDesignHelperMode = true;
             this.kryptonRibbon1.Name = "kryptonRibbon1";
             this.kryptonRibbon1.QATLocation = ComponentFactory.Krypton.Ribbon.QATLocation.Hidden;
-            this.kryptonRibbon1.RibbonAppButton.AppButtonMenuItems.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
-            this.kryptonContextMenuItem16,
-            this.kryptonContextMenuItem17,
-            this.kryptonContextMenuItem18});
             this.kryptonRibbon1.RibbonAppButton.AppButtonMinRecentSize = new System.Drawing.Size(150, 150);
             this.kryptonRibbon1.RibbonAppButton.AppButtonRecentDocs.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonRecentDoc[] {
             this.kryptonRibbonRecentDoc1,
@@ -178,7 +174,7 @@
             this.kryptonRibbonTab8,
             this.kryptonRibbonTab2});
             this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
-            this.kryptonRibbon1.Size = new System.Drawing.Size(1021, 115);
+            this.kryptonRibbon1.Size = new System.Drawing.Size(1021, 143);
             this.kryptonRibbon1.TabIndex = 3;
             // 
             // kryptonContextMenuItem16
@@ -311,6 +307,7 @@
             // mnuDangXuat
             // 
             this.mnuDangXuat.TextLine1 = "Đăng Xuất";
+            this.mnuDangXuat.Click += new System.EventHandler(this.mnuDangXuat_Click);
             // 
             // frmMenu
             // 
