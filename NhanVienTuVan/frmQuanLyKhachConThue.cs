@@ -142,5 +142,17 @@ namespace NhanVienTuVan
                 TaiHienKHTuListView(khChon);
             }    
         }
+
+        private void txtSoDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
+                e.Handled = true;
+        }
+
+        private void txtSoCMND_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
+                e.Handled = true;
+        }
     }
 }

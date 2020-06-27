@@ -1,9 +1,6 @@
 E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\NhanVienKyThuat.exe.config
 E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\NhanVienKyThuat.exe
 E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\NhanVienKyThuat.pdb
-E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\BUS.dll
-E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\DAL.dll
-E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\Entities.dll
 E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\EntityFramework.dll
 E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\EntityFramework.SqlServer.dll
 E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\BUS.pdb
@@ -14,7 +11,6 @@ E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\Entities.pdb
 E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\Entities.dll.config
 E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\EntityFramework.xml
 E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\EntityFramework.SqlServer.xml
-E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.csprojAssemblyReference.cache
 E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.frmDienThongTinPhong.resources
 E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.frmDoiMatKhau.resources
 E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.frmDanhSachPhieuYeuCauKiemTra.resources
@@ -27,3 +23,7 @@ E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.csproj.CopyComplet
 E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.exe
 E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.pdb
 E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.frmDangNhap.resources
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\BUS.dll
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\DAL.dll
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\bin\Debug\Entities.dll
+E:\KTTKPM13A_Nhom15\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.csprojAssemblyReference.cache

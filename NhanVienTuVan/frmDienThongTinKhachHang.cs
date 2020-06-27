@@ -78,5 +78,17 @@ namespace NhanVienTuVan
             if (hoiThoat == DialogResult.Yes)
                 this.Close();
         }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
+                e.Handled = true;
+        }
+
+        private void txtSoCMND_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
+                e.Handled = true;
+        }
     }
 }

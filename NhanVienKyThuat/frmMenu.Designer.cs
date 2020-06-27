@@ -58,10 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             this.SuspendLayout();
             // 
-            // kryptonManager1
-            // 
-            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2010Blue;
-            // 
             // kryptonRibbon1
             // 
             this.kryptonRibbon1.InDesignHelperMode = true;
@@ -81,9 +77,8 @@
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab8,
             this.kryptonRibbonTab2});
-            this.kryptonRibbon1.SelectedContext = null;
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
-            this.kryptonRibbon1.Size = new System.Drawing.Size(1108, 115);
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab8;
+            this.kryptonRibbon1.Size = new System.Drawing.Size(1108, 143);
             this.kryptonRibbon1.TabIndex = 4;
             // 
             // kryptonRibbonRecentDoc1

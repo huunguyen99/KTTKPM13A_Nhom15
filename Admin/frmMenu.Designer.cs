@@ -69,8 +69,9 @@
             this.kryptonRibbon1.RibbonTabs.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab[] {
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab2});
+            this.kryptonRibbon1.SelectedContext = null;
             this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
-            this.kryptonRibbon1.Size = new System.Drawing.Size(1067, 115);
+            this.kryptonRibbon1.Size = new System.Drawing.Size(1067, 143);
             this.kryptonRibbon1.TabIndex = 5;
             // 
             // kryptonRibbonRecentDoc1
@@ -162,7 +163,7 @@
             this.Controls.Add(this.kryptonRibbon1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMenu";
             this.Text = "ADMIN-CHƯƠNG TRÌNH QUẢN LÝ CHO THUÊ VĂN PHÒNG";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

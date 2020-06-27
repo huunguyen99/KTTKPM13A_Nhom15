@@ -33,5 +33,17 @@ namespace BUS
         {
             return dt.TraPhong(maPhong);
         }
+        public bool Xoa_TaiSuDung_Phong(eVanPhong p, bool tinhTrangPhong)
+        {
+            return dt.Xoa_TaiSuDung_Phong(p, tinhTrangPhong);
+        }
+        public bool ThemPhong(eVanPhong p)
+        {
+            return dt.ThemPhong(p);
+        }
+        public bool SuaPhong(eVanPhong p, eVanPhong phSua)
+        {
+            return dt.SuaPhong(p, phSua);
+        }
     }
 }

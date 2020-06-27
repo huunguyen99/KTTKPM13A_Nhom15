@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,9 +21,11 @@ namespace DAL
             var ph = (from n in dt.tblPhieuYeuCauKiemTraPhong
                       where n.MaPhong == maPhong && n.TrangThaiPhieu == false
                       select n).FirstOrDefault();
-            if (ph == null)
-                return false;
-            return true;
+            if (ph != null)
+                return true;
+            if (LayDSPhieuDaDuyet(maPhong).Count > 0)
+                return true;
+            return false;
         }
         public void TaoPhieuKiemTra(ePhieuYeuCauKiemTraPhong p)
         {

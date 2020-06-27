@@ -113,6 +113,7 @@ namespace NhanVienTuVan
             txtDiaChi.Text = kh.DiaChi;
             txtSoCMND.Text = kh.SoCMND;
             txtSoDT.Text = kh.SDT;
+            txtNgaySinh.Text = kh.NgaySinh.ToString("dd/MM/yyyy");
         }
         eKhachHang khChon;
         private void lvwDSKhachHang_SelectedIndexChanged(object sender, EventArgs e)

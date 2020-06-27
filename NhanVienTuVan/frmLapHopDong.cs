@@ -69,6 +69,20 @@ namespace NhanVienTuVan
             lvw.Items.Add(lvwitem);
         }
 
+        void TaiHienThongTinVanPhong(eVanPhong p)
+        {
+            txtDienTich.Text = p.DienTich.ToString();
+            txtGiaThue.Text = p.GiaThue.ToString();
+            txtMaPhong.Text = p.MaPhong;
+            txtSoBongDen.Text = p.SoBongDen.ToString();
+            txtSoMayLanh.Text = p.SoMayLanh.ToString();
+            txtTangLau.Text = p.TangLau.ToString();
+            txtTenPhong.Text = p.TenPhong;
+            if (p.TinhTrang == false)
+                txtTinhTrangPhong.Text = "Phòng đang hỏng";
+            else
+                txtTinhTrangPhong.Text = "Phòng tốt";
+        }
         void LoadPhieuKiemTraLenListView(List<ePhieuYeuCauKiemTraPhong> ds, ListView lvw)
         {
             lvw.Items.Clear();
@@ -83,6 +97,8 @@ namespace NhanVienTuVan
             {
                 maPhongChon = treDSPhong.SelectedNode.Tag.ToString();
                 phongChon = dsphongtrong.Where(x => x.MaPhong == maPhongChon).FirstOrDefault();
+                rtxtGhiChu.Clear();
+                TaiHienThongTinVanPhong(phongChon);
                 List<ePhieuYeuCauKiemTraPhong> dsphieu = busphieu.LayDSPhieuDaDuyet(maPhongChon).ToList();
                 LoadPhieuKiemTraLenListView(dsphieu, lvwDSPhieuKiemTra);
             }    
@@ -105,7 +121,7 @@ namespace NhanVienTuVan
             if (treDSPhong.SelectedNode != null)
             {
                 if (busphieu.KiemTraPhongDaGuiPhieuKiemTraChua(maPhongChon) == true)
-                    MessageBox.Show("Bạn đã gửi yêu cầu kiểm tra thông tin cho phòng này rồi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    MessageBox.Show("Bạn đã gửi yêu cầu kiểm tra thông tin cho phòng này rồi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
                     DialogResult hoi = MessageBox.Show("Bạn có chắc chắn muốn gửi yêu cầu kiểm tra thông tin phòng này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);

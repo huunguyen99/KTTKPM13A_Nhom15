@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,6 +54,69 @@ namespace DAL
                     dsphong.Add(item);
             }
             return dsphong;
+        }
+
+        public bool Xoa_TaiSuDung_Phong(eVanPhong p, bool tinhTrangPhong)
+        {
+            var ph = (from n in dt.tblVanPhong
+                      where n.MaPhong.Equals(p.MaPhong)
+                      select n).FirstOrDefault();
+            var hd = (from n in dt.tblHopDong
+                      where n.EPhieu.MaPhong.Equals(p.MaPhong) && n.TinhTrangHD == true
+                      select n).FirstOrDefault();
+            if (hd != null)
+                return false;
+            try
+            {
+                ph.TinhTrang = tinhTrangPhong;
+                dt.SaveChanges();
+                return true;
+            }
+            catch(Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public bool ThemPhong(eVanPhong p)
+        {
+            var vp = (from n in dt.tblVanPhong
+                      where n.MaPhong.Equals(p.MaPhong)
+                      select n).FirstOrDefault();
+            if (vp != null)
+                return false;
+            try
+            {
+                dt.tblVanPhong.Add(p);
+                dt.SaveChanges();
+                return true;
+            }
+            catch(Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public bool SuaPhong(eVanPhong p, eVanPhong phSua)
+        {
+            var vp = dt.tblVanPhong.Where(x => x.MaPhong.Equals(p.MaPhong)).FirstOrDefault();
+            if (vp == null)
+                return false;
+            try
+            {
+                vp.SoBongDen = phSua.SoBongDen;
+                vp.SoMayLanh = phSua.SoMayLanh;
+                vp.GiaThue = phSua.GiaThue;
+                vp.DienTich = phSua.DienTich;
+                vp.TangLau = phSua.TangLau;
+                vp.TenPhong = phSua.TenPhong;
+                dt.SaveChanges();
+                return true;
+            }
+            catch(Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public bool TraPhong(string maPhong)

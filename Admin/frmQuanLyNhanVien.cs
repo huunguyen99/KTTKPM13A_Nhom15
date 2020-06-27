@@ -137,14 +137,19 @@ namespace Admin
         {
             if (lvwDSNhanVien.SelectedItems.Count > 0)
             {
-                DialogResult hoiXoa = MessageBox.Show("Bạn có chắc chắn muốn xa thải nhân viên này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-                if(hoiXoa == DialogResult.Yes)
+                if (tkChon.ENhanVien.Active == false)
+                    MessageBox.Show("Nhân viên này đã bị xa thải rồi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
                 {
-                    busnvtk.XoaNV(tkChon);
-                    MessageBox.Show("Xa thải nhân viên thành công", "Thông báo");
-                    dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVien();
-                    LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
-                }    
+                    DialogResult hoiXoa = MessageBox.Show("Bạn có chắc chắn muốn xa thải nhân viên này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                    if (hoiXoa == DialogResult.Yes)
+                    {
+                        busnvtk.XoaNV(tkChon);
+                        MessageBox.Show("Xa thải nhân viên thành công", "Thông báo");
+                        dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVien();
+                        LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
+                    }
+                }
             }
             else
                 MessageBox.Show("Vui lòng chọn nhân viên cần xa thải", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -167,14 +172,19 @@ namespace Admin
         {
             if (lvwDSNhanVien.SelectedItems.Count > 0)
             {
-                DialogResult hoiSua = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin nhân viên này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-                if (hoiSua == DialogResult.Yes)
+                if (tkChon.ENhanVien.Active == false)
+                    MessageBox.Show("Nhân viên này đã bị xa thải. Không thể sửa thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
                 {
-                    eNhanVien nv = TaoNVSua();
-                    busnvtk.SuaTTNhanVien(tkChon.MaNV, nv);
-                    MessageBox.Show("Sửa thông tin nhân viên thành công", "Thông báo");
-                    dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVien();
-                    LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
+                    DialogResult hoiSua = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin nhân viên này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                    if (hoiSua == DialogResult.Yes)
+                    {
+                        eNhanVien nv = TaoNVSua();
+                        busnvtk.SuaTTNhanVien(tkChon.MaNV, nv);
+                        MessageBox.Show("Sửa thông tin nhân viên thành công", "Thông báo");
+                        dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVien();
+                        LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
+                    }
                 }
             }
             else
@@ -276,6 +286,18 @@ namespace Admin
         private void rdoTimTheoTen_CheckedChanged(object sender, EventArgs e)
         {
             XuLyAutoComplete();
+        }
+
+        private void txtSoCMND_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
+                e.Handled = true;
+        }
+
+        private void txtSoDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
+                e.Handled = true;
         }
     }
 }
