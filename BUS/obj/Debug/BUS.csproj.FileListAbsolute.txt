@@ -16,3 +16,17 @@ E:\KTTKPM13A_Nhom15\BUS\obj\Debug\BUS.csproj.CopyComplete
 E:\KTTKPM13A_Nhom15\BUS\obj\Debug\BUS.dll
 E:\KTTKPM13A_Nhom15\BUS\obj\Debug\BUS.pdb
 E:\KTTKPM13A_Nhom15\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+E:\KienTrucVaThietKePhanMem\DeAn\CT\BUS\bin\Debug\BUS.dll.config
+E:\KienTrucVaThietKePhanMem\DeAn\CT\BUS\bin\Debug\BUS.dll
+E:\KienTrucVaThietKePhanMem\DeAn\CT\BUS\bin\Debug\BUS.pdb
+E:\KienTrucVaThietKePhanMem\DeAn\CT\BUS\bin\Debug\DAL.dll
+E:\KienTrucVaThietKePhanMem\DeAn\CT\BUS\bin\Debug\Entities.dll
+E:\KienTrucVaThietKePhanMem\DeAn\CT\BUS\bin\Debug\EntityFramework.dll
+E:\KienTrucVaThietKePhanMem\DeAn\CT\BUS\bin\Debug\EntityFramework.SqlServer.dll
+E:\KienTrucVaThietKePhanMem\DeAn\CT\BUS\bin\Debug\DAL.pdb
+E:\KienTrucVaThietKePhanMem\DeAn\CT\BUS\bin\Debug\Entities.pdb
+E:\KienTrucVaThietKePhanMem\DeAn\CT\BUS\bin\Debug\EntityFramework.xml
+E:\KienTrucVaThietKePhanMem\DeAn\CT\BUS\bin\Debug\EntityFramework.SqlServer.xml
+E:\KienTrucVaThietKePhanMem\DeAn\CT\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+E:\KienTrucVaThietKePhanMem\DeAn\CT\BUS\obj\Debug\BUS.dll
+E:\KienTrucVaThietKePhanMem\DeAn\CT\BUS\obj\Debug\BUS.pdb

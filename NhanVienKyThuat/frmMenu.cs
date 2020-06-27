@@ -21,7 +21,7 @@ namespace NhanVienKyThuat
             
         }
         frmDanhSachPhieuYeuCauKiemTra frmktp = new frmDanhSachPhieuYeuCauKiemTra(MaNV);
-        frmQuanLyPhong frmqlp = new frmQuanLyPhong();
+        frmQuanLyPhong frmqlp = new frmQuanLyPhong( );
         frmDoiMatKhau frmdmk = new frmDoiMatKhau(MaNV);
         private void mnuKiemTraPhong_Click(object sender, EventArgs e)
         {

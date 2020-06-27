@@ -56,8 +56,6 @@ E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\Entities.dll
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\EntityFramework.dll
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\EntityFramework.SqlServer.dll
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\Entities.pdb
-E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Ribbon.pdb
-E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\EntityFramework.xml
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\EntityFramework.SqlServer.xml
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\obj\Debug\NhanVienTuVan.csprojResolveAssemblyReference.cache
@@ -82,3 +80,12 @@ E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\BUS.pdb
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\BUS.dll.config
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\DAL.pdb
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\DAL.dll.config
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\BUS.dll
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\DAL.dll
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\BUS.pdb
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\DAL.pdb
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmDanhSachTatCaKhachHang.resources
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmDienThongTinHopDong.resources
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmDienThongTinKhachHang.resources
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmQuanLyHopDong.resources
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmTraPhong.resources
