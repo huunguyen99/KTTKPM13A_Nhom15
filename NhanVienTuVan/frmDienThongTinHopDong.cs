@@ -27,10 +27,14 @@ namespace NhanVienTuVan
             MaPhieu = maphieu;
             MaKH = makh;
         }
-        DALHopDong dalhopdong;
+        BUSHopDong bushopdong;
+        BUSHoaDon bushoadon;
+        BUSChiTietHoaDon buscthoadon;
         private void frmDienThongTinHopDong_Load(object sender, EventArgs e)
         {
-            dalhopdong = new DALHopDong();
+            bushopdong = new BUSHopDong();
+            buscthoadon = new BUSChiTietHoaDon();
+            bushoadon = new BUSHoaDon();
         }
 
         eHopDong TaoHopDong()
@@ -43,11 +47,40 @@ namespace NhanVienTuVan
             hd.NgayThue = dtpNgayThue.Value;
             hd.NgayTra = dtpNgayTra.Value;
             hd.NgayTraThucTe = dtpNgayTra.Value;
-            hd.TienCoc = GiaThue * 2;
+            hd.TienCoc = GiaThue * 3;
             hd.TinhTrangHD = true;
             return hd;
 
         }
+
+        eHoaDon TaoHoaDon(int maHopDong)
+        {
+            eHoaDon hd = new eHoaDon();
+            hd.MaHopDong = maHopDong;
+            hd.MaNV = MaNV;
+            hd.NgayCanLap = dtpNgayThue.Value;
+            hd.NgayLapHoaDon = DateTime.Now;
+            hd.TinhTrangHD = false;
+            hd.NgayThanhToan = dtpNgayThue.Value;
+            return hd;
+        }
+
+        eChiTietHoaDon TaoCTHD(int maHD)
+        {
+            eChiTietHoaDon cthd = new eChiTietHoaDon();
+            cthd.MaHoaDon = maHD;
+            cthd.PhiBaoTri = 0;
+            cthd.PhiBaoVe = 0;
+            cthd.PhiThangMay = 0;
+            cthd.PhiVeSinh = 0;
+            cthd.TienDien = 0;
+            cthd.TienGuiXe = 0;
+            cthd.TienNuoc = 0;
+            cthd.TienPhong = GiaThue;
+            return cthd;
+        }
+        
+
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -62,7 +95,11 @@ namespace NhanVienTuVan
             if(hoithem == DialogResult.Yes)
             {
                 eHopDong hd = TaoHopDong();
-                dalhopdong.TaoHopDong(hd);
+                bushopdong.TaoHopDong(hd);
+                eHoaDon hoadon = TaoHoaDon(hd.MaHopDong);
+                bushoadon.ThemHoaDon(hoadon);
+                eChiTietHoaDon cthd = TaoCTHD(hoadon.MaHoaDon);
+                buscthoadon.ThemCTHoaDon(cthd);
                 MessageBox.Show("Tạo hợp đồng thành công", "Thông báo");
                 this.DialogResult = DialogResult.OK;
             }    
