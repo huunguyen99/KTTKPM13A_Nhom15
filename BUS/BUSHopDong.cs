@@ -24,9 +24,9 @@ namespace BUS
         {
             return dt.LayDSHopDongConHan(maPhong);
         }
-        public void SuaHopDong(eHopDong hdSua, decimal tiencoc, DateTime ngaythue, DateTime ngaytra)
+        public void SuaHopDong(eHopDong hdSua, DateTime ngaythue, DateTime ngaytra)
         {
-            dt.SuaHopDong(hdSua, tiencoc, ngaythue, ngaytra);
+            dt.SuaHopDong(hdSua, ngaythue, ngaytra);
         }
     }
 }

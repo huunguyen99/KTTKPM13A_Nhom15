@@ -109,8 +109,7 @@ namespace NhanVienTuVan
                 DialogResult hoiSua = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin hợp đồng này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
                 if (hoiSua == DialogResult.Yes)
                 {
-                    decimal tiencoc = Convert.ToDecimal(txtTienCoc.Text);
-                    bushd.SuaHopDong(hdChon, tiencoc, dtpNgayThue.Value, dtpNgayTra.Value);
+                    bushd.SuaHopDong(hdChon, dtpNgayThue.Value, dtpNgayTra.Value);
                     MessageBox.Show("Sửa thông tin hợp đồng thành công", "Thông báo");
                     List<eHopDong> dshd = bushd.LayDSHopDongConHan(maPhongChon);
                     LoadDSHopDongLenListView(dshd, lvwDSHopDong);

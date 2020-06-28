@@ -69,6 +69,12 @@
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDanhSachHoaDonChuaThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDanhSachHoaDonChuaThanhToan.Designer.cs">
+      <DependentUpon>frmDanhSachHoaDonChuaThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDienThongTinHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDanhSachHoaDonChuaThanhToan.resx">
+      <DependentUpon>frmDanhSachHoaDonChuaThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDienThongTinHoaDon.resx">
       <DependentUpon>frmDienThongTinHoaDon.cs</DependentUpon>

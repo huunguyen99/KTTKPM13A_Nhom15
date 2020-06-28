@@ -43,3 +43,4 @@ E:\KTTKPM13A_Nhom15\NhanVienKeToan\bin\Debug\Entities.pdb
 E:\KTTKPM13A_Nhom15\NhanVienKeToan\bin\Debug\Entities.dll.config
 E:\KTTKPM13A_Nhom15\NhanVienKeToan\obj\Debug\NhanVienKeToan.frmDangNhap.resources
 E:\KTTKPM13A_Nhom15\NhanVienKeToan\obj\Debug\NhanVienKeToan.frmDienThongTinHoaDon.resources
+E:\KTTKPM13A_Nhom15\NhanVienKeToan\obj\Debug\NhanVienKeToan.frmDanhSachHoaDonChuaThanhToan.resources

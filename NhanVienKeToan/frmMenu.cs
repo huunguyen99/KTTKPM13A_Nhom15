@@ -21,7 +21,7 @@ namespace NhanVienKeToan
         }
         frmQuanLyHoaDon frmqlhd = new frmQuanLyHoaDon();
         frmLapHoaDon frmlhd = new frmLapHoaDon(MaNV);
-
+        frmDanhSachHoaDonChuaThanhToan frmthanhtoan = new frmDanhSachHoaDonChuaThanhToan();
         private void mnuQuanLyHoaDon_Click(object sender, EventArgs e)
         {
             foreach (Form frm in this.MdiChildren)
@@ -64,6 +64,20 @@ namespace NhanVienKeToan
         private void frmMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Owner.Show();
+        }
+
+        private void mnuThanhToan_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
+            if (frmthanhtoan.IsAccessible == false)
+            {
+                frmthanhtoan = new frmDanhSachHoaDonChuaThanhToan();
+                frmthanhtoan.MdiParent = this;
+                frmthanhtoan.Show();
+            }
         }
     }
 }

@@ -59,4 +59,3 @@ E:\KTTKPM13A_Nhom15\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 E:\KTTKPM13A_Nhom15\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\KTTKPM13A_Nhom15\DAL\obj\Debug\DAL.dll
 E:\KTTKPM13A_Nhom15\DAL\obj\Debug\DAL.pdb
-E:\KTTKPM13A_Nhom15\DAL\obj\Debug\DAL.csprojAssemblyReference.cache

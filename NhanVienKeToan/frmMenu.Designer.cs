@@ -82,9 +82,8 @@
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab8,
             this.kryptonRibbonTab2});
-            this.kryptonRibbon1.SelectedContext = null;
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
-            this.kryptonRibbon1.Size = new System.Drawing.Size(903, 115);
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab8;
+            this.kryptonRibbon1.Size = new System.Drawing.Size(903, 143);
             this.kryptonRibbon1.TabIndex = 5;
             // 
             // kryptonRibbonRecentDoc1
@@ -166,6 +165,7 @@
             // mnuThanhToan
             // 
             this.mnuThanhToan.TextLine1 = "Thanh toán";
+            this.mnuThanhToan.Click += new System.EventHandler(this.mnuThanhToan_Click);
             // 
             // kryptonRibbonTab2
             // 

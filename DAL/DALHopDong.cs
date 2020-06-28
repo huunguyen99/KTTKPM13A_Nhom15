@@ -36,14 +36,13 @@ namespace DAL
             return ds;
         }
 
-        public void SuaHopDong(eHopDong hdSua, decimal tiencoc, DateTime ngaythue, DateTime ngaytra)
+        public void SuaHopDong(eHopDong hdSua, DateTime ngaythue, DateTime ngaytra)
         {
             var hd = (from n in dt.tblHopDong
                       where n.MaHopDong.Equals(hdSua.MaHopDong)
                       select n).FirstOrDefault();
             try
             {
-                hd.TienCoc = tiencoc;
                 hd.NgayThue = ngaythue;
                 hd.NgayTra = ngaytra;
                 dt.SaveChanges();
