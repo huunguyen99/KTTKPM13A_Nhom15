@@ -89,3 +89,11 @@ E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmDie
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmDienThongTinKhachHang.resources
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmQuanLyHopDong.resources
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\obj\Debug\NhanVienTuVan.frmTraPhong.resources
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Navigator.dll
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Workspace.dll
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Workspace.pdb
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Design.dll
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Docking.dll
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Design.pdb
+E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Docking.pdb

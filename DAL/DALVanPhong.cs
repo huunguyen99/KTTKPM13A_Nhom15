@@ -11,16 +11,17 @@ namespace DAL
 {
     public class DALVanPhong
     {
+        DALHoaDon dalhd;
         VanPhongDbContext dt;
         public DALVanPhong()
         {
             dt = new VanPhongDbContext();
+            dalhd = new DALHoaDon();
         }
         public bool KiemTraPhongDaThueChua(string maPhong)
         {
-            var hd = (from p in dt.tblPhieuYeuCauKiemTraPhong
-                      join h in dt.tblHopDong on p.MaPhieuKTra equals h.MaPhieuKTra
-                      where p.MaPhong.Equals(maPhong) && h.TinhTrangHD == true
+            var hd = (from h in dt.tblHopDong
+                      where h.EPhieu.MaPhong.Equals(maPhong) && h.TinhTrangHD == true
                       select h).FirstOrDefault();
             if (hd == null)
                 return false;
@@ -44,6 +45,20 @@ namespace DAL
             }
             return dsphong;
         }
+
+        public List<eVanPhong> LayDSVanPHongDenHanThanhToan()
+        {
+            var ds = dt.tblVanPhong.Where(p => p.TinhTrang == true).ToList();
+            List<eVanPhong> dsphong = new List<eVanPhong>();
+            foreach (var item in ds)
+            {
+                if (KiemTraPhongDaThueChua(item.MaPhong) == true && (DateTime.Now - dalhd.LayHDSauCung(item.MaPhong)).TotalDays >= 3)
+                    dsphong.Add(item);
+            }
+            return dsphong;
+        }
+
+
         public List<eVanPhong> LayDSVanPhongTrong()
         {
             var ds = dt.tblVanPhong.Where(x => x.TinhTrang == true).ToList();

@@ -45,5 +45,10 @@ namespace BUS
         {
             return dt.SuaPhong(p, phSua);
         }
+
+        public List<eVanPhong> LayDSVanPHongDenHanThanhToan()
+        {
+            return dt.LayDSVanPHongDenHanThanhToan();
+        }
     }
 }

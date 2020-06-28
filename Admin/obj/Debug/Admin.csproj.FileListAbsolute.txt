@@ -69,3 +69,7 @@ E:\KienTrucVaThietKePhanMem\DeAn\CT\Admin\bin\Debug\EntityFramework.xml
 E:\KienTrucVaThietKePhanMem\DeAn\CT\Admin\bin\Debug\EntityFramework.SqlServer.xml
 E:\KienTrucVaThietKePhanMem\DeAn\CT\Admin\obj\Debug\Admin.exe
 E:\KienTrucVaThietKePhanMem\DeAn\CT\Admin\obj\Debug\Admin.pdb
+E:\KTTKPM13A_Nhom15\Admin\bin\Debug\ComponentFactory.Krypton.Design.dll
+E:\KTTKPM13A_Nhom15\Admin\bin\Debug\ComponentFactory.Krypton.Docking.dll
+E:\KTTKPM13A_Nhom15\Admin\bin\Debug\ComponentFactory.Krypton.Design.pdb
+E:\KTTKPM13A_Nhom15\Admin\bin\Debug\ComponentFactory.Krypton.Docking.pdb

@@ -10,5 +10,18 @@ namespace BUS
 {
     public class BUSHoaDon
     {
+        DALHoaDon dt;
+        public BUSHoaDon()
+        {
+            dt = new DALHoaDon();
+        }
+        public DateTime LayHDSauCung(string maPhong)
+        {
+            return dt.LayHDSauCung(maPhong);
+        }
+        public void ThemHoaDon(eHoaDon hd)
+        {
+            dt.ThemHoaDon(hd);
+        }
     }
 }
