@@ -97,3 +97,9 @@ E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Design.dll
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Docking.dll
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Design.pdb
 E:\KTTKPM13A_Nhom15\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Docking.pdb
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Design.pdb
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Docking.pdb
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Ribbon.pdb
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienTuVan\bin\Debug\ComponentFactory.Krypton.Workspace.pdb

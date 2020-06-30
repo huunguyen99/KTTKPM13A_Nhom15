@@ -27,5 +27,9 @@ namespace BUS
         {
             return dt.LayDSHoaDonChuaThanhToan(maPhong);
         }
+        public void SuaHoaDon(eChiTietHoaDon cthds)
+        {
+            dt.SuaHoaDon(cthds);
+        }
     }
 }

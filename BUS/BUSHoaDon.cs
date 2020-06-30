@@ -23,5 +23,9 @@ namespace BUS
         {
             dt.ThemHoaDon(hd);
         }
+        public void ThanhToanHoaDon(eHoaDon hdtt, DateTime ngayThanhToan)
+        {
+            dt.ThanhToanHoaDon(hdtt, ngayThanhToan);
+        }
     }
 }

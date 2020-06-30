@@ -31,3 +31,4 @@ E:\KienTrucVaThietKePhanMem\DeAn\CT\Entities\bin\Debug\EntityFramework.SqlServer
 E:\KienTrucVaThietKePhanMem\DeAn\CT\Entities\obj\Debug\Entities.dll
 E:\KienTrucVaThietKePhanMem\DeAn\CT\Entities\obj\Debug\Entities.pdb
 E:\KTTKPM13A_Nhom15\Entities\obj\Debug\Entities.csprojAssemblyReference.cache
+E:\KienTrucVaThietKePhanMem\DeAn\CT\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache

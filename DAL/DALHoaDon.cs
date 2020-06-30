@@ -34,5 +34,20 @@ namespace DAL
                 throw new Exception(e.Message);
             }
         }
+        public void ThanhToanHoaDon(eHoaDon hdtt, DateTime ngayThanhToan)
+        {
+            eHoaDon hd = (from n in dt.tblHoaDon
+                          where n.MaHoaDon.Equals(hdtt.MaHoaDon)
+                          select n).FirstOrDefault();
+            try
+            {
+                hd.NgayThanhToan = ngayThanhToan;
+                hd.TinhTrangHD = true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

@@ -22,12 +22,14 @@ namespace NhanVienKeToan
 
         BUSVanPhong busvp;
         BUSChiTietHoaDon bushd;
+        BUSHoaDon bushdon;
         List<eVanPhong> dsvp;
         string maPhongChon;
         private void frmDanhSachHoaDonChuaThanhToan_Load(object sender, EventArgs e)
         {
             bushd = new BUSChiTietHoaDon();
             busvp = new BUSVanPhong();
+            bushdon = new BUSHoaDon();
             dsvp = busvp.LayDanhSachPhong();
             LoadPhongLenTreeView(treDSVanPhong, dsvp);
         }
@@ -134,6 +136,26 @@ namespace NhanVienKeToan
                 hdChon = (eChiTietHoaDon)lvwDSHoaDon.SelectedItems[0].Tag;
                 TaiHienThongTinHoaDonLenTextBox(hdChon);
             }    
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            if (hdChon.EHoaDon.TinhTrangHD == true || hdChon.EHoaDon.NgayThanhToan == hdChon.EHoaDon.NgayCanLap)
+            {
+                MessageBox.Show("Hóa đơn này đã thanh toán rồi!\nKhông thể thanh toán nữa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            else
+            {
+                DialogResult HoiTT = MessageBox.Show("Bạn có chắc chắn muốn thanh toán hóa đơn này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                if (HoiTT == DialogResult.Yes)
+                {
+                    bushdon.ThanhToanHoaDon(hdChon.EHoaDon, DateTime.Now);
+                    MessageBox.Show("Thanh toán thành công!", "Thông báo");
+                }
+                List<eChiTietHoaDon> dshd = bushd.LayDSHoaDon(maPhongChon);
+                LoadDSHoaDonLenListView(dshd, lvwDSHoaDon);
+
+            }
         }
     }
 }

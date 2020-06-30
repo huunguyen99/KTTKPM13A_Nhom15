@@ -84,6 +84,7 @@
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.btnLuuSua = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
             this.kryptonSplitContainer1.Panel1.SuspendLayout();
@@ -178,7 +179,7 @@
             this.kryptonWrapLabel2.AutoSize = false;
             this.kryptonWrapLabel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonWrapLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.kryptonWrapLabel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonWrapLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.kryptonWrapLabel2.Name = "kryptonWrapLabel2";
@@ -233,6 +234,7 @@
             this.lvwDSHoaDon.TabIndex = 7;
             this.lvwDSHoaDon.UseCompatibleStateImageBehavior = false;
             this.lvwDSHoaDon.View = System.Windows.Forms.View.Details;
+            this.lvwDSHoaDon.SelectedIndexChanged += new System.EventHandler(this.lvwDSHoaDon_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -288,6 +290,7 @@
             // 
             // btnXoa.Panel
             // 
+            this.btnXoa.Panel.Controls.Add(this.btnLuuSua);
             this.btnXoa.Panel.Controls.Add(this.kryptonLabel9);
             this.btnXoa.Panel.Controls.Add(this.btnThoat);
             this.btnXoa.Panel.Controls.Add(this.btnSua);
@@ -340,7 +343,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(968, 266);
+            this.btnThoat.Location = new System.Drawing.Point(968, 267);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(102, 34);
@@ -349,12 +352,13 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(470, 266);
+            this.btnSua.Location = new System.Drawing.Point(470, 267);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(102, 34);
             this.btnSua.TabIndex = 23;
             this.btnSua.Values.Text = "SỬA";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // txtPhiVeSinh
             // 
@@ -666,6 +670,15 @@
             this.kryptonLabel1.TabIndex = 15;
             this.kryptonLabel1.Values.Text = "Mã Hóa Đơn";
             // 
+            // btnLuuSua
+            // 
+            this.btnLuuSua.Location = new System.Drawing.Point(707, 267);
+            this.btnLuuSua.Name = "btnLuuSua";
+            this.btnLuuSua.Size = new System.Drawing.Size(102, 34);
+            this.btnLuuSua.TabIndex = 25;
+            this.btnLuuSua.Values.Text = "LƯU";
+            this.btnLuuSua.Click += new System.EventHandler(this.btnLuuSua_Click);
+            // 
             // frmQuanLyHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -763,5 +776,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private System.Windows.Forms.TextBox txtTinhTrangHD;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel18;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnLuuSua;
     }
 }

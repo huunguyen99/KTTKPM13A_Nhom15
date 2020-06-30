@@ -54,3 +54,12 @@ E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.fr
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.frmQuanLyPhong.resources
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.Properties.Resources.resources
 E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.csproj.GenerateResource.Cache
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\obj\Debug\NhanVienKyThuat.csprojResolveAssemblyReference.cache
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\bin\Debug\ComponentFactory.Krypton.Design.dll
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\bin\Debug\ComponentFactory.Krypton.Docking.dll
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\bin\Debug\ComponentFactory.Krypton.Navigator.dll
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\bin\Debug\ComponentFactory.Krypton.Workspace.dll
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\bin\Debug\ComponentFactory.Krypton.Design.pdb
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\bin\Debug\ComponentFactory.Krypton.Docking.pdb
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
+E:\KienTrucVaThietKePhanMem\DeAn\CT\NhanVienKyThuat\bin\Debug\ComponentFactory.Krypton.Workspace.pdb

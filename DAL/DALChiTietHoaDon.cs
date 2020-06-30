@@ -43,5 +43,25 @@ namespace DAL
                       select n).OrderByDescending(n => n.EHoaDon.NgayCanLap).ToList();
             return ds;
         }
+        public void SuaHoaDon(eChiTietHoaDon cthds)
+        {
+            var cthd = (from n in dt.tblCT_HoaDon
+                        where n.MaCTHD.Equals(cthds.MaCTHD)
+                        select n).FirstOrDefault();
+            try
+            {
+                cthd.TienDien = cthds.TienDien;
+                cthd.TienNuoc = cthds.TienNuoc;
+                cthd.TienGuiXe = cthds.TienGuiXe;
+                cthd.PhiBaoTri = cthds.PhiBaoTri;
+                cthd.PhiVeSinh = cthds.PhiVeSinh;
+                cthd.PhiBaoVe = cthds.PhiBaoVe;
+                cthd.PhiThangMay = cthds.PhiThangMay;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
