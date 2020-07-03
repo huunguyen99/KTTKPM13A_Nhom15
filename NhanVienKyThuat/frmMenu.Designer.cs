@@ -58,6 +58,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             this.SuspendLayout();
             // 
+            // kryptonManager1
+            // 
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Blue;
+            // 
             // kryptonRibbon1
             // 
             this.kryptonRibbon1.InDesignHelperMode = true;
@@ -77,9 +81,8 @@
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab8,
             this.kryptonRibbonTab2});
-            this.kryptonRibbon1.SelectedContext = null;
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
-            this.kryptonRibbon1.Size = new System.Drawing.Size(1108, 143);
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
+            this.kryptonRibbon1.Size = new System.Drawing.Size(1108, 115);
             this.kryptonRibbon1.TabIndex = 4;
             // 
             // kryptonRibbonRecentDoc1
@@ -208,6 +211,7 @@
             this.ClientSize = new System.Drawing.Size(1108, 749);
             this.Controls.Add(this.kryptonRibbon1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMenu";

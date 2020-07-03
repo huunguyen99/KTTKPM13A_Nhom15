@@ -101,15 +101,15 @@ namespace NhanVienKeToan
             txtTenNV.Text = cthd.EHoaDon.ENhanVien.TenNV.ToString();
             txtTenKhachHang.Text = cthd.EHoaDon.EHopDong.EKhachHang.TenKH.ToString();
             txtMaHopDong.Text = cthd.EHoaDon.EHopDong.MaHopDong.ToString();
-            txtNgayLapHopDong.Text = cthd.EHoaDon.EHopDong.NgayTao.ToString("dd/mm/yyyy");
-            txtNgayLapHoaDon.Text = cthd.EHoaDon.NgayLapHoaDon.ToString("dd/mm/yyyy");
-            txtNgayCanLapHoaDon.Text = cthd.EHoaDon.NgayLapHoaDon.ToString("dd/mm/yyyy");
+            txtNgayLapHopDong.Text = cthd.EHoaDon.EHopDong.NgayTao.ToString("dd/MM/yyyy");
+            txtNgayLapHoaDon.Text = cthd.EHoaDon.NgayLapHoaDon.ToString("dd/MM/yyyy");
+            txtNgayCanLapHoaDon.Text = cthd.EHoaDon.NgayLapHoaDon.ToString("dd/MM/yyyy");
             if (cthd.EHoaDon.TinhTrangHD == false)
             {
                 txtNgayThanhToan.Text = ("Chưa thanh toán");
             }
             else
-                txtNgayThanhToan.Text = (cthd.EHoaDon.NgayThanhToan.ToString("dd/mm/yyyy"));
+                txtNgayThanhToan.Text = (cthd.EHoaDon.NgayThanhToan.ToString("dd/MM/yyyy"));
             if (cthd.EHoaDon.TinhTrangHD == false)
             {
                 txtTinhTrangHD.Text = ("Chưa thanh toán");
@@ -140,22 +140,26 @@ namespace NhanVienKeToan
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            if (hdChon.EHoaDon.TinhTrangHD == true || hdChon.EHoaDon.NgayThanhToan == hdChon.EHoaDon.NgayCanLap)
+            if (lvwDSHoaDon.SelectedItems.Count > 0)
             {
-                MessageBox.Show("Hóa đơn này đã thanh toán rồi!\nKhông thể thanh toán nữa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                if (hdChon.EHoaDon.TinhTrangHD == true)
+                {
+                    MessageBox.Show("Hóa đơn này đã thanh toán rồi!\nKhông thể thanh toán nữa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DialogResult HoiTT = MessageBox.Show("Bạn có chắc chắn muốn thanh toán hóa đơn này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                    if (HoiTT == DialogResult.Yes)
+                    {
+                        bushdon.ThanhToanHoaDon(hdChon.EHoaDon, DateTime.Now);
+                        MessageBox.Show("Thanh toán thành công!", "Thông báo");
+                        List<eChiTietHoaDon> dshd = bushd.LayDSHoaDon(maPhongChon);
+                        LoadDSHoaDonLenListView(dshd, lvwDSHoaDon);
+                    }
+                }
             }
             else
-            {
-                DialogResult HoiTT = MessageBox.Show("Bạn có chắc chắn muốn thanh toán hóa đơn này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-                if (HoiTT == DialogResult.Yes)
-                {
-                    bushdon.ThanhToanHoaDon(hdChon.EHoaDon, DateTime.Now);
-                    MessageBox.Show("Thanh toán thành công!", "Thông báo");
-                }
-                List<eChiTietHoaDon> dshd = bushd.LayDSHoaDon(maPhongChon);
-                LoadDSHoaDonLenListView(dshd, lvwDSHoaDon);
-
-            }
+                MessageBox.Show("Vui lòng chọn hóa đơn cần thanh toán", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

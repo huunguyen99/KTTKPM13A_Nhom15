@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDienThongTinKhachHang));
             this.kryptonWrapLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -56,7 +57,7 @@
             this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.kryptonWrapLabel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonWrapLabel1.Name = "kryptonWrapLabel1";
-            this.kryptonWrapLabel1.Size = new System.Drawing.Size(412, 42);
+            this.kryptonWrapLabel1.Size = new System.Drawing.Size(412, 52);
             this.kryptonWrapLabel1.StateCommon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonWrapLabel1.Text = "ĐIỀN THÔNG TIN KHÁCH HÀNG";
             this.kryptonWrapLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -122,7 +123,7 @@
             this.txtHoTen.Location = new System.Drawing.Point(158, 71);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(180, 23);
-            this.txtHoTen.TabIndex = 2;
+            this.txtHoTen.TabIndex = 0;
             // 
             // txtSDT
             // 
@@ -130,6 +131,7 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(180, 23);
             this.txtSDT.TabIndex = 2;
+            this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
             this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
             // txtEmail
@@ -137,14 +139,16 @@
             this.txtEmail.Location = new System.Drawing.Point(158, 167);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(180, 23);
-            this.txtEmail.TabIndex = 2;
+            this.txtEmail.TabIndex = 3;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtSoCMND
             // 
             this.txtSoCMND.Location = new System.Drawing.Point(158, 199);
             this.txtSoCMND.Name = "txtSoCMND";
             this.txtSoCMND.Size = new System.Drawing.Size(180, 23);
-            this.txtSoCMND.TabIndex = 2;
+            this.txtSoCMND.TabIndex = 4;
+            this.txtSoCMND.TextChanged += new System.EventHandler(this.txtSoCMND_TextChanged);
             this.txtSoCMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoCMND_KeyPress);
             // 
             // rtxtDiaChi
@@ -152,7 +156,7 @@
             this.rtxtDiaChi.Location = new System.Drawing.Point(158, 239);
             this.rtxtDiaChi.Name = "rtxtDiaChi";
             this.rtxtDiaChi.Size = new System.Drawing.Size(179, 63);
-            this.rtxtDiaChi.TabIndex = 3;
+            this.rtxtDiaChi.TabIndex = 5;
             this.rtxtDiaChi.Text = "";
             // 
             // dtpNgaySinh
@@ -160,16 +164,16 @@
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgaySinh.Location = new System.Drawing.Point(157, 105);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
             this.dtpNgaySinh.Size = new System.Drawing.Size(180, 21);
-            this.dtpNgaySinh.TabIndex = 4;
+            this.dtpNgaySinh.TabIndex = 1;
             // 
             // rdoNam
             // 
+            this.rdoNam.Checked = true;
             this.rdoNam.Location = new System.Drawing.Point(157, 313);
             this.rdoNam.Name = "rdoNam";
             this.rdoNam.Size = new System.Drawing.Size(49, 20);
-            this.rdoNam.TabIndex = 5;
+            this.rdoNam.TabIndex = 6;
             this.rdoNam.Values.Text = "Nam";
             // 
             // kryptonRadioButton1
@@ -177,7 +181,7 @@
             this.kryptonRadioButton1.Location = new System.Drawing.Point(212, 313);
             this.kryptonRadioButton1.Name = "kryptonRadioButton1";
             this.kryptonRadioButton1.Size = new System.Drawing.Size(39, 20);
-            this.kryptonRadioButton1.TabIndex = 5;
+            this.kryptonRadioButton1.TabIndex = 7;
             this.kryptonRadioButton1.Values.Text = "Nữ";
             // 
             // btnThem
@@ -185,7 +189,7 @@
             this.btnThem.Location = new System.Drawing.Point(70, 353);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(125, 40);
-            this.btnThem.TabIndex = 6;
+            this.btnThem.TabIndex = 8;
             this.btnThem.Values.Text = "THÊM KHÁCH HÀNG";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -194,7 +198,7 @@
             this.btnThoat.Location = new System.Drawing.Point(212, 353);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(125, 40);
-            this.btnThoat.TabIndex = 6;
+            this.btnThoat.TabIndex = 9;
             this.btnThoat.Values.Text = "THOÁT";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -222,6 +226,7 @@
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.kryptonWrapLabel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDienThongTinKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

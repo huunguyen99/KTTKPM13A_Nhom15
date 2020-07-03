@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 using Entities;
 
 namespace NhanVienTuVan
@@ -26,10 +27,11 @@ namespace NhanVienTuVan
         frmLapHopDong frmlaphopdong = new frmLapHopDong(MaNV);
         frmTraPhong frmtp = new frmTraPhong();
         frmQuanLyHopDong frmqlhd = new frmQuanLyHopDong();
-
+        BUSHopDong bushd;
         private void frmMenu_Load(object sender, EventArgs e)
         {
-
+            bushd = new BUSHopDong();
+            bushd.AutoKetThucHopDong();
         }
 
         private void frmMenu_FormClosed(object sender, FormClosedEventArgs e)

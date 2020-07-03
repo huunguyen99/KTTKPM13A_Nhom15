@@ -22,13 +22,15 @@ namespace Admin
         }
         BUSNhanVienVaTaiKhoan busnvtk;
         List<eTaiKhoan> dsnvtk;
+        ErrorProvider ep;
         private void frmQuanLyNhanVien_Load(object sender, EventArgs e)
         {
             busnvtk = new BUSNhanVienVaTaiKhoan();
-            dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVien();
+            dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVienDangLamViec();
             LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
             ItemsCboChucVu(cboChucVu);
             XuLyAutoComplete();
+            ep = new ErrorProvider();
         }
         void ItemsCboChucVu(KryptonComboBox cbo)
         {
@@ -58,9 +60,9 @@ namespace Admin
                 lvwitem.SubItems.Add("Nam");
             else
                 lvwitem.SubItems.Add("Nữ");
-            if(tk.ENhanVien.ChucVu == 1)
+            if (tk.ENhanVien.ChucVu == 1)
                 lvwitem.SubItems.Add("Nhân Viên Tư Vấn");
-            else if(tk.ENhanVien.ChucVu == 2)
+            else if (tk.ENhanVien.ChucVu == 2)
                 lvwitem.SubItems.Add("Nhân Viên Kỹ Thuật");
             else
                 lvwitem.SubItems.Add("Nhân Viên Kế Toán");
@@ -71,10 +73,10 @@ namespace Admin
         void LoadDSNhanVienLenListView(List<eTaiKhoan> ds, ListView lvw)
         {
             lvw.Items.Clear();
-            foreach(var item in ds)
+            foreach (var item in ds)
             {
                 ThemItem(item, lvw);
-            }    
+            }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -83,7 +85,7 @@ namespace Admin
             if (hoiThoat == DialogResult.Yes)
                 this.Close();
         }
-        
+
         void TaiHienThongTinNhanVien(eTaiKhoan tk)
         {
             txtMaNV.Text = tk.ENhanVien.MaNV.ToString();
@@ -116,21 +118,26 @@ namespace Admin
         eTaiKhoan tkChon;
         private void lvwDSNhanVien_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(lvwDSNhanVien.SelectedItems.Count > 0)
+            if (lvwDSNhanVien.SelectedItems.Count > 0)
             {
                 tkChon = (eTaiKhoan)lvwDSNhanVien.SelectedItems[0].Tag;
                 TaiHienThongTinNhanVien(tkChon);
-            }    
+            }
         }
 
         private void btnThemNhanVien_Click(object sender, EventArgs e)
         {
-            frmThemNhanVien frmtnv = new frmThemNhanVien();
-            if(frmtnv.ShowDialog() == DialogResult.OK)
+            if (rdoDSNhanVienDaNghiViec.Checked == true)
+                MessageBox.Show("Không thể thêm nhân viên vào danh sách này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
             {
-                dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVien();
-                LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
-            }    
+                frmThemNhanVien frmtnv = new frmThemNhanVien();
+                if (frmtnv.ShowDialog() == DialogResult.OK)
+                {
+                    dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVienDangLamViec();
+                    LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
+                }
+            }
         }
 
         private void btnXoaNV_Click(object sender, EventArgs e)
@@ -146,7 +153,7 @@ namespace Admin
                     {
                         busnvtk.XoaNV(tkChon);
                         MessageBox.Show("Xa thải nhân viên thành công", "Thông báo");
-                        dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVien();
+                        dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVienDangLamViec();
                         LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
                     }
                 }
@@ -176,14 +183,27 @@ namespace Admin
                     MessageBox.Show("Nhân viên này đã bị xa thải. Không thể sửa thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    DialogResult hoiSua = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin nhân viên này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-                    if (hoiSua == DialogResult.Yes)
+                    if ((DateTime.Now - dtpNgaySinh.Value).TotalDays < 18 * 365 + 4)
+                        MessageBox.Show("Ngày sinh không hợp lệ, nhân viên chưa đủ 18 tuổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else if (txtTenNV.Text.Trim().Length == 0 || txtEmail.Text.Trim().Length == 0 || txtSoCMND.Text.Trim().Length == 0 || txtSoDT.Text.Trim().Length == 0 || rtxtDiaChi.Text.Trim().Length == 0 || rtxtQueQuan.Text.Trim().Length == 0)
+                        MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    else if (!txtEmail.Text.KtraEmail())
+                        ep.SetError(txtEmail, "Email phải đúng định dạng bắt đầu bằng chữ cái. Ex: abc123@gmail.com");
+                    else if (!txtSoCMND.Text.KtraSCMND())
+                        ep.SetError(txtSoCMND, "Số chứng minh(căn cước) phải là số, có 9 hoặc 12 số, bắt đầu bằng 1-9");
+                    else if (!txtSoDT.Text.KtraSDT())
+                        ep.SetError(txtSoDT, "Số điện thoại phải là số và có 10 số, bắt đầu bằng 01, 03, 05, 07 hoặc 09");
+                    else
                     {
-                        eNhanVien nv = TaoNVSua();
-                        busnvtk.SuaTTNhanVien(tkChon.MaNV, nv);
-                        MessageBox.Show("Sửa thông tin nhân viên thành công", "Thông báo");
-                        dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVien();
-                        LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
+                        DialogResult hoiSua = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin nhân viên này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                        if (hoiSua == DialogResult.Yes)
+                        {
+                            eNhanVien nv = TaoNVSua();
+                            busnvtk.SuaTTNhanVien(tkChon.MaNV, nv);
+                            MessageBox.Show("Sửa thông tin nhân viên thành công", "Thông báo");
+                            dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVienDangLamViec();
+                            LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
+                        }
                     }
                 }
             }
@@ -220,72 +240,51 @@ namespace Admin
         }
 
 
-
-        int TimKiem(string giaTriTim)
+        List<eTaiKhoan> TimKiemNV(string giaTriTim)
         {
-            eTaiKhoan tk;
+            List<eTaiKhoan> dsTim = new List<eTaiKhoan>();
             if (rdoTimTheoCMND.Checked == true)
             {
-                for (int i = 0; i < lvwDSNhanVien.Items.Count; i++)
-                {
-                    tk = (eTaiKhoan)lvwDSNhanVien.Items[i].Tag;
-                    if (tk.ENhanVien.SoCMND.Contains(giaTriTim))
-                        return i;
-                }
+                dsTim = dsnvtk.Where(x => x.ENhanVien.SoCMND.Contains(giaTriTim)).ToList();
             }
             else if (rdoTimTheoSDT.Checked == true)
             {
-                for (int i = 0; i < lvwDSNhanVien.Items.Count; i++)
-                {
-                    tk = (eTaiKhoan)lvwDSNhanVien.Items[i].Tag;
-                    if (tk.ENhanVien.SDT.Contains(giaTriTim))
-                        return i;
-                }
+                dsTim = dsnvtk.Where(x => x.ENhanVien.SDT.Contains(giaTriTim)).ToList();
             }
             else
             {
-                for (int i = 0; i < lvwDSNhanVien.Items.Count; i++)
-                {
-                    tk = (eTaiKhoan)lvwDSNhanVien.Items[i].Tag;
-                    if (tk.ENhanVien.TenNV.Contains(giaTriTim))
-                        return i;
-                }
+                dsTim = dsnvtk.Where(x => x.ENhanVien.TenNV.ToLower().Contains(giaTriTim.ToLower())).ToList();
             }
-            return -1;
+            return dsTim;
         }
-
         private void btnTimKiemNV_Click(object sender, EventArgs e)
         {
-            int kq = TimKiem(txtGiaTriTim.Text);
-            if (kq == -1)
-                MessageBox.Show("Không tìm thấy khách hàng có thông tin điền vào", "Thông báo");
-            else
+            List<eTaiKhoan> kquaTim = TimKiemNV(txtGiaTriTim.Text);
+            if (kquaTim.Count == 0)
             {
-                if (lvwDSNhanVien.SelectedItems.Count > 0)
-                {
-                    int vitritruoc = lvwDSNhanVien.SelectedIndices[0];
-                    lvwDSNhanVien.Items[vitritruoc].Selected = false;
-                }
-                lvwDSNhanVien.Items[kq].Selected = true;
-                lvwDSNhanVien.Focus();
-                tkChon = (eTaiKhoan)lvwDSNhanVien.Items[kq].Tag;
-                TaiHienThongTinNhanVien(tkChon);
+                MessageBox.Show("Không tìm thấy nhân viên nào có thông tin như yêu cầu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
             }
+            else
+                LoadDSNhanVienLenListView(kquaTim, lvwDSNhanVien);
         }
 
         private void rdoTimTheoCMND_CheckedChanged(object sender, EventArgs e)
         {
             XuLyAutoComplete();
+            LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
         }
 
         private void rdoTimTheoSDT_CheckedChanged(object sender, EventArgs e)
         {
             XuLyAutoComplete();
+            LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
         }
 
         private void rdoTimTheoTen_CheckedChanged(object sender, EventArgs e)
         {
             XuLyAutoComplete();
+            LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
         }
 
         private void txtSoCMND_KeyPress(object sender, KeyPressEventArgs e)
@@ -298,6 +297,46 @@ namespace Admin
         {
             if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
                 e.Handled = true;
+        }
+
+        private void txtGiaTriTim_TextChanged(object sender, EventArgs e)
+        {
+            if (txtGiaTriTim.Text == "")
+                LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
+        }
+
+        private void txtSoCMND_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSoCMND.Text.KtraSCMND())
+                ep.Clear();
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEmail.Text.KtraEmail())
+                ep.Clear();
+        }
+
+        private void txtSoDT_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSoDT.Text.KtraSDT())
+                ep.Clear();
+        }
+
+        private void rdoDSNhanVienDangLam_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVienDangLamViec();
+            LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
+            XuLyAutoComplete();
+        }
+
+        private void rdoDSNhanVienDaNghiViec_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            dsnvtk = busnvtk.LayDSTaiKhoanVaNhanVienDaNghiViec();
+            LoadDSNhanVienLenListView(dsnvtk, lvwDSNhanVien);
+            XuLyAutoComplete();
         }
     }
 }

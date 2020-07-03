@@ -31,9 +31,13 @@ namespace BUS
         {
             return dt.DoiMatKhau(maNV, matKhau, matKhauMoi);
         }
-        public List<eTaiKhoan> LayDSTaiKhoanVaNhanVien()
+        public List<eTaiKhoan> LayDSTaiKhoanVaNhanVienDangLamViec()
         {
-            return dt.LayDSTaiKhoanVaNhanVien();
+            return dt.LayDSTaiKhoanVaNhanVienDangLamViec();
+        }
+        public List<eTaiKhoan> LayDSTaiKhoanVaNhanVienDaNghiViec()
+        {
+            return dt.LayDSTaiKhoanVaNhanVienDaNghiViec();
         }
 
         public void ThemNhanVien(eNhanVien nv)

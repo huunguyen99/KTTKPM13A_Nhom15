@@ -43,7 +43,7 @@
             this.btnHuy.Location = new System.Drawing.Point(233, 162);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(96, 35);
-            this.btnHuy.TabIndex = 28;
+            this.btnHuy.TabIndex = 4;
             this.btnHuy.Values.Text = "HỦY";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -52,7 +52,7 @@
             this.btnXacNhan.Location = new System.Drawing.Point(90, 162);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(96, 35);
-            this.btnXacNhan.TabIndex = 27;
+            this.btnXacNhan.TabIndex = 3;
             this.btnXacNhan.Values.Text = "XÁC NHẬN";
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
@@ -62,7 +62,7 @@
             this.txtXacNhanMatKhauMoi.Name = "txtXacNhanMatKhauMoi";
             this.txtXacNhanMatKhauMoi.PasswordChar = '*';
             this.txtXacNhanMatKhauMoi.Size = new System.Drawing.Size(139, 23);
-            this.txtXacNhanMatKhauMoi.TabIndex = 26;
+            this.txtXacNhanMatKhauMoi.TabIndex = 2;
             // 
             // txtMatKhauMoi
             // 
@@ -70,7 +70,7 @@
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.PasswordChar = '*';
             this.txtMatKhauMoi.Size = new System.Drawing.Size(139, 23);
-            this.txtMatKhauMoi.TabIndex = 23;
+            this.txtMatKhauMoi.TabIndex = 1;
             // 
             // txtMatKhauHienTai
             // 
@@ -78,7 +78,7 @@
             this.txtMatKhauHienTai.Name = "txtMatKhauHienTai";
             this.txtMatKhauHienTai.PasswordChar = '*';
             this.txtMatKhauHienTai.Size = new System.Drawing.Size(139, 23);
-            this.txtMatKhauHienTai.TabIndex = 21;
+            this.txtMatKhauHienTai.TabIndex = 0;
             // 
             // kryptonLabel3
             // 

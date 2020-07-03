@@ -21,8 +21,10 @@ namespace NhanVienTuVan
         }
         BUSKhachHang buskh;
         List<eKhachHang> dskh;
+        ErrorProvider ep;
         private void frmQuanLyKhachKhongConThue_Load(object sender, EventArgs e)
         {
+            ep = new ErrorProvider();
             buskh = new BUSKhachHang();
             dskh = buskh.LayDSKhachHangKhongConThue();
             LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
@@ -80,14 +82,27 @@ namespace NhanVienTuVan
         {
             if (lvwDSKhachHang.SelectedItems.Count > 0)
             {
-                DialogResult hoiSua = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin khách hàng này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-                if (hoiSua == DialogResult.Yes)
+                if ((DateTime.Now - dtpNgaySinh.Value).TotalDays < 18 * 365 + 4)
+                    MessageBox.Show("ngày sinh cần sửa không hợp lệ, khách hàng chưa đủ 18 tuổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (txtHoTen.Text.Trim().Length == 0 || txtEmail.Text.Trim().Length == 0 || txtSoCMND.Text.Trim().Length == 0 || txtSoDT.Text.Trim().Length == 0 || rtxtDiaChi.Text.Trim().Length == 0)
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else if (!txtEmail.Text.KtraEmail())
+                    ep.SetError(txtEmail, "Email phải đúng định dang bắt đầu bằng chữ cái. Ex: abc123@gmail.com");
+                else if (!txtSoCMND.Text.KtraSCMND())
+                    ep.SetError(txtSoCMND, "Số chứng minh(căn cước) phải là số, có 9 hoặc 12 số, bắt đầu bằng 1-9");
+                else if (!txtSoDT.Text.KtraSDT())
+                    ep.SetError(txtSoDT, "Số điện thoại phải là số và có 10 số, bắt đầu bằng 01, 03, 05, 07 hoặc 09");
+                else
                 {
-                    eKhachHang khSua = TaoKHSua();
-                    buskh.SuaKH(khChon, khSua);
-                    MessageBox.Show("Sửa thông tin khách hàng thành công", "Thông báo");
-                    dskh = buskh.LayDSKhachHangKhongConThue();
-                    LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
+                    DialogResult hoiSua = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin khách hàng này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                    if (hoiSua == DialogResult.Yes)
+                    {
+                        eKhachHang khSua = TaoKHSua();
+                        buskh.SuaKH(khChon, khSua);
+                        MessageBox.Show("Sửa thông tin khách hàng thành công", "Thông báo");
+                        List<eKhachHang> dskh = buskh.LayDSKhachHangKhongConThue();
+                        LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
+                    }
                 }
             }
             else
@@ -162,71 +177,52 @@ namespace NhanVienTuVan
             }
         }
 
-        int TimKiem(string giaTriTim)
-        {
-            eKhachHang kh;
-            if(rdoTimTheoCMND.Checked == true)
-            {
-                for(int i = 0; i < lvwDSKhachHang.Items.Count; i++)
-                {
-                    kh = (eKhachHang)lvwDSKhachHang.Items[i].Tag;
-                    if (kh.SoCMND.Contains(giaTriTim))
-                        return i;
-                } 
-            }    
-            else if(rdoTimTheoSDT.Checked == true)
-            {
-                for (int i = 0; i < lvwDSKhachHang.Items.Count; i++)
-                {
-                    kh = (eKhachHang)lvwDSKhachHang.Items[i].Tag;
-                    if (kh.SDT.Contains(giaTriTim))
-                        return i;
-                }
-            }    
-            else
-            {
-                for (int i = 0; i < lvwDSKhachHang.Items.Count; i++)
-                {
-                    kh = (eKhachHang)lvwDSKhachHang.Items[i].Tag;
-                    if (kh.TenKH.Contains(giaTriTim))
-                        return i;
-                }
-            }
-            return -1;
-        }
+        
 
         private void rdoTimTheoSDT_CheckedChanged(object sender, EventArgs e)
         {
             XuLyAutoComplete();
+            LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
         }
 
         private void rdoTimTheoCMND_CheckedChanged(object sender, EventArgs e)
         {
             XuLyAutoComplete();
+            LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
         }
 
         private void rdoTimTheoTen_CheckedChanged(object sender, EventArgs e)
         {
             XuLyAutoComplete();
+            LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
         }
-
-        private void btnTimKiem_Click(object sender, EventArgs e)
+        List<eKhachHang> TimKiemKH(string giaTriTim)
         {
-            int kq = TimKiem(txtGiaTriTim.Text);
-            if (kq == -1)
-                MessageBox.Show("Không tìm thấy khách hàng có thông tin điền vào", "Thông báo");
+            List<eKhachHang> dsTim = new List<eKhachHang>();
+            if (rdoTimTheoCMND.Checked == true)
+            {
+                dsTim = dskh.Where(x => x.SoCMND.Contains(giaTriTim)).ToList();
+            }
+            else if (rdoTimTheoSDT.Checked == true)
+            {
+                dsTim = dskh.Where(x => x.SDT.Contains(giaTriTim)).ToList();
+            }
             else
             {
-                if (lvwDSKhachHang.SelectedItems.Count > 0)
-                {
-                    int vitritruoc = lvwDSKhachHang.SelectedIndices[0];
-                    lvwDSKhachHang.Items[vitritruoc].Selected = false;
-                }
-                lvwDSKhachHang.Items[kq].Selected = true;
-                lvwDSKhachHang.Focus();
-                khChon = (eKhachHang)lvwDSKhachHang.Items[kq].Tag;
-                TaiHienKHTuListView(khChon);
+                dsTim = dskh.Where(x => x.TenKH.ToLower().Contains(giaTriTim.ToLower())).ToList();
             }
+            return dsTim;
+        }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            List<eKhachHang> kquaTim = TimKiemKH(txtGiaTriTim.Text);
+            if (kquaTim.Count == 0)
+            {
+                MessageBox.Show("Không có thông tin khách hàng nào như yêu cầu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
+            }
+            else
+                LoadDSKhachHangLenListView(kquaTim, lvwDSKhachHang);
         }
 
         private void txtSoDT_KeyPress(object sender, KeyPressEventArgs e)
@@ -239,6 +235,30 @@ namespace NhanVienTuVan
         {
             if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
                 e.Handled = true;
+        }
+
+        private void txtSoDT_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSoDT.Text.KtraSDT())
+                ep.Clear();
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEmail.Text.KtraEmail())
+                ep.Clear();
+        }
+
+        private void txtSoCMND_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSoCMND.Text.KtraSCMND())
+                ep.Clear();
+        }
+
+        private void txtGiaTriTim_TextChanged(object sender, EventArgs e)
+        {
+            if (txtGiaTriTim.Text == "")
+                LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
         }
     }
 }

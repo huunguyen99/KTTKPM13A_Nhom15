@@ -91,18 +91,23 @@ namespace NhanVienTuVan
 
         private void btnTaoHopDong_Click(object sender, EventArgs e)
         {
-            DialogResult hoithem = MessageBox.Show("Bạn có chắc chắn muốn tạo hợp đồng này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-            if(hoithem == DialogResult.Yes)
+            if ((dtpNgayTra.Value - dtpNgayThue.Value).TotalDays < 365)
+                MessageBox.Show("Hợp đồng không thể dưới 1 năm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
             {
-                eHopDong hd = TaoHopDong();
-                bushopdong.TaoHopDong(hd);
-                eHoaDon hoadon = TaoHoaDon(hd.MaHopDong);
-                bushoadon.ThemHoaDon(hoadon);
-                eChiTietHoaDon cthd = TaoCTHD(hoadon.MaHoaDon);
-                buscthoadon.ThemCTHoaDon(cthd);
-                MessageBox.Show("Tạo hợp đồng thành công", "Thông báo");
-                this.DialogResult = DialogResult.OK;
-            }    
+                DialogResult hoithem = MessageBox.Show("Bạn có chắc chắn muốn tạo hợp đồng này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                if (hoithem == DialogResult.Yes)
+                {
+                    eHopDong hd = TaoHopDong();
+                    bushopdong.TaoHopDong(hd);
+                    eHoaDon hoadon = TaoHoaDon(hd.MaHopDong);
+                    bushoadon.ThemHoaDon(hoadon);
+                    eChiTietHoaDon cthd = TaoCTHD(hoadon.MaHoaDon);
+                    buscthoadon.ThemCTHoaDon(cthd);
+                    MessageBox.Show("Tạo hợp đồng thành công", "Thông báo");
+                    this.DialogResult = DialogResult.OK;
+                }
+            }
         }
 
         

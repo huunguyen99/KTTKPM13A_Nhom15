@@ -52,7 +52,7 @@ namespace DAL
             List<eVanPhong> dsphong = new List<eVanPhong>();
             foreach (var item in ds)
             {
-                if (KiemTraPhongDaThueChua(item.MaPhong) == true && (DateTime.Now - dalhd.LayHDSauCung(item.MaPhong)).TotalDays >= 3)
+                if (KiemTraPhongDaThueChua(item.MaPhong) == true && (DateTime.Now - dalhd.LayHDSauCung(item.MaPhong)).TotalDays >= 28)
                     dsphong.Add(item);
             }
             return dsphong;

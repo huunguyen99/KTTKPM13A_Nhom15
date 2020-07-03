@@ -30,11 +30,11 @@ namespace Admin
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             if (txtMatKhauMoi.Text.Trim().Length == 0 || txtMatKhauHienTai.Text.Trim().Length == 0 || txtXacNhanMatKhauMoi.Text.Trim().Length == 0)
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Thông báo");
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 if (txtMatKhauMoi.Text.Equals(txtXacNhanMatKhauMoi.Text) == false)
-                    MessageBox.Show("Mật khẩu xác nhận không đúng", "Thông báo");
+                    MessageBox.Show("Mật khẩu xác nhận không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     DialogResult hoi = MessageBox.Show("Bạn có chắc chắn muốn thay đổi mật khẩu không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
@@ -42,7 +42,7 @@ namespace Admin
                     {
                         bool kq = busnv.DoiMatKhau(MaNV, txtMatKhauHienTai.Text, txtMatKhauMoi.Text);
                         if (kq == false)
-                            MessageBox.Show("Mật khẩu không đúng", "Thông báo");
+                            MessageBox.Show("Mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         else
                         {
                             MessageBox.Show("Đổi mật khẩu thành công", "Thông báo");

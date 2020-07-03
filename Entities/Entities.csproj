@@ -61,6 +61,7 @@
     <Compile Include="eTaiKhoan.cs" />
     <Compile Include="eVanPhong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegularExpression.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

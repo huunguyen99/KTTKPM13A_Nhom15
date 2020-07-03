@@ -19,6 +19,7 @@ namespace NhanVienKeToan
         private static decimal TienPhong { get; set; }
         private static int MaHopDong { get; set; }
         private static DateTime HDGanNhat { get; set; }
+        ErrorProvider ep;
         public frmDienThongTinHoaDon(int manv, decimal giathue, int mahopdong, DateTime hdgn)
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace NhanVienKeToan
             MaNV = manv;
             TienPhong = giathue;
             HDGanNhat = hdgn;
+            ep = new ErrorProvider();
         }
         BUSChiTietHoaDon buscthd;
         BUSHoaDon bushd;
@@ -63,26 +65,64 @@ namespace NhanVienKeToan
         }
         private void btnTaoHoaDon_Click(object sender, EventArgs e)
         {
-            if ((dtpNgayCanLap.Value - HDGanNhat).TotalDays >= 32)
-                MessageBox.Show("Tháng trước bạn vẫn chưa lập hóa đơn!\n Không thể lập hóa đơn cho tháng tiếp theo", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            decimal tiendien;
+            decimal tiennuoc;
+            decimal tienguixe;
+            decimal phibaotri;
+            decimal phivesinh;
+            decimal phithangmay;
+            decimal phibaove;
+            if (txtTienDien.Text.Trim().Length == 0 || txtTienNuoc.Text.Trim().Length == 0 || txtTienGuiXe.Text.Trim().Length == 0 || txtPhiBaoTri.Text.Trim().Length == 0 || txtPhiBaoVe.Text.Trim().Length == 0 || txtPhiThangMay.Text.Trim().Length == 0 || txtPhiVeSinh.Text.Trim().Length == 0)
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             else
             {
-                DialogResult hoi = MessageBox.Show("Bạn có chắc chắn muốn thêm hóa đơn này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-                if (hoi == DialogResult.Yes)
+                try
                 {
-                    eHoaDon hd = TaoHD();
-                    bushd.ThemHoaDon(hd);
-                    eChiTietHoaDon cthd = TaoCTHD(hd.MaHoaDon);
-                    buscthd.ThemCTHoaDon(cthd);
-                    MessageBox.Show("Thêm hóa đơn thành công", "Thông báo");
-                    this.DialogResult = DialogResult.OK;
+                    tiendien = Convert.ToDecimal(txtTienDien.Text);
+                    tiennuoc = Convert.ToDecimal(txtTienNuoc.Text);
+                    tienguixe = Convert.ToDecimal(txtTienGuiXe.Text);
+                    phibaotri = Convert.ToDecimal(txtPhiBaoTri.Text);
+                    phivesinh = Convert.ToDecimal(txtPhiVeSinh.Text);
+                    phithangmay = Convert.ToDecimal(txtPhiThangMay.Text);
+                    phibaove = Convert.ToDecimal(txtPhiBaoVe.Text);
+                    if (tiendien >= 100000000)
+                        ep.SetError(txtTienDien, "Các khoản phí không thể quá 100 triệu");
+                    else if (tiennuoc >= 100000000)
+                        ep.SetError(txtTienGuiXe, "Các khoản phí không thể quá 100 triệu");
+                    else if (tienguixe >= 100000000)
+                        ep.SetError(txtTienNuoc, "Các khoản phí không thể quá 100 triệu");
+                    else if (phibaotri >= 100000000)
+                        ep.SetError(txtPhiBaoTri, "Các khoản phí không thể quá 100 triệu");
+                    else if (phibaove >= 100000000)
+                        ep.SetError(txtPhiBaoVe, "Các khoản phí không thể quá 100 triệu");
+                    else if (phithangmay >= 100000000)
+                        ep.SetError(txtPhiThangMay, "Các khoản phí không thể quá 100 triệu");
+                    else if (phivesinh >= 100000000)
+                        ep.SetError(txtPhiVeSinh, "Các khoản phí không thể quá 100 triệu");
+                    else
+                    {
+                        DialogResult hoi = MessageBox.Show("Bạn có chắc chắn muốn thêm hóa đơn này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                        if (hoi == DialogResult.Yes)
+                        {
+                            eHoaDon hd = TaoHD();
+                            bushd.ThemHoaDon(hd);
+                            eChiTietHoaDon cthd = TaoCTHD(hd.MaHoaDon);
+                            buscthd.ThemCTHoaDon(cthd);
+                            MessageBox.Show("Thêm hóa đơn thành công", "Thông báo");
+                            this.DialogResult = DialogResult.OK;
+                        }
+                    }
+                }
+                catch (OverflowException)
+                {
+                    MessageBox.Show("Số tiền quá lớn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
         private void txtTienDien_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
+            if (!((e.KeyChar >= 48 && e.KeyChar <= 57)))
                 e.Handled = true;
         }
 
@@ -127,6 +167,48 @@ namespace NhanVienKeToan
             DialogResult hoiThoat = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
             if (hoiThoat == DialogResult.Yes)
                 this.Close();
+        }
+
+        private void txtTienDien_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTienDien.Text.KTraTien())
+                ep.Clear();
+        }
+
+        private void txtTienNuoc_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTienNuoc.Text.KTraTien())
+                ep.Clear();
+        }
+
+        private void txtTienGuiXe_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTienGuiXe.Text.KTraTien())
+                ep.Clear();
+        }
+
+        private void txtPhiBaoTri_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPhiBaoTri.Text.KTraTien())
+                ep.Clear();
+        }
+
+        private void txtPhiVeSinh_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPhiVeSinh.Text.KTraTien())
+                ep.Clear();
+        }
+
+        private void txtPhiThangMay_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPhiThangMay.Text.KTraTien())
+                ep.Clear();
+        }
+
+        private void txtPhiBaoVe_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPhiBaoVe.Text.KTraTien())
+                ep.Clear();
         }
     }
 }

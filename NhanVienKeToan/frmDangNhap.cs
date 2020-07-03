@@ -31,7 +31,7 @@ namespace NhanVienKeToan
             if (txtTaiKhoan.Text.Trim().Length == 0 || txtMatKhau.Text.Trim().Length == 0)
             {
                 demDN++;
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin đăng nhập!", "Thông báo");
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (nv != null)
             {
@@ -54,7 +54,7 @@ namespace NhanVienKeToan
             else
             {
                 demDN++;
-                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "THÔNG BÁO");
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             if (demDN == 3)
             {

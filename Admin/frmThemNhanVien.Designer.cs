@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemNhanVien));
             this.kryptonWrapLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.dtmNgaySinh = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.btnHuy = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -77,16 +78,15 @@
             this.dtmNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtmNgaySinh.Location = new System.Drawing.Point(153, 119);
             this.dtmNgaySinh.Name = "dtmNgaySinh";
-            this.dtmNgaySinh.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
             this.dtmNgaySinh.Size = new System.Drawing.Size(147, 21);
-            this.dtmNgaySinh.TabIndex = 33;
+            this.dtmNgaySinh.TabIndex = 2;
             // 
             // btnHuy
             // 
             this.btnHuy.Location = new System.Drawing.Point(202, 529);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(98, 35);
-            this.btnHuy.TabIndex = 41;
+            this.btnHuy.TabIndex = 14;
             this.btnHuy.Values.Text = "HỦY";
             // 
             // btnDangKy
@@ -94,7 +94,7 @@
             this.btnDangKy.Location = new System.Drawing.Point(66, 529);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(98, 35);
-            this.btnDangKy.TabIndex = 40;
+            this.btnDangKy.TabIndex = 13;
             this.btnDangKy.Values.Text = "THÊM";
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
@@ -104,7 +104,7 @@
             this.txtXacNhanMk.Name = "txtXacNhanMk";
             this.txtXacNhanMk.PasswordChar = '*';
             this.txtXacNhanMk.Size = new System.Drawing.Size(147, 23);
-            this.txtXacNhanMk.TabIndex = 39;
+            this.txtXacNhanMk.TabIndex = 12;
             // 
             // txtMatKhau
             // 
@@ -112,28 +112,31 @@
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(147, 23);
-            this.txtMatKhau.TabIndex = 38;
+            this.txtMatKhau.TabIndex = 11;
             // 
             // txtTenTK
             // 
             this.txtTenTK.Location = new System.Drawing.Point(153, 416);
             this.txtTenTK.Name = "txtTenTK";
             this.txtTenTK.Size = new System.Drawing.Size(147, 23);
-            this.txtTenTK.TabIndex = 37;
+            this.txtTenTK.TabIndex = 10;
+            this.txtTenTK.TextChanged += new System.EventHandler(this.txtTenTK_TextChanged);
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(153, 181);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(147, 23);
-            this.txtEmail.TabIndex = 36;
+            this.txtEmail.TabIndex = 4;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtSoDT
             // 
             this.txtSoDT.Location = new System.Drawing.Point(153, 149);
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.Size = new System.Drawing.Size(147, 23);
-            this.txtSoDT.TabIndex = 35;
+            this.txtSoDT.TabIndex = 3;
+            this.txtSoDT.TextChanged += new System.EventHandler(this.txtSoDT_TextChanged);
             this.txtSoDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoDT_KeyPress);
             // 
             // txtSoCMND
@@ -141,7 +144,8 @@
             this.txtSoCMND.Location = new System.Drawing.Point(153, 87);
             this.txtSoCMND.Name = "txtSoCMND";
             this.txtSoCMND.Size = new System.Drawing.Size(147, 23);
-            this.txtSoCMND.TabIndex = 32;
+            this.txtSoCMND.TabIndex = 1;
+            this.txtSoCMND.TextChanged += new System.EventHandler(this.txtSoCMND_TextChanged);
             this.txtSoCMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoCMND_KeyPress);
             // 
             // txtHoTen
@@ -149,7 +153,7 @@
             this.txtHoTen.Location = new System.Drawing.Point(153, 55);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(147, 23);
-            this.txtHoTen.TabIndex = 26;
+            this.txtHoTen.TabIndex = 0;
             // 
             // kryptonLabel7
             // 
@@ -245,7 +249,7 @@
             this.rdoNam.Location = new System.Drawing.Point(153, 218);
             this.rdoNam.Name = "rdoNam";
             this.rdoNam.Size = new System.Drawing.Size(49, 20);
-            this.rdoNam.TabIndex = 45;
+            this.rdoNam.TabIndex = 5;
             this.rdoNam.Values.Text = "Nam";
             // 
             // rdoNu
@@ -253,7 +257,7 @@
             this.rdoNu.Location = new System.Drawing.Point(208, 218);
             this.rdoNu.Name = "rdoNu";
             this.rdoNu.Size = new System.Drawing.Size(39, 20);
-            this.rdoNu.TabIndex = 45;
+            this.rdoNu.TabIndex = 6;
             this.rdoNu.Values.Text = "Nữ";
             // 
             // kryptonLabel12
@@ -272,14 +276,14 @@
             this.cboChucVu.Location = new System.Drawing.Point(153, 386);
             this.cboChucVu.Name = "cboChucVu";
             this.cboChucVu.Size = new System.Drawing.Size(147, 21);
-            this.cboChucVu.TabIndex = 47;
+            this.cboChucVu.TabIndex = 9;
             // 
             // rtxtQueQuan
             // 
             this.rtxtQueQuan.Location = new System.Drawing.Point(153, 250);
             this.rtxtQueQuan.Name = "rtxtQueQuan";
             this.rtxtQueQuan.Size = new System.Drawing.Size(147, 59);
-            this.rtxtQueQuan.TabIndex = 48;
+            this.rtxtQueQuan.TabIndex = 7;
             this.rtxtQueQuan.Text = "";
             // 
             // rtxtDiaChi
@@ -287,7 +291,7 @@
             this.rtxtDiaChi.Location = new System.Drawing.Point(153, 316);
             this.rtxtDiaChi.Name = "rtxtDiaChi";
             this.rtxtDiaChi.Size = new System.Drawing.Size(147, 59);
-            this.rtxtDiaChi.TabIndex = 48;
+            this.rtxtDiaChi.TabIndex = 8;
             this.rtxtDiaChi.Text = "";
             // 
             // frmThemNhanVien
@@ -324,6 +328,7 @@
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.kryptonLabel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmThemNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

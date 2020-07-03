@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using BUS;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -76,10 +77,11 @@ namespace NhanVienKyThuat
         {
             this.Owner.Show();
         }
-
+        BUSHopDong bushd;
         private void frmMenu_Load(object sender, EventArgs e)
         {
-
+            bushd = new BUSHopDong();
+            bushd.AutoKetThucHopDong();
         }
     }
 }

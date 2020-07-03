@@ -68,7 +68,6 @@ namespace DAL
             }    
             return dshphieucanlay;
         }
-
         public List<ePhieuYeuCauKiemTraPhong> LayDSPhieuChuaDuyet()
         {
             var dsphieu = dt.tblPhieuYeuCauKiemTraPhong.Where(x => x.TrangThaiPhieu == false).ToList();

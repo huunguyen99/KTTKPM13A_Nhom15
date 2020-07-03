@@ -40,6 +40,15 @@ namespace DAL
                     dskh.RemoveAt(i);
                     i--;
                 }
+            }
+            for (int i = 0; i < dskh.Count - 1; i++)
+            {
+                eKhachHang k = dskh[i];
+                for(int j = i + 1; j < dskh.Count; j++)
+                {
+                    if (dskh[j].MaKH == dskh[i].MaKH)
+                        dskh.RemoveAt(j);
+                }
             }    
             return dskh;
         }

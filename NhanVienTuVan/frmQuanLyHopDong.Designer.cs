@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.txtTienCoc = new System.Windows.Forms.TextBox();
             this.txtKhachHang = new System.Windows.Forms.TextBox();
             this.txtMaHopDong = new System.Windows.Forms.TextBox();
@@ -89,6 +89,7 @@
             this.txtTienCoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienCoc.Location = new System.Drawing.Point(178, 120);
             this.txtTienCoc.Name = "txtTienCoc";
+            this.txtTienCoc.ReadOnly = true;
             this.txtTienCoc.Size = new System.Drawing.Size(238, 22);
             this.txtTienCoc.TabIndex = 3;
             this.txtTienCoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienCoc_KeyPress);
@@ -98,6 +99,7 @@
             this.txtKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKhachHang.Location = new System.Drawing.Point(178, 90);
             this.txtKhachHang.Name = "txtKhachHang";
+            this.txtKhachHang.ReadOnly = true;
             this.txtKhachHang.Size = new System.Drawing.Size(238, 22);
             this.txtKhachHang.TabIndex = 2;
             // 
@@ -106,15 +108,13 @@
             this.txtMaHopDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaHopDong.Location = new System.Drawing.Point(178, 30);
             this.txtMaHopDong.Name = "txtMaHopDong";
+            this.txtMaHopDong.ReadOnly = true;
             this.txtMaHopDong.Size = new System.Drawing.Size(238, 22);
             this.txtMaHopDong.TabIndex = 0;
             // 
             // kryptonGroupBox1
             // 
-            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             // 
@@ -155,7 +155,6 @@
             this.dtpNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayTra.Location = new System.Drawing.Point(590, 88);
             this.dtpNgayTra.Name = "dtpNgayTra";
-            this.dtpNgayTra.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
             this.dtpNgayTra.Size = new System.Drawing.Size(238, 21);
             this.dtpNgayTra.TabIndex = 35;
             // 
@@ -165,7 +164,6 @@
             this.dtpNgayThue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayThue.Location = new System.Drawing.Point(590, 59);
             this.dtpNgayThue.Name = "dtpNgayThue";
-            this.dtpNgayThue.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
             this.dtpNgayThue.Size = new System.Drawing.Size(238, 21);
             this.dtpNgayThue.TabIndex = 35;
             // 
@@ -175,7 +173,6 @@
             this.dtpNgayTao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayTao.Location = new System.Drawing.Point(590, 30);
             this.dtpNgayTao.Name = "dtpNgayTao";
-            this.dtpNgayTao.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
             this.dtpNgayTao.Size = new System.Drawing.Size(238, 21);
             this.dtpNgayTao.TabIndex = 35;
             // 
@@ -184,6 +181,7 @@
             this.txtNhanVienTao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhanVienTao.Location = new System.Drawing.Point(178, 60);
             this.txtNhanVienTao.Name = "txtNhanVienTao";
+            this.txtNhanVienTao.ReadOnly = true;
             this.txtNhanVienTao.Size = new System.Drawing.Size(238, 22);
             this.txtNhanVienTao.TabIndex = 1;
             // 
@@ -269,7 +267,7 @@
             this.lvwDSHopDong.GridLines = true;
             this.lvwDSHopDong.HideSelection = false;
             this.lvwDSHopDong.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.lvwDSHopDong.Location = new System.Drawing.Point(0, 0);
             this.lvwDSHopDong.Name = "lvwDSHopDong";
             this.lvwDSHopDong.Size = new System.Drawing.Size(897, 229);

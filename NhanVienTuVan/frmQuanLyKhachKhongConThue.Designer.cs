@@ -257,10 +257,7 @@
             // 
             // kryptonGroupBox2
             // 
-            this.kryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox2.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox2.Location = new System.Drawing.Point(0, 0);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
             this.kryptonGroupBox2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
@@ -340,6 +337,7 @@
             this.txtGiaTriTim.Size = new System.Drawing.Size(180, 22);
             this.txtGiaTriTim.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaTriTim.TabIndex = 63;
+            this.txtGiaTriTim.TextChanged += new System.EventHandler(this.txtGiaTriTim_TextChanged);
             // 
             // btnTimKiem
             // 
@@ -357,7 +355,6 @@
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgaySinh.Location = new System.Drawing.Point(507, 28);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
             this.dtpNgaySinh.Size = new System.Drawing.Size(232, 21);
             this.dtpNgaySinh.TabIndex = 54;
             // 
@@ -374,6 +371,7 @@
             this.txtGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGioiTinh.Location = new System.Drawing.Point(507, 58);
             this.txtGioiTinh.Name = "txtGioiTinh";
+            this.txtGioiTinh.ReadOnly = true;
             this.txtGioiTinh.Size = new System.Drawing.Size(238, 22);
             this.txtGioiTinh.TabIndex = 42;
             // 
@@ -384,6 +382,7 @@
             this.txtSoCMND.Name = "txtSoCMND";
             this.txtSoCMND.Size = new System.Drawing.Size(238, 22);
             this.txtSoCMND.TabIndex = 39;
+            this.txtSoCMND.TextChanged += new System.EventHandler(this.txtSoCMND_TextChanged);
             this.txtSoCMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoCMND_KeyPress);
             // 
             // txtEmail
@@ -393,6 +392,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(238, 22);
             this.txtEmail.TabIndex = 38;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtSoDT
             // 
@@ -401,6 +401,7 @@
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.Size = new System.Drawing.Size(238, 22);
             this.txtSoDT.TabIndex = 37;
+            this.txtSoDT.TextChanged += new System.EventHandler(this.txtSoDT_TextChanged);
             this.txtSoDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoDT_KeyPress);
             // 
             // txtHoTen
@@ -416,6 +417,7 @@
             this.txtMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaKH.Location = new System.Drawing.Point(134, 28);
             this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.ReadOnly = true;
             this.txtMaKH.Size = new System.Drawing.Size(238, 22);
             this.txtMaKH.TabIndex = 35;
             // 

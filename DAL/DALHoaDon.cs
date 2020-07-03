@@ -43,6 +43,7 @@ namespace DAL
             {
                 hd.NgayThanhToan = ngayThanhToan;
                 hd.TinhTrangHD = true;
+                dt.SaveChanges();
             }
             catch (Exception ex)
             {

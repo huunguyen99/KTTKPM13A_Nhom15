@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDienThongTinPhong));
             this.kryptonWrapLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -121,14 +122,15 @@
             this.txtMaPhong.Location = new System.Drawing.Point(135, 53);
             this.txtMaPhong.Name = "txtMaPhong";
             this.txtMaPhong.Size = new System.Drawing.Size(161, 23);
-            this.txtMaPhong.TabIndex = 2;
+            this.txtMaPhong.TabIndex = 0;
+            this.txtMaPhong.TextChanged += new System.EventHandler(this.txtMaPhong_TextChanged);
             // 
             // txtTenPhong
             // 
             this.txtTenPhong.Location = new System.Drawing.Point(135, 88);
             this.txtTenPhong.Name = "txtTenPhong";
             this.txtTenPhong.Size = new System.Drawing.Size(161, 23);
-            this.txtTenPhong.TabIndex = 2;
+            this.txtTenPhong.TabIndex = 1;
             // 
             // txtGiaThue
             // 
@@ -136,6 +138,7 @@
             this.txtGiaThue.Name = "txtGiaThue";
             this.txtGiaThue.Size = new System.Drawing.Size(161, 23);
             this.txtGiaThue.TabIndex = 2;
+            this.txtGiaThue.TextChanged += new System.EventHandler(this.txtGiaThue_TextChanged);
             this.txtGiaThue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaThue_KeyPress);
             // 
             // txtTangLau
@@ -143,7 +146,8 @@
             this.txtTangLau.Location = new System.Drawing.Point(135, 158);
             this.txtTangLau.Name = "txtTangLau";
             this.txtTangLau.Size = new System.Drawing.Size(161, 23);
-            this.txtTangLau.TabIndex = 2;
+            this.txtTangLau.TabIndex = 3;
+            this.txtTangLau.TextChanged += new System.EventHandler(this.txtTangLau_TextChanged);
             this.txtTangLau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTangLau_KeyPress);
             // 
             // txtDienTich
@@ -151,7 +155,8 @@
             this.txtDienTich.Location = new System.Drawing.Point(135, 193);
             this.txtDienTich.Name = "txtDienTich";
             this.txtDienTich.Size = new System.Drawing.Size(161, 23);
-            this.txtDienTich.TabIndex = 2;
+            this.txtDienTich.TabIndex = 4;
+            this.txtDienTich.TextChanged += new System.EventHandler(this.txtDienTich_TextChanged);
             this.txtDienTich.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDienTich_KeyPress);
             // 
             // txtSoBongDen
@@ -159,7 +164,8 @@
             this.txtSoBongDen.Location = new System.Drawing.Point(135, 228);
             this.txtSoBongDen.Name = "txtSoBongDen";
             this.txtSoBongDen.Size = new System.Drawing.Size(161, 23);
-            this.txtSoBongDen.TabIndex = 2;
+            this.txtSoBongDen.TabIndex = 5;
+            this.txtSoBongDen.TextChanged += new System.EventHandler(this.txtSoBongDen_TextChanged);
             this.txtSoBongDen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoBongDen_KeyPress);
             // 
             // txtSoMayLanh
@@ -167,7 +173,8 @@
             this.txtSoMayLanh.Location = new System.Drawing.Point(135, 263);
             this.txtSoMayLanh.Name = "txtSoMayLanh";
             this.txtSoMayLanh.Size = new System.Drawing.Size(161, 23);
-            this.txtSoMayLanh.TabIndex = 2;
+            this.txtSoMayLanh.TabIndex = 6;
+            this.txtSoMayLanh.TextChanged += new System.EventHandler(this.txtSoMayLanh_TextChanged);
             this.txtSoMayLanh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoMayLanh_KeyPress);
             // 
             // btnThemPhong
@@ -175,7 +182,7 @@
             this.btnThemPhong.Location = new System.Drawing.Point(39, 303);
             this.btnThemPhong.Name = "btnThemPhong";
             this.btnThemPhong.Size = new System.Drawing.Size(96, 38);
-            this.btnThemPhong.TabIndex = 3;
+            this.btnThemPhong.TabIndex = 7;
             this.btnThemPhong.Values.Text = "THÊM PHÒNG";
             this.btnThemPhong.Click += new System.EventHandler(this.btnThemPhong_Click);
             // 
@@ -184,7 +191,7 @@
             this.btnThoat.Location = new System.Drawing.Point(200, 303);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(96, 38);
-            this.btnThoat.TabIndex = 3;
+            this.btnThoat.TabIndex = 8;
             this.btnThoat.Values.Text = "HỦY";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -211,6 +218,7 @@
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.kryptonWrapLabel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDienThongTinPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

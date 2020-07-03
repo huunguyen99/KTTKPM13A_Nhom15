@@ -42,12 +42,10 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.kryptonSplitContainer2 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.rdoTimTheoTenPhong = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.rdoTimTheoMaPhong = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.kryptonWrapLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblTimKiem = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnTimKiemPhong = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.txtGiaTriTim = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonRadioButton1 = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.kryptonSplitContainer3 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.txtTangLau = new System.Windows.Forms.TextBox();
@@ -71,7 +69,6 @@
             this.btnSua = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnXoa = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnThem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonWrapLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
             this.kryptonSplitContainer1.Panel1.SuspendLayout();
@@ -154,7 +151,7 @@
             this.kryptonWrapLabel1.AutoSize = false;
             this.kryptonWrapLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonWrapLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
             this.kryptonWrapLabel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonWrapLabel1.Name = "kryptonWrapLabel1";
             this.kryptonWrapLabel1.Size = new System.Drawing.Size(1065, 38);
@@ -255,45 +252,38 @@
             // kryptonGroupBox2.Panel
             // 
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonWrapLabel2);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.rdoTimTheoTenPhong);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.rdoTimTheoMaPhong);
             this.kryptonGroupBox2.Panel.Controls.Add(this.lblTimKiem);
             this.kryptonGroupBox2.Panel.Controls.Add(this.btnTimKiemPhong);
             this.kryptonGroupBox2.Panel.Controls.Add(this.txtGiaTriTim);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonRadioButton1);
             this.kryptonGroupBox2.Size = new System.Drawing.Size(352, 301);
             this.kryptonGroupBox2.TabIndex = 0;
             this.kryptonGroupBox2.Values.Heading = "Tìm kiếm";
             // 
-            // rdoTimTheoTenPhong
+            // kryptonWrapLabel2
             // 
-            this.rdoTimTheoTenPhong.Location = new System.Drawing.Point(180, 107);
-            this.rdoTimTheoTenPhong.Name = "rdoTimTheoTenPhong";
-            this.rdoTimTheoTenPhong.Size = new System.Drawing.Size(149, 20);
-            this.rdoTimTheoTenPhong.TabIndex = 68;
-            this.rdoTimTheoTenPhong.Values.Text = "TÌM THEO TÊN PHÒNG";
-            // 
-            // rdoTimTheoMaPhong
-            // 
-            this.rdoTimTheoMaPhong.Checked = true;
-            this.rdoTimTheoMaPhong.Location = new System.Drawing.Point(28, 107);
-            this.rdoTimTheoMaPhong.Name = "rdoTimTheoMaPhong";
-            this.rdoTimTheoMaPhong.Size = new System.Drawing.Size(146, 20);
-            this.rdoTimTheoMaPhong.TabIndex = 69;
-            this.rdoTimTheoMaPhong.Values.Text = "TÌM THEO MÃ PHÒNG";
+            this.kryptonWrapLabel2.AutoSize = false;
+            this.kryptonWrapLabel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonWrapLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.kryptonWrapLabel2.Location = new System.Drawing.Point(0, 0);
+            this.kryptonWrapLabel2.Name = "kryptonWrapLabel2";
+            this.kryptonWrapLabel2.Size = new System.Drawing.Size(348, 34);
+            this.kryptonWrapLabel2.StateCommon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonWrapLabel2.Text = "ĐIỀN THÔNG TIN CẦN TÌM";
+            this.kryptonWrapLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTimKiem
             // 
-            this.lblTimKiem.Location = new System.Drawing.Point(28, 70);
+            this.lblTimKiem.Location = new System.Drawing.Point(12, 70);
             this.lblTimKiem.Margin = new System.Windows.Forms.Padding(5);
             this.lblTimKiem.Name = "lblTimKiem";
-            this.lblTimKiem.Size = new System.Drawing.Size(78, 20);
+            this.lblTimKiem.Size = new System.Drawing.Size(94, 20);
             this.lblTimKiem.TabIndex = 67;
-            this.lblTimKiem.Values.Text = "GIÁ TRỊ TÌM:";
+            this.lblTimKiem.Values.Text = "Phòng Cần Tìm";
             // 
             // btnTimKiemPhong
             // 
-            this.btnTimKiemPhong.Location = new System.Drawing.Point(88, 158);
+            this.btnTimKiemPhong.Location = new System.Drawing.Point(89, 143);
             this.btnTimKiemPhong.Margin = new System.Windows.Forms.Padding(5);
             this.btnTimKiemPhong.Name = "btnTimKiemPhong";
             this.btnTimKiemPhong.Size = new System.Drawing.Size(171, 35);
@@ -303,6 +293,8 @@
             // 
             // txtGiaTriTim
             // 
+            this.txtGiaTriTim.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtGiaTriTim.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtGiaTriTim.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
             this.txtGiaTriTim.Location = new System.Drawing.Point(116, 67);
             this.txtGiaTriTim.Margin = new System.Windows.Forms.Padding(5);
@@ -310,14 +302,6 @@
             this.txtGiaTriTim.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.txtGiaTriTim.Size = new System.Drawing.Size(203, 23);
             this.txtGiaTriTim.TabIndex = 66;
-            // 
-            // kryptonRadioButton1
-            // 
-            this.kryptonRadioButton1.Location = new System.Drawing.Point(77, 115);
-            this.kryptonRadioButton1.Name = "kryptonRadioButton1";
-            this.kryptonRadioButton1.Size = new System.Drawing.Size(18, 12);
-            this.kryptonRadioButton1.TabIndex = 0;
-            this.kryptonRadioButton1.Values.Text = "";
             // 
             // kryptonSplitContainer3
             // 
@@ -560,19 +544,6 @@
             this.btnThem.Values.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // kryptonWrapLabel2
-            // 
-            this.kryptonWrapLabel2.AutoSize = false;
-            this.kryptonWrapLabel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonWrapLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.kryptonWrapLabel2.Location = new System.Drawing.Point(0, 0);
-            this.kryptonWrapLabel2.Name = "kryptonWrapLabel2";
-            this.kryptonWrapLabel2.Size = new System.Drawing.Size(348, 34);
-            this.kryptonWrapLabel2.StateCommon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel2.Text = "ĐIỀN THÔNG TIN CẦN TÌM";
-            this.kryptonWrapLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frmQuanLyPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -633,9 +604,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer1;
         private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer2;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox2;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton kryptonRadioButton1;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdoTimTheoTenPhong;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdoTimTheoMaPhong;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblTimKiem;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnTimKiemPhong;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtGiaTriTim;

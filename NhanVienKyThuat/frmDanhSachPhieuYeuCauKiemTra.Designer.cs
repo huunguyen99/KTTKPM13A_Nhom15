@@ -31,7 +31,7 @@
             this.kryptonSplitContainer1 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.kryptonSplitContainer5 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.kryptonWrapLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lvwDSPhong = new System.Windows.Forms.ListView();
+            this.lvwDSPhieu = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -123,7 +123,7 @@
             // 
             // kryptonSplitContainer5.Panel2
             // 
-            this.kryptonSplitContainer5.Panel2.Controls.Add(this.lvwDSPhong);
+            this.kryptonSplitContainer5.Panel2.Controls.Add(this.lvwDSPhieu);
             this.kryptonSplitContainer5.Size = new System.Drawing.Size(908, 250);
             this.kryptonSplitContainer5.SplitterDistance = 38;
             this.kryptonSplitContainer5.TabIndex = 0;
@@ -141,27 +141,27 @@
             this.kryptonWrapLabel1.Text = "DANH SÁCH PHIẾU YÊU CẦU KIỂM TRA PHÒNG";
             this.kryptonWrapLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lvwDSPhong
+            // lvwDSPhieu
             // 
-            this.lvwDSPhong.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvwDSPhieu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            this.lvwDSPhong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvwDSPhong.FullRowSelect = true;
-            this.lvwDSPhong.GridLines = true;
-            this.lvwDSPhong.HideSelection = false;
-            this.lvwDSPhong.Location = new System.Drawing.Point(0, 0);
-            this.lvwDSPhong.Margin = new System.Windows.Forms.Padding(4);
-            this.lvwDSPhong.Name = "lvwDSPhong";
-            this.lvwDSPhong.Size = new System.Drawing.Size(908, 207);
-            this.lvwDSPhong.TabIndex = 1;
-            this.lvwDSPhong.UseCompatibleStateImageBehavior = false;
-            this.lvwDSPhong.View = System.Windows.Forms.View.Details;
-            this.lvwDSPhong.SelectedIndexChanged += new System.EventHandler(this.lvwDSPhong_SelectedIndexChanged);
+            this.lvwDSPhieu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvwDSPhieu.FullRowSelect = true;
+            this.lvwDSPhieu.GridLines = true;
+            this.lvwDSPhieu.HideSelection = false;
+            this.lvwDSPhieu.Location = new System.Drawing.Point(0, 0);
+            this.lvwDSPhieu.Margin = new System.Windows.Forms.Padding(4);
+            this.lvwDSPhieu.Name = "lvwDSPhieu";
+            this.lvwDSPhieu.Size = new System.Drawing.Size(908, 207);
+            this.lvwDSPhieu.TabIndex = 1;
+            this.lvwDSPhieu.UseCompatibleStateImageBehavior = false;
+            this.lvwDSPhieu.View = System.Windows.Forms.View.Details;
+            this.lvwDSPhieu.SelectedIndexChanged += new System.EventHandler(this.lvwDSPhieu_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -245,10 +245,7 @@
             // 
             // kryptonGroupBox1
             // 
-            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.kryptonGroupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
@@ -292,10 +289,7 @@
             // 
             // kryptonGroupBox2
             // 
-            this.kryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox2.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox2.Location = new System.Drawing.Point(0, 0);
             this.kryptonGroupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
@@ -408,7 +402,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnThoat;
         private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer5;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel1;
-        private System.Windows.Forms.ListView lvwDSPhong;
+        private System.Windows.Forms.ListView lvwDSPhieu;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

@@ -67,10 +67,11 @@ namespace Admin
         {
             this.Owner.Show();
         }
-
+        BUSHopDong bushd;
         private void frmMenu_Load(object sender, EventArgs e)
         {
-
+            bushd = new BUSHopDong();
+            bushd.AutoKetThucHopDong();
         }
     }
 }

@@ -71,7 +71,7 @@
             this.kryptonWrapLabel1.AutoSize = false;
             this.kryptonWrapLabel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonWrapLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.kryptonWrapLabel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonWrapLabel1.Name = "kryptonWrapLabel1";
             this.kryptonWrapLabel1.Size = new System.Drawing.Size(389, 35);
@@ -140,7 +140,8 @@
             this.txtTienDien.Location = new System.Drawing.Point(158, 99);
             this.txtTienDien.Name = "txtTienDien";
             this.txtTienDien.Size = new System.Drawing.Size(153, 23);
-            this.txtTienDien.TabIndex = 4;
+            this.txtTienDien.TabIndex = 1;
+            this.txtTienDien.TextChanged += new System.EventHandler(this.txtTienDien_TextChanged);
             this.txtTienDien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienDien_KeyPress);
             // 
             // txtTienNuoc
@@ -148,7 +149,8 @@
             this.txtTienNuoc.Location = new System.Drawing.Point(158, 133);
             this.txtTienNuoc.Name = "txtTienNuoc";
             this.txtTienNuoc.Size = new System.Drawing.Size(153, 23);
-            this.txtTienNuoc.TabIndex = 4;
+            this.txtTienNuoc.TabIndex = 2;
+            this.txtTienNuoc.TextChanged += new System.EventHandler(this.txtTienNuoc_TextChanged);
             this.txtTienNuoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienNuoc_KeyPress);
             // 
             // txtTienGuiXe
@@ -156,7 +158,8 @@
             this.txtTienGuiXe.Location = new System.Drawing.Point(158, 167);
             this.txtTienGuiXe.Name = "txtTienGuiXe";
             this.txtTienGuiXe.Size = new System.Drawing.Size(153, 23);
-            this.txtTienGuiXe.TabIndex = 4;
+            this.txtTienGuiXe.TabIndex = 3;
+            this.txtTienGuiXe.TextChanged += new System.EventHandler(this.txtTienGuiXe_TextChanged);
             this.txtTienGuiXe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienGuiXe_KeyPress);
             // 
             // txtPhiBaoTri
@@ -165,6 +168,7 @@
             this.txtPhiBaoTri.Name = "txtPhiBaoTri";
             this.txtPhiBaoTri.Size = new System.Drawing.Size(153, 23);
             this.txtPhiBaoTri.TabIndex = 4;
+            this.txtPhiBaoTri.TextChanged += new System.EventHandler(this.txtPhiBaoTri_TextChanged);
             this.txtPhiBaoTri.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhiBaoTri_KeyPress);
             // 
             // txtPhiVeSinh
@@ -172,7 +176,8 @@
             this.txtPhiVeSinh.Location = new System.Drawing.Point(158, 235);
             this.txtPhiVeSinh.Name = "txtPhiVeSinh";
             this.txtPhiVeSinh.Size = new System.Drawing.Size(153, 23);
-            this.txtPhiVeSinh.TabIndex = 4;
+            this.txtPhiVeSinh.TabIndex = 5;
+            this.txtPhiVeSinh.TextChanged += new System.EventHandler(this.txtPhiVeSinh_TextChanged);
             this.txtPhiVeSinh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhiVeSinh_KeyPress);
             // 
             // txtPhiThangMay
@@ -180,7 +185,8 @@
             this.txtPhiThangMay.Location = new System.Drawing.Point(158, 269);
             this.txtPhiThangMay.Name = "txtPhiThangMay";
             this.txtPhiThangMay.Size = new System.Drawing.Size(153, 23);
-            this.txtPhiThangMay.TabIndex = 4;
+            this.txtPhiThangMay.TabIndex = 6;
+            this.txtPhiThangMay.TextChanged += new System.EventHandler(this.txtPhiThangMay_TextChanged);
             this.txtPhiThangMay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhiThangMay_KeyPress);
             // 
             // txtPhiBaoVe
@@ -188,7 +194,8 @@
             this.txtPhiBaoVe.Location = new System.Drawing.Point(158, 303);
             this.txtPhiBaoVe.Name = "txtPhiBaoVe";
             this.txtPhiBaoVe.Size = new System.Drawing.Size(153, 23);
-            this.txtPhiBaoVe.TabIndex = 4;
+            this.txtPhiBaoVe.TabIndex = 7;
+            this.txtPhiBaoVe.TextChanged += new System.EventHandler(this.txtPhiBaoVe_TextChanged);
             this.txtPhiBaoVe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhiBaoVe_KeyPress);
             // 
             // btnTaoHoaDon
@@ -196,7 +203,7 @@
             this.btnTaoHoaDon.Location = new System.Drawing.Point(53, 348);
             this.btnTaoHoaDon.Name = "btnTaoHoaDon";
             this.btnTaoHoaDon.Size = new System.Drawing.Size(105, 29);
-            this.btnTaoHoaDon.TabIndex = 6;
+            this.btnTaoHoaDon.TabIndex = 8;
             this.btnTaoHoaDon.Values.Text = "TẠO HÓA ĐƠN";
             this.btnTaoHoaDon.Click += new System.EventHandler(this.btnTaoHoaDon_Click);
             // 
@@ -205,7 +212,7 @@
             this.btnThoat.Location = new System.Drawing.Point(206, 348);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(105, 29);
-            this.btnThoat.TabIndex = 6;
+            this.btnThoat.TabIndex = 9;
             this.btnThoat.Values.Text = "THOÁT";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 

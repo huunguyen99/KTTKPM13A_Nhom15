@@ -24,8 +24,10 @@ namespace NhanVienTuVan
         BUSKhachHang buskh;
         List<eVanPhong> dsphong;
         string maPhongChon;
+        ErrorProvider ep;
         private void frmQuanLyKhachConThue_Load(object sender, EventArgs e)
         {
+            ep = new ErrorProvider();
             busvp = new BUSVanPhong();
             buskh = new BUSKhachHang();
             dsphong = busvp.LayDSVanPhongDangChoThue().ToList();
@@ -88,14 +90,27 @@ namespace NhanVienTuVan
         {
             if (lvwDSKhachHang.SelectedItems.Count > 0)
             {
-                DialogResult hoiSua = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin khách hàng này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-                if (hoiSua == DialogResult.Yes)
+                if ((DateTime.Now - dtpNgaySinh.Value).TotalDays < 18 * 365 + 4)
+                    MessageBox.Show("ngày sinh cần sửa không hợp lệ, khách hàng chưa đủ 18 tuổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (txtHoTen.Text.Trim().Length == 0 || txtEmail.Text.Trim().Length == 0 || txtSoCMND.Text.Trim().Length == 0 || txtSoDT.Text.Trim().Length == 0 || rtxtDiaChi.Text.Trim().Length == 0)
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else if (!txtEmail.Text.KtraEmail())
+                    ep.SetError(txtEmail, "Email phải đúng định dang bắt đầu bằng chữ cái. Ex: abc123@gmail.com");
+                else if (!txtSoCMND.Text.KtraSCMND())
+                    ep.SetError(txtSoCMND, "Số chứng minh(căn cước) phải là số, có 9 hoặc 12 số, bắt đầu bằng 1-9");
+                else if (!txtSoDT.Text.KtraSDT())
+                    ep.SetError(txtSoDT, "Số điện thoại phải là số và có 10 số, bắt đầu bằng 01, 03, 05, 07 hoặc 09");
+                else
                 {
-                    eKhachHang khSua = TaoKHSua();
-                    buskh.SuaKH(khChon, khSua);
-                    MessageBox.Show("Sửa thông tin khách hàng thành công", "Thông báo");
-                    List<eKhachHang> dskh = buskh.LayDSKhachHangDangThue(maPhongChon);
-                    LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
+                    DialogResult hoiSua = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin khách hàng này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                    if (hoiSua == DialogResult.Yes)
+                    {
+                        eKhachHang khSua = TaoKHSua();
+                        buskh.SuaKH(khChon, khSua);
+                        MessageBox.Show("Sửa thông tin khách hàng thành công", "Thông báo");
+                        List<eKhachHang> dskh = buskh.LayDSKhachHangDangThue(maPhongChon);
+                        LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
+                    }
                 }
             }
             else
@@ -153,6 +168,24 @@ namespace NhanVienTuVan
         {
             if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
                 e.Handled = true;
+        }
+
+        private void txtSoDT_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSoDT.Text.KtraSDT())
+                ep.Clear();
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEmail.Text.KtraEmail())
+                ep.Clear();
+        }
+
+        private void txtSoCMND_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSoCMND.Text.KtraSCMND())
+                ep.Clear();
         }
     }
 }

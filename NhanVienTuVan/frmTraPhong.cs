@@ -89,6 +89,7 @@ namespace NhanVienTuVan
                     MessageBox.Show("Trả phòng thành công", "Thông báo");
                     dsphong = busvp.LayDSVanPhongDangChoThue().ToList();
                     LoadPhongLenTreeView(treDSPhong, dsphong);
+                    lvwDSKhachHang.Items.Clear();
                 }    
             }
             else

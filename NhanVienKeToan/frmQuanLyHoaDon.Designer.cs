@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("");
             this.kryptonSplitContainer1 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.kryptonWrapLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.kryptonSplitContainer2 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
@@ -46,9 +46,9 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnXoa = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.btnLuuSua = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnThoat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnSua = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.txtPhiVeSinh = new System.Windows.Forms.TextBox();
             this.txtPhiBaoTri = new System.Windows.Forms.TextBox();
             this.kryptonLabel16 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -84,7 +84,6 @@
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.btnLuuSua = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
             this.kryptonSplitContainer1.Panel1.SuspendLayout();
@@ -226,7 +225,7 @@
             this.lvwDSHoaDon.GridLines = true;
             this.lvwDSHoaDon.HideSelection = false;
             this.lvwDSHoaDon.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem14});
             this.lvwDSHoaDon.Location = new System.Drawing.Point(0, 0);
             this.lvwDSHoaDon.Margin = new System.Windows.Forms.Padding(4);
             this.lvwDSHoaDon.Name = "lvwDSHoaDon";
@@ -293,7 +292,6 @@
             this.btnXoa.Panel.Controls.Add(this.btnLuuSua);
             this.btnXoa.Panel.Controls.Add(this.kryptonLabel9);
             this.btnXoa.Panel.Controls.Add(this.btnThoat);
-            this.btnXoa.Panel.Controls.Add(this.btnSua);
             this.btnXoa.Panel.Controls.Add(this.txtPhiVeSinh);
             this.btnXoa.Panel.Controls.Add(this.txtPhiBaoTri);
             this.btnXoa.Panel.Controls.Add(this.kryptonLabel16);
@@ -333,6 +331,15 @@
             this.btnXoa.TabIndex = 7;
             this.btnXoa.Values.Heading = "THÔNG TIN CHI TIẾT";
             // 
+            // btnLuuSua
+            // 
+            this.btnLuuSua.Location = new System.Drawing.Point(470, 267);
+            this.btnLuuSua.Name = "btnLuuSua";
+            this.btnLuuSua.Size = new System.Drawing.Size(102, 34);
+            this.btnLuuSua.TabIndex = 25;
+            this.btnLuuSua.Values.Text = "SỬA";
+            this.btnLuuSua.Click += new System.EventHandler(this.btnLuuSua_Click);
+            // 
             // kryptonLabel9
             // 
             this.kryptonLabel9.Location = new System.Drawing.Point(49, 122);
@@ -350,16 +357,6 @@
             this.btnThoat.TabIndex = 22;
             this.btnThoat.Values.Text = "THOÁT";
             // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(470, 267);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(102, 34);
-            this.btnSua.TabIndex = 23;
-            this.btnSua.Values.Text = "SỬA";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
             // txtPhiVeSinh
             // 
             this.txtPhiVeSinh.Location = new System.Drawing.Point(890, 47);
@@ -367,6 +364,8 @@
             this.txtPhiVeSinh.Name = "txtPhiVeSinh";
             this.txtPhiVeSinh.Size = new System.Drawing.Size(180, 23);
             this.txtPhiVeSinh.TabIndex = 21;
+            this.txtPhiVeSinh.TextChanged += new System.EventHandler(this.txtPhiVeSinh_TextChanged);
+            this.txtPhiVeSinh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhiVeSinh_KeyPress);
             // 
             // txtPhiBaoTri
             // 
@@ -375,6 +374,8 @@
             this.txtPhiBaoTri.Name = "txtPhiBaoTri";
             this.txtPhiBaoTri.Size = new System.Drawing.Size(180, 23);
             this.txtPhiBaoTri.TabIndex = 20;
+            this.txtPhiBaoTri.TextChanged += new System.EventHandler(this.txtPhiBaoTri_TextChanged);
+            this.txtPhiBaoTri.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhiBaoTri_KeyPress);
             // 
             // kryptonLabel16
             // 
@@ -401,6 +402,8 @@
             this.txtPhiThangMay.Name = "txtPhiThangMay";
             this.txtPhiThangMay.Size = new System.Drawing.Size(180, 23);
             this.txtPhiThangMay.TabIndex = 11;
+            this.txtPhiThangMay.TextChanged += new System.EventHandler(this.txtPhiThangMay_TextChanged);
+            this.txtPhiThangMay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhiThangMay_KeyPress);
             // 
             // txtNgayLapHopDong
             // 
@@ -418,6 +421,8 @@
             this.txtPhiBaoVe.Name = "txtPhiBaoVe";
             this.txtPhiBaoVe.Size = new System.Drawing.Size(180, 23);
             this.txtPhiBaoVe.TabIndex = 12;
+            this.txtPhiBaoVe.TextChanged += new System.EventHandler(this.txtPhiBaoVe_TextChanged);
+            this.txtPhiBaoVe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhiBaoVe_KeyPress);
             // 
             // txtTongTien
             // 
@@ -454,6 +459,8 @@
             this.txtTienGuiXe.Name = "txtTienGuiXe";
             this.txtTienGuiXe.Size = new System.Drawing.Size(180, 23);
             this.txtTienGuiXe.TabIndex = 7;
+            this.txtTienGuiXe.TextChanged += new System.EventHandler(this.txtTienGuiXe_TextChanged);
+            this.txtTienGuiXe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienGuiXe_KeyPress);
             // 
             // txtTienPhong
             // 
@@ -507,6 +514,8 @@
             this.txtTienNuoc.Name = "txtTienNuoc";
             this.txtTienNuoc.Size = new System.Drawing.Size(180, 23);
             this.txtTienNuoc.TabIndex = 9;
+            this.txtTienNuoc.TextChanged += new System.EventHandler(this.txtTienNuoc_TextChanged);
+            this.txtTienNuoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienNuoc_KeyPress);
             // 
             // txtTienDien
             // 
@@ -515,6 +524,8 @@
             this.txtTienDien.Name = "txtTienDien";
             this.txtTienDien.Size = new System.Drawing.Size(180, 23);
             this.txtTienDien.TabIndex = 8;
+            this.txtTienDien.TextChanged += new System.EventHandler(this.txtTienDien_TextChanged);
+            this.txtTienDien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienDien_KeyPress);
             // 
             // txtTenNV
             // 
@@ -670,15 +681,6 @@
             this.kryptonLabel1.TabIndex = 15;
             this.kryptonLabel1.Values.Text = "Mã Hóa Đơn";
             // 
-            // btnLuuSua
-            // 
-            this.btnLuuSua.Location = new System.Drawing.Point(707, 267);
-            this.btnLuuSua.Name = "btnLuuSua";
-            this.btnLuuSua.Size = new System.Drawing.Size(102, 34);
-            this.btnLuuSua.TabIndex = 25;
-            this.btnLuuSua.Values.Text = "LƯU";
-            this.btnLuuSua.Click += new System.EventHandler(this.btnLuuSua_Click);
-            // 
             // frmQuanLyHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -740,7 +742,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox btnXoa;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel9;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnThoat;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSua;
         private System.Windows.Forms.TextBox txtPhiVeSinh;
         private System.Windows.Forms.TextBox txtPhiBaoTri;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel16;

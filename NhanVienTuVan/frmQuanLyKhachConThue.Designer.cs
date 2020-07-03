@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
             this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -290,7 +290,7 @@
             this.lvwDSKhachHang.GridLines = true;
             this.lvwDSKhachHang.HideSelection = false;
             this.lvwDSKhachHang.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem4});
             this.lvwDSKhachHang.Location = new System.Drawing.Point(0, 0);
             this.lvwDSKhachHang.Name = "lvwDSKhachHang";
             this.lvwDSKhachHang.Size = new System.Drawing.Size(871, 154);
@@ -341,10 +341,7 @@
             // 
             // kryptonGroupBox1
             // 
-            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             this.kryptonGroupBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
@@ -386,7 +383,6 @@
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgaySinh.Location = new System.Drawing.Point(576, 29);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
             this.dtpNgaySinh.Size = new System.Drawing.Size(238, 21);
             this.dtpNgaySinh.TabIndex = 35;
             // 
@@ -395,6 +391,7 @@
             this.txtGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGioiTinh.Location = new System.Drawing.Point(576, 58);
             this.txtGioiTinh.Name = "txtGioiTinh";
+            this.txtGioiTinh.ReadOnly = true;
             this.txtGioiTinh.Size = new System.Drawing.Size(238, 22);
             this.txtGioiTinh.TabIndex = 8;
             // 
@@ -405,6 +402,7 @@
             this.txtSoCMND.Name = "txtSoCMND";
             this.txtSoCMND.Size = new System.Drawing.Size(238, 22);
             this.txtSoCMND.TabIndex = 4;
+            this.txtSoCMND.TextChanged += new System.EventHandler(this.txtSoCMND_TextChanged);
             this.txtSoCMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoCMND_KeyPress);
             // 
             // txtEmail
@@ -414,6 +412,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(238, 22);
             this.txtEmail.TabIndex = 3;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtSoDT
             // 
@@ -422,6 +421,7 @@
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.Size = new System.Drawing.Size(238, 22);
             this.txtSoDT.TabIndex = 2;
+            this.txtSoDT.TextChanged += new System.EventHandler(this.txtSoDT_TextChanged);
             this.txtSoDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoDT_KeyPress);
             // 
             // txtHoTen
@@ -437,6 +437,7 @@
             this.txtMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaKH.Location = new System.Drawing.Point(178, 30);
             this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.ReadOnly = true;
             this.txtMaKH.Size = new System.Drawing.Size(238, 22);
             this.txtMaKH.TabIndex = 0;
             // 

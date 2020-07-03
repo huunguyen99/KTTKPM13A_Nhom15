@@ -27,7 +27,7 @@ namespace NhanVienKyThuat
         {
             busphieu = new BUSPhieuYeuCauKiemTraPhong();
             dsphieu = busphieu.LayDSPhieuChuaDuyet();
-            LoadPhieuKiemTraLenListView(dsphieu, lvwDSPhong);
+            LoadPhieuKiemTraLenListView(dsphieu, lvwDSPhieu);
         }
 
         void ThemItem(ePhieuYeuCauKiemTraPhong p, ListView lvw)
@@ -55,10 +55,18 @@ namespace NhanVienKyThuat
                 ThemItem(item, lvw);
             }
         }
+        ePhieuYeuCauKiemTraPhong phChon;
+        private void lvwDSPhieu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvwDSPhieu.SelectedItems.Count > 0)
+            {
+                phChon = (ePhieuYeuCauKiemTraPhong)lvwDSPhieu.SelectedItems[0].Tag;
+            }
+        }
 
         private void btnDuyet_Click(object sender, EventArgs e)
         {
-            if (lvwDSPhong.SelectedItems.Count > 0)
+            if (lvwDSPhieu.SelectedItems.Count > 0)
             {
                 if (rtxtGhichu.Text.Trim().Length == 0)
                     MessageBox.Show("Vui lòng điền vào ghi chú cho nhân viên tư vấn", "Thông báo");
@@ -72,7 +80,8 @@ namespace NhanVienKyThuat
                         busphieu.DuyetPhieu(phChon, MaNV, true, rtxtGhichu.Text);
                         MessageBox.Show("Duyệt phiếu thành công", "Thông báo");
                         dsphieu = busphieu.LayDSPhieuChuaDuyet();
-                        LoadPhieuKiemTraLenListView(dsphieu, lvwDSPhong);
+                        LoadPhieuKiemTraLenListView(dsphieu, lvwDSPhieu);
+                        rtxtGhichu.Clear();
                     }
                 }    
             }
@@ -80,18 +89,11 @@ namespace NhanVienKyThuat
                 MessageBox.Show("Vui lòng chọn phiếu cần duyệt", "Thông báo");
         }
 
-        ePhieuYeuCauKiemTraPhong phChon;
-        private void lvwDSPhong_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(lvwDSPhong.SelectedItems.Count > 0)
-            {
-                phChon = (ePhieuYeuCauKiemTraPhong)lvwDSPhong.SelectedItems[0].Tag;
-            }    
-        }
+        
 
         private void btnKhongduyet_Click(object sender, EventArgs e)
         {
-            if (lvwDSPhong.SelectedItems.Count > 0)
+            if (lvwDSPhieu.SelectedItems.Count > 0)
             {
                 if (rtxtGhichu.Text.Trim().Length == 0)
                     MessageBox.Show("Vui lòng điền vào ghi chú cho nhân viên tư vấn", "Thông báo");
@@ -103,7 +105,8 @@ namespace NhanVienKyThuat
                         busphieu.DuyetPhieu(phChon, MaNV, false, rtxtGhichu.Text);
                         MessageBox.Show("Duyệt phiếu thành công", "Thông báo");
                         dsphieu = busphieu.LayDSPhieuChuaDuyet();
-                        LoadPhieuKiemTraLenListView(dsphieu, lvwDSPhong);
+                        LoadPhieuKiemTraLenListView(dsphieu, lvwDSPhieu);
+                        rtxtGhichu.Clear();
                     }
                 }
             }
@@ -114,7 +117,7 @@ namespace NhanVienKyThuat
         private void btnNhanPhieu_Click(object sender, EventArgs e)
         {
             dsphieu = busphieu.LayDSPhieuChuaDuyet();
-            LoadPhieuKiemTraLenListView(dsphieu, lvwDSPhong);
+            LoadPhieuKiemTraLenListView(dsphieu, lvwDSPhieu);
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -123,5 +126,7 @@ namespace NhanVienKyThuat
             if (hoiThoat == DialogResult.Yes)
                 this.Close();
         }
+
+        
     }
 }

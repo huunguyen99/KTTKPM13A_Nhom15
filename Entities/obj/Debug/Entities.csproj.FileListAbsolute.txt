@@ -30,5 +30,15 @@ E:\KienTrucVaThietKePhanMem\DeAn\CT\Entities\bin\Debug\EntityFramework.xml
 E:\KienTrucVaThietKePhanMem\DeAn\CT\Entities\bin\Debug\EntityFramework.SqlServer.xml
 E:\KienTrucVaThietKePhanMem\DeAn\CT\Entities\obj\Debug\Entities.dll
 E:\KienTrucVaThietKePhanMem\DeAn\CT\Entities\obj\Debug\Entities.pdb
-E:\KTTKPM13A_Nhom15\Entities\obj\Debug\Entities.csprojAssemblyReference.cache
 E:\KienTrucVaThietKePhanMem\DeAn\CT\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+E:\KienTrucThietKePhanMem\KTTKPM13A_Nhom15\Entities\bin\Debug\Entities.dll.config
+E:\KienTrucThietKePhanMem\KTTKPM13A_Nhom15\Entities\bin\Debug\Entities.dll
+E:\KienTrucThietKePhanMem\KTTKPM13A_Nhom15\Entities\bin\Debug\Entities.pdb
+E:\KienTrucThietKePhanMem\KTTKPM13A_Nhom15\Entities\bin\Debug\EntityFramework.dll
+E:\KienTrucThietKePhanMem\KTTKPM13A_Nhom15\Entities\bin\Debug\EntityFramework.SqlServer.dll
+E:\KienTrucThietKePhanMem\KTTKPM13A_Nhom15\Entities\bin\Debug\EntityFramework.xml
+E:\KienTrucThietKePhanMem\KTTKPM13A_Nhom15\Entities\bin\Debug\EntityFramework.SqlServer.xml
+E:\KienTrucThietKePhanMem\KTTKPM13A_Nhom15\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+E:\KienTrucThietKePhanMem\KTTKPM13A_Nhom15\Entities\obj\Debug\Entities.csproj.CopyComplete
+E:\KienTrucThietKePhanMem\KTTKPM13A_Nhom15\Entities\obj\Debug\Entities.dll
+E:\KienTrucThietKePhanMem\KTTKPM13A_Nhom15\Entities\obj\Debug\Entities.pdb

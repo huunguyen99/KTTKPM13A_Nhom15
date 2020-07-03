@@ -57,7 +57,8 @@ namespace NhanVienTuVan
             ListViewItem lvwitem = new ListViewItem(hd.MaHopDong.ToString());
             lvwitem.SubItems.Add(hd.ENhanVien.TenNV);
             lvwitem.SubItems.Add(hd.EKhachHang.TenKH);
-            lvwitem.SubItems.Add(hd.TienCoc.ToString());
+            string tiencoc = string.Format("{0:0,0 VNĐ}", hd.TienCoc);
+            lvwitem.SubItems.Add(tiencoc);
             lvwitem.SubItems.Add(hd.NgayTao.ToString("dd/MM/yyyy"));
             lvwitem.SubItems.Add(hd.NgayThue.ToString("dd/MM/yyyy"));
             lvwitem.SubItems.Add(hd.NgayTra.ToString("dd/MM/yyyy"));
@@ -82,7 +83,8 @@ namespace NhanVienTuVan
             dtpNgayThue.Value = hd.NgayThue;
             dtpNgayTra.Value = hd.NgayTra;
             txtNhanVienTao.Text = hd.ENhanVien.TenNV;
-            txtTienCoc.Text = hd.TienCoc.ToString();
+            string tiencoc = string.Format("{0:0,0 VNĐ}", hd.TienCoc);
+            txtTienCoc.Text = tiencoc;
         }
         eHopDong hdChon;
         private void lvwDSHopDong_SelectedIndexChanged(object sender, EventArgs e)

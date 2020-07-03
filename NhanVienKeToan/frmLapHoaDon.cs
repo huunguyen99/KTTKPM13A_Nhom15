@@ -79,7 +79,8 @@ namespace NhanVienKeToan
             dtpNgayThue.Value = hd.NgayThue;
             dtpNgayTra.Value = hd.NgayTra;
             txtNhanVienTao.Text = hd.ENhanVien.TenNV;
-            txtTienCoc.Text = hd.TienCoc.ToString();
+            string tiencoc = string.Format("{0:0,0 VNĐ}", hd.TienCoc);
+            txtTienCoc.Text = tiencoc;
         }
         eHopDong hdChon;
 
@@ -124,10 +125,10 @@ namespace NhanVienKeToan
                     }    
                 }
                 else
-                    MessageBox.Show("Vui lòng chọn vào hợp đồng", "Thông báo");
+                    MessageBox.Show("Vui lòng chọn vào hợp đồng cần lập hóa đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
-                MessageBox.Show("Vui lòng chọn phòng cần lập hóa đơn", "Thông báo");
+                MessageBox.Show("Vui lòng chọn phòng cần lập hóa đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

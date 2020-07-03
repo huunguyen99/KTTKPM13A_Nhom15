@@ -89,7 +89,7 @@ namespace NhanVienTuVan
             txtHoTen.Text = kh.TenKH;
             txtMaKH.Text = kh.MaKH.ToString();
             txtNgaySinh.Text = kh.NgaySinh.ToString("dd/MM/yyyy");
-            txtDiaChi.Text = kh.DiaChi;
+            rtxtDiaChi.Text = kh.DiaChi;
             txtSoCMND.Text = kh.SoCMND;
             txtSoDT.Text = kh.SDT;
         }
@@ -137,73 +137,59 @@ namespace NhanVienTuVan
             }    
         }
 
-        
 
-        int TimKiem(string giaTriTim)
+
+        List<eKhachHang> TimKiemKH(string giaTriTim)
         {
-            eKhachHang kh;
+            List<eKhachHang> dsTim = new List<eKhachHang>();
             if (rdoTimTheoCMND.Checked == true)
             {
-                for (int i = 0; i < lvwDSKhachHang.Items.Count; i++)
-                {
-                    kh = (eKhachHang)lvwDSKhachHang.Items[i].Tag;
-                    if (kh.SoCMND.Contains(giaTriTim))
-                        return i;
-                }
+                dsTim = dskh.Where(x => x.SoCMND.Contains(giaTriTim)).ToList();
             }
             else if (rdoTimTheoSDT.Checked == true)
             {
-                for (int i = 0; i < lvwDSKhachHang.Items.Count; i++)
-                {
-                    kh = (eKhachHang)lvwDSKhachHang.Items[i].Tag;
-                    if (kh.SDT.Contains(giaTriTim))
-                        return i;
-                }
+                dsTim = dskh.Where(x => x.SDT.Contains(giaTriTim)).ToList();
             }
             else
             {
-                for (int i = 0; i < lvwDSKhachHang.Items.Count; i++)
-                {
-                    kh = (eKhachHang)lvwDSKhachHang.Items[i].Tag;
-                    if (kh.TenKH.Contains(giaTriTim))
-                        return i;
-                }
+                dsTim = dskh.Where(x => x.TenKH.ToLower().Contains(giaTriTim.ToLower())).ToList();
             }
-            return -1;
+            return dsTim;
         }
-
         private void rdoTimTheoCMND_CheckedChanged(object sender, EventArgs e)
         {
             XuLyAutoComplete();
+            LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
         }
 
         private void rdoTimTheoSDT_CheckedChanged(object sender, EventArgs e)
         {
             XuLyAutoComplete();
+            LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
         }
 
         private void rdoTimTheoTen_CheckedChanged(object sender, EventArgs e)
         {
             XuLyAutoComplete();
+            LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            int kq = TimKiem(txtGiaTriTim.Text);
-            if (kq == -1)
-                MessageBox.Show("Không tìm thấy khách hàng có thông tin điền vào", "Thông báo");
-            else
+            List<eKhachHang> kquaTim = TimKiemKH(txtGiaTriTim.Text);
+            if (kquaTim.Count == 0)
             {
-                if (lvwDSKhachHang.SelectedItems.Count > 0)
-                {
-                    int vitritruoc = lvwDSKhachHang.SelectedIndices[0];
-                    lvwDSKhachHang.Items[vitritruoc].Selected = false;
-                }
-                lvwDSKhachHang.Items[kq].Selected = true;
-                lvwDSKhachHang.Focus();
-                khChon = (eKhachHang)lvwDSKhachHang.Items[kq].Tag;
-                TaiHienKHTuListView(khChon);
+                MessageBox.Show("Không có thông tin khách hàng nào như yêu cầu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
             }
+            else
+                LoadDSKhachHangLenListView(kquaTim, lvwDSKhachHang);
+        }
+
+        private void txtGiaTriTim_TextChanged(object sender, EventArgs e)
+        {
+            if(txtGiaTriTim.Text == "")
+                LoadDSKhachHangLenListView(dskh, lvwDSKhachHang);
         }
     }
 }

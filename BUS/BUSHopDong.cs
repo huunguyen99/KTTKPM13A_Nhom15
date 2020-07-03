@@ -28,5 +28,9 @@ namespace BUS
         {
             dt.SuaHopDong(hdSua, ngaythue, ngaytra);
         }
+        public void AutoKetThucHopDong()
+        {
+            dt.AutoKetThucHopDong();
+        }
     }
 }

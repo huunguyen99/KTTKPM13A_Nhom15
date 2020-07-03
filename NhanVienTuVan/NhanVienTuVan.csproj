@@ -210,12 +210,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\next_anh.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\next_anh1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{d30ee08a-7528-4190-813e-ad99f50beb97}</Project>
       <Name>BUS</Name>

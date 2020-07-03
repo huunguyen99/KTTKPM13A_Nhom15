@@ -28,6 +28,20 @@ namespace DAL
             }
         }
 
+        public void AutoKetThucHopDong()
+        {
+            var ds = (from n in dt.tblHopDong
+                      where n.TinhTrangHD == true
+                      select n).ToList();
+            foreach(eHopDong item in ds)
+            {
+                if(item.NgayTra < DateTime.Now)
+                {
+                    item.TinhTrangHD = false;
+                    dt.SaveChanges();
+                } 
+            }    
+        }
         public List<eHopDong> LayDSHopDongConHan(string maPhong)
         {
             var ds = (from n in dt.tblHopDong

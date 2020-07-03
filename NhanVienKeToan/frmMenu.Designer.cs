@@ -82,8 +82,9 @@
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab8,
             this.kryptonRibbonTab2});
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab8;
-            this.kryptonRibbon1.Size = new System.Drawing.Size(903, 143);
+            this.kryptonRibbon1.SelectedContext = null;
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
+            this.kryptonRibbon1.Size = new System.Drawing.Size(903, 115);
             this.kryptonRibbon1.TabIndex = 5;
             // 
             // kryptonRibbonRecentDoc1
@@ -189,6 +190,7 @@
             // mnuDoiMatKhau
             // 
             this.mnuDoiMatKhau.TextLine1 = "Đổi mật khẩu";
+            this.mnuDoiMatKhau.Click += new System.EventHandler(this.mnuDoiMatKhau_Click);
             // 
             // kryptonRibbonGroupTriple10
             // 

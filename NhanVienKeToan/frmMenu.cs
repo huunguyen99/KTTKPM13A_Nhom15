@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using BUS;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,10 +50,11 @@ namespace NhanVienKeToan
                 frmlhd.Show();
             }
         }
-
+        BUSHopDong bushd;
         private void frmMenu_Load(object sender, EventArgs e)
         {
-
+            bushd = new BUSHopDong();
+            bushd.AutoKetThucHopDong();
         }
 
         private void mnuDangXuat_Click(object sender, EventArgs e)
@@ -77,6 +79,20 @@ namespace NhanVienKeToan
                 frmthanhtoan = new frmDanhSachHoaDonChuaThanhToan();
                 frmthanhtoan.MdiParent = this;
                 frmthanhtoan.Show();
+            }
+        }
+        frmDoiMatKhau frmdmk = new frmDoiMatKhau(MaNV);
+        private void mnuDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
+            if (frmdmk.IsAccessible == false)
+            {
+                frmdmk = new frmDoiMatKhau(MaNV);
+                frmdmk.MdiParent = this;
+                frmdmk.Show();
             }
         }
     }

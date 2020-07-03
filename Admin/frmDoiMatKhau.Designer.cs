@@ -43,7 +43,7 @@
             this.btnHuy.Location = new System.Drawing.Point(246, 161);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(96, 35);
-            this.btnHuy.TabIndex = 36;
+            this.btnHuy.TabIndex = 4;
             this.btnHuy.Values.Text = "HỦY";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -52,7 +52,7 @@
             this.btnXacNhan.Location = new System.Drawing.Point(103, 161);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(96, 35);
-            this.btnXacNhan.TabIndex = 35;
+            this.btnXacNhan.TabIndex = 3;
             this.btnXacNhan.Values.Text = "XÁC NHẬN";
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
@@ -62,7 +62,7 @@
             this.txtXacNhanMatKhauMoi.Name = "txtXacNhanMatKhauMoi";
             this.txtXacNhanMatKhauMoi.PasswordChar = '*';
             this.txtXacNhanMatKhauMoi.Size = new System.Drawing.Size(139, 23);
-            this.txtXacNhanMatKhauMoi.TabIndex = 34;
+            this.txtXacNhanMatKhauMoi.TabIndex = 2;
             // 
             // txtMatKhauMoi
             // 
@@ -70,7 +70,7 @@
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.PasswordChar = '*';
             this.txtMatKhauMoi.Size = new System.Drawing.Size(139, 23);
-            this.txtMatKhauMoi.TabIndex = 31;
+            this.txtMatKhauMoi.TabIndex = 1;
             // 
             // txtMatKhauHienTai
             // 
@@ -78,7 +78,7 @@
             this.txtMatKhauHienTai.Name = "txtMatKhauHienTai";
             this.txtMatKhauHienTai.PasswordChar = '*';
             this.txtMatKhauHienTai.Size = new System.Drawing.Size(139, 23);
-            this.txtMatKhauHienTai.TabIndex = 29;
+            this.txtMatKhauHienTai.TabIndex = 0;
             // 
             // kryptonLabel3
             // 
@@ -119,7 +119,7 @@
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.kryptonLabel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDoiMatKhau";
             this.Text = "ĐỔI MẬT KHẨU";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

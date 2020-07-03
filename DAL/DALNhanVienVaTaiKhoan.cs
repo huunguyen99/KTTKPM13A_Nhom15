@@ -15,10 +15,17 @@ namespace DAL
             dt = new VanPhongDbContext();
         }
 
-        public List<eTaiKhoan> LayDSTaiKhoanVaNhanVien()
+        public List<eTaiKhoan> LayDSTaiKhoanVaNhanVienDangLamViec()
         {
             var ds = (from n in dt.tblTaiKhoan
-                      where n.ENhanVien.ChucVu != 4
+                      where n.ENhanVien.ChucVu != 4 && n.ENhanVien.Active == true
+                      select n).ToList();
+            return ds;
+        }
+        public List<eTaiKhoan> LayDSTaiKhoanVaNhanVienDaNghiViec()
+        {
+            var ds = (from n in dt.tblTaiKhoan
+                      where n.ENhanVien.ChucVu != 4 && n.ENhanVien.Active == false
                       select n).ToList();
             return ds;
         }

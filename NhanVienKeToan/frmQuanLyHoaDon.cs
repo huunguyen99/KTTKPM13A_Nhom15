@@ -22,14 +22,16 @@ namespace NhanVienKeToan
         BUSChiTietHoaDon bushd;
         List<eVanPhong> dsvp;
         string maPhongChon;
+        ErrorProvider ep;
         private void frmQuanLyHoaDon_Load(object sender, EventArgs e)
         {
+            ep = new ErrorProvider();
             bushd = new BUSChiTietHoaDon();
             busvp = new BUSVanPhong();
             dsvp = busvp.LayDanhSachPhong();
             LoadPhongLenTreeView(treDSVanPhong, dsvp);
         }
-        
+
 
         void LoadPhongLenTreeView(TreeView tre, List<eVanPhong> dsp)
         {
@@ -43,7 +45,7 @@ namespace NhanVienKeToan
             }
             tre.ExpandAll();
         }
-        eChiTietHoaDon cthd;
+        eChiTietHoaDon hdChon;
         void ThemItem(eChiTietHoaDon hd, ListView lvw)
         {
             ListViewItem lvwitem = new ListViewItem(hd.EHoaDon.MaHoaDon.ToString());
@@ -68,10 +70,10 @@ namespace NhanVienKeToan
         void LoadDSHoaDonLenListView(List<eChiTietHoaDon> ds, ListView lvw)
         {
             lvw.Items.Clear();
-            foreach(var hd in ds)
+            foreach (var hd in ds)
             {
                 ThemItem(hd, lvw);
-            }    
+            }
         }
         private void treDSVanPhong_AfterSelect(object sender, TreeViewEventArgs e)
         {
@@ -94,15 +96,15 @@ namespace NhanVienKeToan
             txtTenNV.Text = cthd.EHoaDon.ENhanVien.TenNV.ToString();
             txtTenKhachHang.Text = cthd.EHoaDon.EHopDong.EKhachHang.TenKH.ToString();
             txtMaHopDong.Text = cthd.EHoaDon.EHopDong.MaHopDong.ToString();
-            txtNgayLapHopDong.Text = cthd.EHoaDon.EHopDong.NgayTao.ToString("dd/mm/yyyy");
-            txtNgayLapHoaDon.Text = cthd.EHoaDon.NgayLapHoaDon.ToString("dd/mm/yyyy");
-            txtNgayCanLapHoaDon.Text = cthd.EHoaDon.NgayLapHoaDon.ToString("dd/mm/yyyy");
+            txtNgayLapHopDong.Text = cthd.EHoaDon.EHopDong.NgayTao.ToString("dd/MM/yyyy");
+            txtNgayLapHoaDon.Text = cthd.EHoaDon.NgayLapHoaDon.ToString("dd/MM/yyyy");
+            txtNgayCanLapHoaDon.Text = cthd.EHoaDon.NgayLapHoaDon.ToString("dd/MM/yyyy");
             if (cthd.EHoaDon.TinhTrangHD == false)
             {
                 txtNgayThanhToan.Text = ("Chưa thanh toán");
             }
             else
-                txtNgayThanhToan.Text = (cthd.EHoaDon.NgayThanhToan.ToString("dd/mm/yyyy"));
+                txtNgayThanhToan.Text = (cthd.EHoaDon.NgayThanhToan.ToString("dd/MM/yyyy"));
             if (cthd.EHoaDon.TinhTrangHD == false)
             {
                 txtTinhTrangHD.Text = ("Chưa thanh toán");
@@ -126,80 +128,185 @@ namespace NhanVienKeToan
         {
             if (lvwDSHoaDon.SelectedItems.Count > 0)
             {
-                cthd = (eChiTietHoaDon)lvwDSHoaDon.SelectedItems[0].Tag;
-                LoadDuLieuTextBox(cthd);
+                hdChon = (eChiTietHoaDon)lvwDSHoaDon.SelectedItems[0].Tag;
+                LoadDuLieuTextBox(hdChon);
             }
         }
-        void MoSuaTextBox()
-        {
-            txtTienDien.ReadOnly = false;
-            txtTienNuoc.ReadOnly = false;
-            txtTienGuiXe.ReadOnly = false;
-            txtPhiBaoTri.ReadOnly = false;
-            txtPhiVeSinh.ReadOnly = false;
-            txtPhiThangMay.ReadOnly = false;
-            txtPhiBaoVe.ReadOnly = false;
 
-            txtTienDien.Clear();
-            txtTienNuoc.Clear();
-            txtTienGuiXe.Clear();
-            txtPhiBaoTri.Clear();
-            txtPhiVeSinh.Clear();
-            txtPhiThangMay.Clear();
-            txtPhiBaoVe.Clear();
-        }
-        void KhoaSuaTextBox()
-        {
-            txtTienDien.ReadOnly = true;
-            txtTienNuoc.ReadOnly = true;
-            txtTienGuiXe.ReadOnly = true;
-            txtPhiBaoTri.ReadOnly = true;
-            txtPhiVeSinh.ReadOnly = true;
-            txtPhiThangMay.ReadOnly = true;
-            txtPhiBaoVe.ReadOnly = true;
-        }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        eChiTietHoaDon TaoHoaDonSua()
         {
-            MoSuaTextBox();
+            eChiTietHoaDon hd = new eChiTietHoaDon();
+            decimal tiendien = Convert.ToDecimal(txtTienDien.Text);
+            decimal tiennuoc = Convert.ToDecimal(txtTienNuoc.Text);
+            decimal tienguixe = Convert.ToDecimal(txtTienGuiXe.Text);
+            decimal phibaotri = Convert.ToDecimal(txtPhiBaoTri.Text);
+            decimal phivesinh = Convert.ToDecimal(txtPhiVeSinh.Text);
+            decimal phithangmay = Convert.ToDecimal(txtPhiThangMay.Text);
+            decimal phibaove = Convert.ToDecimal(txtPhiBaoVe.Text);
+            hd.TienDien = tiendien;
+            hd.TienNuoc = tiennuoc;
+            hd.TienGuiXe = tienguixe;
+            hd.PhiBaoTri = phibaotri;
+            hd.PhiBaoVe = phibaove;
+            hd.PhiThangMay = phithangmay;
+            hd.PhiVeSinh = phivesinh;
+            return hd;
         }
 
         private void btnLuuSua_Click(object sender, EventArgs e)
         {
-            if(txtTienDien.Text.Trim().Length==0 || txtTienNuoc.Text.Trim().Length == 0|| txtTienGuiXe.Text.Trim().Length == 0|| txtPhiBaoTri.Text.Trim().Length == 0|| txtPhiBaoVe.Text.Trim().Length == 0|| txtPhiThangMay.Text.Trim().Length == 0|| txtPhiVeSinh.Text.Trim().Length == 0)
+            if (lvwDSHoaDon.SelectedItems.Count > 0)
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-            else
-            {
-                    decimal tiendien = Convert.ToDecimal(txtTienDien.Text);
-                    decimal tiennuoc = Convert.ToDecimal(txtTienNuoc.Text);
-                    decimal tienguixe = Convert.ToDecimal(txtTienGuiXe.Text);
-                    decimal phibaotri = Convert.ToDecimal(txtPhiBaoTri.Text);
-                    decimal phivesinh = Convert.ToDecimal(txtPhiVeSinh.Text);
-                    decimal phithangmay = Convert.ToDecimal(txtPhiThangMay.Text);
-                    decimal phibaove = Convert.ToDecimal(txtPhiBaoVe.Text);
-
-                    if (tiendien < 0 || tiennuoc < 0 || tienguixe < 0 || phibaotri < 0 || phivesinh < 0 || phithangmay < 0 || phibaove < 0)
-                    {
-                        MessageBox.Show("Các giá trị phải lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    }
+                if (hdChon.EHoaDon.TinhTrangHD == true)
+                    MessageBox.Show("Hóa đơn này đã thanh toán, không thể chỉnh sửa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    decimal tiendien;
+                    decimal tiennuoc;
+                    decimal tienguixe;
+                    decimal phibaotri;
+                    decimal phivesinh;
+                    decimal phithangmay;
+                    decimal phibaove;
+                    if (txtTienDien.Text.Trim().Length == 0 || txtTienNuoc.Text.Trim().Length == 0 || txtTienGuiXe.Text.Trim().Length == 0 || txtPhiBaoTri.Text.Trim().Length == 0 || txtPhiBaoVe.Text.Trim().Length == 0 || txtPhiThangMay.Text.Trim().Length == 0 || txtPhiVeSinh.Text.Trim().Length == 0)
+                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     else
                     {
-                        if (lvwDSHoaDon.SelectedItems.Count > 0)
+                        try
                         {
-                            DialogResult HoiSua = MessageBox.Show("Bạn có chắc chắn muốn lưu lại thông tin này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-                            if (HoiSua == DialogResult.Yes)
+                            tiendien = Convert.ToDecimal(txtTienDien.Text);
+                            tiennuoc = Convert.ToDecimal(txtTienNuoc.Text);
+                            tienguixe = Convert.ToDecimal(txtTienGuiXe.Text);
+                            phibaotri = Convert.ToDecimal(txtPhiBaoTri.Text);
+                            phivesinh = Convert.ToDecimal(txtPhiVeSinh.Text);
+                            phithangmay = Convert.ToDecimal(txtPhiThangMay.Text);
+                            phibaove = Convert.ToDecimal(txtPhiBaoVe.Text);
+                            if (tiendien >= 100000000)
+                                ep.SetError(txtTienDien, "Các khoản phí không thể quá 100 triệu");
+                            else if (tiennuoc >= 100000000)
+                                ep.SetError(txtTienGuiXe, "Các khoản phí không thể quá 100 triệu");
+                            else if (tienguixe >= 100000000)
+                                ep.SetError(txtTienNuoc, "Các khoản phí không thể quá 100 triệu");
+                            else if (phibaotri >= 100000000)
+                                ep.SetError(txtPhiBaoTri, "Các khoản phí không thể quá 100 triệu");
+                            else if (phibaove >= 100000000)
+                                ep.SetError(txtPhiBaoVe, "Các khoản phí không thể quá 100 triệu");
+                            else if (phithangmay >= 100000000)
+                                ep.SetError(txtPhiThangMay, "Các khoản phí không thể quá 100 triệu");
+                            else if (phivesinh >= 100000000)
+                                ep.SetError(txtPhiVeSinh, "Các khoản phí không thể quá 100 triệu");
+                            else
                             {
-                                bushd.SuaHoaDon(cthd);
-                                MessageBox.Show("Sửa thông tin hoàn tất", "Thông báo");
+                                DialogResult HoiSua = MessageBox.Show("Bạn có chắc chắn muốn lưu lại thông tin này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                                if (HoiSua == DialogResult.Yes)
+                                {
+                                    eChiTietHoaDon hdSua = TaoHoaDonSua();
+                                    bushd.SuaHoaDon(hdChon, hdSua);
+                                    MessageBox.Show("Sửa thông tin hoàn tất", "Thông báo");
+                                }
+                                List<eChiTietHoaDon> dshd = bushd.LayDSHoaDon(maPhongChon);
+                                LoadDSHoaDonLenListView(dshd, lvwDSHoaDon);
                             }
-                            KhoaSuaTextBox();
-                            List<eChiTietHoaDon> dshd = bushd.LayDSHoaDon(maPhongChon);
-                            LoadDSHoaDonLenListView(dshd, lvwDSHoaDon);
+                        }
+                        catch (OverflowException)
+                        {
+                            MessageBox.Show("Số tiền quá lớn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        catch(Exception)
+                        {
+                            MessageBox.Show("Có lỗi xảy ra", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
             }
+            else
+                MessageBox.Show("Vui lòng chọn hóa đơn cần chỉnh sửa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void txtTienDien_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTienDien.Text.KTraTien())
+                ep.Clear();
+        }
+
+        private void txtTienNuoc_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTienNuoc.Text.KTraTien())
+                ep.Clear();
+        }
+
+        private void txtTienGuiXe_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTienGuiXe.Text.KTraTien())
+                ep.Clear();
+        }
+
+        private void txtPhiBaoTri_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPhiBaoTri.Text.KTraTien())
+                ep.Clear();
+        }
+
+        private void txtPhiVeSinh_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPhiVeSinh.Text.KTraTien())
+                ep.Clear();
+
+        }
+
+        private void txtPhiThangMay_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPhiThangMay.Text.KTraTien())
+                ep.Clear();
+        }
+
+        private void txtPhiBaoVe_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPhiBaoVe.Text.KTraTien())
+                ep.Clear();
+        }
+
+        private void txtTienNuoc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
+                e.Handled = true;
+        }
+
+        private void txtTienDien_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
+                e.Handled = true;
+        }
+
+        private void txtTienGuiXe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
+                e.Handled = true;
+        }
+
+        private void txtPhiBaoTri_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
+                e.Handled = true;
+        }
+
+        private void txtPhiVeSinh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
+                e.Handled = true;
+        }
+
+        private void txtPhiThangMay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
+                e.Handled = true;
+        }
+
+        private void txtPhiBaoVe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
+                e.Handled = true;
+        }
     }
 }

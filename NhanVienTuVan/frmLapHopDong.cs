@@ -72,7 +72,8 @@ namespace NhanVienTuVan
         void TaiHienThongTinVanPhong(eVanPhong p)
         {
             txtDienTich.Text = p.DienTich.ToString();
-            txtGiaThue.Text = p.GiaThue.ToString();
+            string giathue = string.Format("{0:0,0 VNĐ}", p.GiaThue);
+            txtGiaThue.Text = giathue;
             txtMaPhong.Text = p.MaPhong;
             txtSoBongDen.Text = p.SoBongDen.ToString();
             txtSoMayLanh.Text = p.SoMayLanh.ToString();
@@ -130,8 +131,7 @@ namespace NhanVienTuVan
                         ePhieuYeuCauKiemTraPhong ph = TaoPhieKiemTra();
                         busphieu.TaoPhieuKiemTra(ph);
                         MessageBox.Show("Gửi yêu cầu kiểm tra phòng thành công", "Thông báo");
-                        List<ePhieuYeuCauKiemTraPhong> dsphieu = busphieu.LayDSPhieuDaDuyet(maPhongChon).ToList();
-                        LoadPhieuKiemTraLenListView(dsphieu, lvwDSPhieuKiemTra);
+                        
                     }
                 }
             }
@@ -161,11 +161,26 @@ namespace NhanVienTuVan
             }    
         }
 
+        void Clear()
+        {
+            txtDienTich.Clear();
+            txtGiaThue.Clear();
+            txtMaPhong.Clear();
+            txtSoBongDen.Clear();
+            txtSoMayLanh.Clear();
+            txtTangLau.Clear();
+            txtTenPhong.Clear();
+            txtTinhTrangPhong.Clear();
+            rtxtGhiChu.Clear();
+        }
+
         private void btnLapHopDong_Click(object sender, EventArgs e)
         {
             if (lvwDSPhieuKiemTra.SelectedItems.Count > 0)
             {
-                if (phChon.TinhTrangPhong == false)
+                if (phChon.TrangThaiPhieu == false)
+                    MessageBox.Show("Phòng này chưa kiểm tra, chưa thể cho thuê", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else if (phChon.TinhTrangPhong == false)
                 {
                     MessageBox.Show("Phòng này đang hỏng. Không thể cho thuê", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -179,17 +194,21 @@ namespace NhanVienTuVan
                         {
                             dsphongtrong = busvp.LayDSVanPhongTrong().ToList();
                             LoadPhongLenTreeView(treDSPhong, dsphongtrong);
+                            lvwDSPhieuKiemTra.Items.Clear();
+                            Clear();
                         }
                     }
-                    else if(hoi == DialogResult.No)
+                    else if (hoi == DialogResult.No)
                     {
                         frmDienThongTinKhachHang frmkh = new frmDienThongTinKhachHang(MaNV, phChon.MaPhieuKTra, phongChon.GiaThue);
-                        if(frmkh.ShowDialog() == DialogResult.OK)
+                        if (frmkh.ShowDialog() == DialogResult.OK)
                         {
                             dsphongtrong = busvp.LayDSVanPhongTrong().ToList();
                             LoadPhongLenTreeView(treDSPhong, dsphongtrong);
-                        }    
-                    }    
+                            lvwDSPhieuKiemTra.Items.Clear();
+                            Clear();
+                        }
+                    }
                 }
             }
             else

@@ -22,12 +22,14 @@ namespace NhanVienKyThuat
 
         BUSVanPhong busvp;
         List<eVanPhong> dsvp;
-
+        ErrorProvider ep;
         private void frmQuanLyPhong_Load(object sender, EventArgs e)
         {
             busvp = new BUSVanPhong();
             dsvp = busvp.LayDanhSachPhong();
             LoadDSPhongLenListView(dsvp, lvwDSPhong);
+            ep = new ErrorProvider();
+            XuLyAutoComplete();
         }
 
         void ThemItem(eVanPhong p, ListView lvw)
@@ -35,7 +37,8 @@ namespace NhanVienKyThuat
             ListViewItem lvwitem = new ListViewItem(p.MaPhong);
             lvwitem.SubItems.Add(p.TenPhong);
             lvwitem.SubItems.Add(p.TangLau.ToString());
-            lvwitem.SubItems.Add(p.GiaThue.ToString());
+            string giathue = string.Format("{0:0,0 VNĐ}", p.GiaThue);
+            lvwitem.SubItems.Add(giathue);
             lvwitem.SubItems.Add(p.DienTich.ToString() + "m2");
             lvwitem.SubItems.Add(p.SoMayLanh.ToString());
             lvwitem.SubItems.Add(p.SoBongDen.ToString());
@@ -144,22 +147,72 @@ namespace NhanVienKyThuat
             btnXoa.Text = "XÓA";
             if (lvwDSPhong.SelectedItems.Count > 0)
             {
-                DialogResult hoi = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin phòng này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-                if(hoi == DialogResult.Yes)
+                if (!txtDienTich.Text.KTraDienTich())
+                    ep.SetError(txtDienTich, "Diện tích không thể vượt quá 1000m2");
+                else if (!txtGiaThue.Text.KTraTien())
+                    ep.SetError(txtGiaThue, "Giá thuê không thể vượt quá 100 triệu");
+                else if (!txtSoBongDen.Text.KTraSoBongDen())
+                    ep.SetError(txtSoBongDen, "Số bóng đèn không thể vượt quá 100 bóng");
+                else if (!txtTangLau.Text.KTraTangLau())
+                    ep.SetError(txtTangLau, "Tầng lầu không thể vượt quá 99 tầng");
+                else
                 {
-                    eVanPhong vpSua = TaoPhongSua();
-                    busvp.SuaPhong(vpChon, vpSua);
-                    dsvp = busvp.LayDanhSachPhong();
-                    LoadDSPhongLenListView(dsvp, lvwDSPhong);
-                }    
+                    DialogResult hoi = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin phòng này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                    if (hoi == DialogResult.Yes)
+                    {
+                        eVanPhong vpSua = TaoPhongSua();
+                        busvp.SuaPhong(vpChon, vpSua);
+                        dsvp = busvp.LayDanhSachPhong();
+                        LoadDSPhongLenListView(dsvp, lvwDSPhong);
+                    }
+                }
             }
             else
                 MessageBox.Show("Vui lòng chọn phòng cần chỉnh sửa thông tin", "Thông báo");
         }
 
+        void XuLyAutoComplete()
+        {
+            txtGiaTriTim.AutoCompleteCustomSource.Clear();
+            for(int i = 0; i < lvwDSPhong.Items.Count; i++)
+            {
+                eVanPhong vp = (eVanPhong)lvwDSPhong.Items[i].Tag;
+                txtGiaTriTim.AutoCompleteCustomSource.Add(vp.MaPhong);
+            }    
+        }
+
+        int TimKiem(string giaTriTim)
+        {
+            for(int i = 0; i < lvwDSPhong.Items.Count; i++)
+            {
+                eVanPhong vp = (eVanPhong)lvwDSPhong.Items[i].Tag;
+                if (vp.MaPhong.ToLower().Contains(giaTriTim.ToLower()) || vp.TenPhong.ToLower().Contains(giaTriTim.ToLower()))
+                    return i;
+            }
+            return -1;
+        }
+
         private void btnTimKiemPhong_Click(object sender, EventArgs e)
         {
             btnXoa.Text = "XÓA";
+            if (txtGiaTriTim.Text.Trim().Length == 0)
+                MessageBox.Show("Vui lòng nhập phòng cần tìm");
+            else
+            {
+                int i = TimKiem(txtGiaTriTim.Text);
+                if (i == -1)
+                    MessageBox.Show("Không có phòng nào có thông tin như yêu cầu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
+                else
+                {
+                    if(lvwDSPhong.SelectedItems.Count > 0)
+                    {
+                        int vitritruoc = lvwDSPhong.SelectedIndices[0];
+                        lvwDSPhong.Items[vitritruoc].Selected = false;
+                    }
+                    lvwDSPhong.Items[i].Selected = true;
+                    lvwDSPhong.Focus();
+                }    
+            }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
