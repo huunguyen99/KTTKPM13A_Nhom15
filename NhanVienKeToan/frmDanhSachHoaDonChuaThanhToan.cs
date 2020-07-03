@@ -153,7 +153,7 @@ namespace NhanVienKeToan
                     {
                         bushdon.ThanhToanHoaDon(hdChon.EHoaDon, DateTime.Now);
                         MessageBox.Show("Thanh toán thành công!", "Thông báo");
-                        List<eChiTietHoaDon> dshd = bushd.LayDSHoaDon(maPhongChon);
+                        List<eChiTietHoaDon> dshd = bushd.LayDSHoaDonChuaThanhToan(maPhongChon);
                         LoadDSHoaDonLenListView(dshd, lvwDSHoaDon);
                     }
                 }

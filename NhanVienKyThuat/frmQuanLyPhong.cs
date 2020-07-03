@@ -145,25 +145,40 @@ namespace NhanVienKyThuat
         private void btnSua_Click(object sender, EventArgs e)
         {
             btnXoa.Text = "XÓA";
+            decimal giathue;
             if (lvwDSPhong.SelectedItems.Count > 0)
             {
-                if (!txtDienTich.Text.KTraDienTich())
-                    ep.SetError(txtDienTich, "Diện tích không thể vượt quá 1000m2");
-                else if (!txtGiaThue.Text.KTraTien())
-                    ep.SetError(txtGiaThue, "Giá thuê không thể vượt quá 100 triệu");
-                else if (!txtSoBongDen.Text.KTraSoBongDen())
-                    ep.SetError(txtSoBongDen, "Số bóng đèn không thể vượt quá 100 bóng");
-                else if (!txtTangLau.Text.KTraTangLau())
-                    ep.SetError(txtTangLau, "Tầng lầu không thể vượt quá 99 tầng");
+                if (txtDienTich.Text.Trim().Length == 0 || txtGiaThue.Text.Trim().Length == 0 || txtSoBongDen.Text.Trim().Length == 0 || txtSoMayLanh.Text.Trim().Length == 0 || txtTangLau.Text.Trim().Length == 0)
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin cần sửa", "Thông báo");
                 else
                 {
-                    DialogResult hoi = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin phòng này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-                    if (hoi == DialogResult.Yes)
+                    try
                     {
-                        eVanPhong vpSua = TaoPhongSua();
-                        busvp.SuaPhong(vpChon, vpSua);
-                        dsvp = busvp.LayDanhSachPhong();
-                        LoadDSPhongLenListView(dsvp, lvwDSPhong);
+                        giathue = Convert.ToDecimal(txtGiaThue.Text);
+                        if (!txtDienTich.Text.KTraDienTich())
+                            ep.SetError(txtDienTich, "Diện tích không thể vượt quá 1000m2");
+                        else if (giathue > 100000000)
+                            ep.SetError(txtGiaThue, "Giá thuê không thể vượt quá 100 triệu");
+                        else if (!txtSoBongDen.Text.KTraSoBongDen())
+                            ep.SetError(txtSoBongDen, "Số bóng đèn không thể vượt quá 100 bóng");
+                        else if (!txtTangLau.Text.KTraTangLau())
+                            ep.SetError(txtTangLau, "Tầng lầu không thể vượt quá 99 tầng");
+                        else
+                        {
+                            DialogResult hoi = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin phòng này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                            if (hoi == DialogResult.Yes)
+                            {
+                                eVanPhong vpSua = TaoPhongSua();
+                                busvp.SuaPhong(vpChon, vpSua);
+                                MessageBox.Show("Sửa thông tin phòng thành công", "Thông báo");
+                                dsvp = busvp.LayDanhSachPhong();
+                                LoadDSPhongLenListView(dsvp, lvwDSPhong);
+                            }
+                        }
+                    }
+                    catch (OverflowException)
+                    {
+                        MessageBox.Show("Giá thuê quá lớn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -250,6 +265,30 @@ namespace NhanVienKyThuat
         {
             if (!((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8))
                 e.Handled = true;
+        }
+
+        private void txtGiaThue_TextChanged(object sender, EventArgs e)
+        {
+            if (txtGiaThue.Text.KTraTien())
+                ep.Clear();
+        }
+
+        private void txtTangLau_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTangLau.Text.KTraTangLau())
+                ep.Clear();
+        }
+
+        private void txtSoBongDen_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSoBongDen.Text.KTraSoBongDen())
+                ep.Clear();
+        }
+
+        private void txtDienTich_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDienTich.Text.KTraDienTich())
+                ep.Clear();
         }
     }
 }

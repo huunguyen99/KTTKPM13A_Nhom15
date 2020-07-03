@@ -146,19 +146,21 @@ namespace NhanVienTuVan
             {
                 phChon = (ePhieuYeuCauKiemTraPhong)lvwDSPhieuKiemTra.SelectedItems[0].Tag;
                 rtxtGhiChu.Text = phChon.GhiChu;
+                if (phChon.TinhTrangPhong == false && phChon.TrangThaiPhieu == true)
+                {
+                    MessageBox.Show("Phòng này đang hỏng. Không thể cho thuê", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    rtxtGhiChu.Clear();
+                    busphieu.XoaPhieuKiemTra(phChon.MaPhieuKTra);
+                    List<ePhieuYeuCauKiemTraPhong> dsphieu = busphieu.LayDSPhieuDaDuyet(maPhongChon).ToList();
+                    LoadPhieuKiemTraLenListView(dsphieu, lvwDSPhieuKiemTra);
+                }
+                
             }    
         }
 
         private void lvwDSPhieuKiemTra_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if(phChon.TinhTrangPhong == false && phChon.TrangThaiPhieu == true)
-            {
-                MessageBox.Show("Phòng này đang hỏng. Không thể cho thuê", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                rtxtGhiChu.Clear();
-                busphieu.XoaPhieuKiemTra(phChon.MaPhieuKTra);
-                List<ePhieuYeuCauKiemTraPhong> dsphieu = busphieu.LayDSPhieuDaDuyet(maPhongChon).ToList();
-                LoadPhieuKiemTraLenListView(dsphieu, lvwDSPhieuKiemTra);
-            }    
+            
         }
 
         void Clear()

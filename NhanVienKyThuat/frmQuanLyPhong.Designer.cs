@@ -358,6 +358,7 @@
             this.txtTangLau.Name = "txtTangLau";
             this.txtTangLau.Size = new System.Drawing.Size(184, 23);
             this.txtTangLau.TabIndex = 1;
+            this.txtTangLau.TextChanged += new System.EventHandler(this.txtTangLau_TextChanged);
             this.txtTangLau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTangLau_KeyPress);
             // 
             // txtGiaThue
@@ -367,6 +368,7 @@
             this.txtGiaThue.Name = "txtGiaThue";
             this.txtGiaThue.Size = new System.Drawing.Size(184, 23);
             this.txtGiaThue.TabIndex = 1;
+            this.txtGiaThue.TextChanged += new System.EventHandler(this.txtGiaThue_TextChanged);
             this.txtGiaThue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaThue_KeyPress);
             // 
             // txtTenPhong
@@ -392,6 +394,7 @@
             this.txtSoBongDen.Name = "txtSoBongDen";
             this.txtSoBongDen.Size = new System.Drawing.Size(188, 23);
             this.txtSoBongDen.TabIndex = 1;
+            this.txtSoBongDen.TextChanged += new System.EventHandler(this.txtSoBongDen_TextChanged);
             this.txtSoBongDen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoBongDen_KeyPress);
             // 
             // txtSoMayLanh
@@ -410,6 +413,7 @@
             this.txtDienTich.Name = "txtDienTich";
             this.txtDienTich.Size = new System.Drawing.Size(188, 23);
             this.txtDienTich.TabIndex = 1;
+            this.txtDienTich.TextChanged += new System.EventHandler(this.txtDienTich_TextChanged);
             this.txtDienTich.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDienTich_KeyPress);
             // 
             // txtMaPhong
